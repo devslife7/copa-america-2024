@@ -1,0 +1,1919 @@
+{
+  "get": "fixtures",
+  "parameters": {
+    "league": "9",
+    "season": "2021"
+  },
+  "errors": [],
+  "results": 28,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "fixture": {
+        "id": 312544,
+        "referee": "W. Roldán",
+        "timezone": "UTC",
+        "date": "2021-06-14T21:00:00+00:00",
+        "timestamp": 1623704400,
+        "periods": {
+          "first": 1623704400,
+          "second": 1623708000
+        },
+        "venue": {
+          "id": 218,
+          "name": "Estádio Nilton Santos",
+          "city": "Rio de Janeiro"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group A - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 26,
+          "name": "Argentina",
+          "logo": "https://media.api-sports.io/football/teams/26.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2383,
+          "name": "Chile",
+          "logo": "https://media.api-sports.io/football/teams/2383.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312546,
+        "referee": "D. Haro",
+        "timezone": "UTC",
+        "date": "2021-06-15T00:00:00+00:00",
+        "timestamp": 1623715200,
+        "periods": {
+          "first": 1623715200,
+          "second": 1623718800
+        },
+        "venue": {
+          "id": 7311,
+          "name": "Estádio Olímpico Pedro Ludovico Teixeira",
+          "city": "Goiânia, Goiás"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group A - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 2380,
+          "name": "Paraguay",
+          "logo": "https://media.api-sports.io/football/teams/2380.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2381,
+          "name": "Bolivia",
+          "logo": "https://media.api-sports.io/football/teams/2381.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312547,
+        "referee": "N. Pitana",
+        "timezone": "UTC",
+        "date": "2021-06-14T00:00:00+00:00",
+        "timestamp": 1623628800,
+        "periods": {
+          "first": 1623628800,
+          "second": 1623632400
+        },
+        "venue": {
+          "id": 235,
+          "name": "Arena Pantanal",
+          "city": "Cuiabá, Mato Grosso"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group B - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 8,
+          "name": "Colombia",
+          "logo": "https://media.api-sports.io/football/teams/8.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2382,
+          "name": "Ecuador",
+          "logo": "https://media.api-sports.io/football/teams/2382.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312548,
+        "referee": "E. Ostojich",
+        "timezone": "UTC",
+        "date": "2021-06-13T21:00:00+00:00",
+        "timestamp": 1623618000,
+        "periods": {
+          "first": 1623618000,
+          "second": 1623621600
+        },
+        "venue": {
+          "id": null,
+          "name": "Estádio Nacional de Brasília",
+          "city": "Brasília, Distrito Federal"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group B - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 6,
+          "name": "Brazil",
+          "logo": "https://media.api-sports.io/football/teams/6.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2379,
+          "name": "Venezuela",
+          "logo": "https://media.api-sports.io/football/teams/2379.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312550,
+        "referee": "Wilton Pereira Sampaio",
+        "timezone": "UTC",
+        "date": "2021-06-19T00:00:00+00:00",
+        "timestamp": 1624060800,
+        "periods": {
+          "first": 1624060800,
+          "second": 1624064400
+        },
+        "venue": {
+          "id": null,
+          "name": "Estádio Nacional de Brasília",
+          "city": "Brasília, Distrito Federal"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group A - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 26,
+          "name": "Argentina",
+          "logo": "https://media.api-sports.io/football/teams/26.png",
+          "winner": true
+        },
+        "away": {
+          "id": 7,
+          "name": "Uruguay",
+          "logo": "https://media.api-sports.io/football/teams/7.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312551,
+        "referee": "Jesús Gil",
+        "timezone": "UTC",
+        "date": "2021-06-18T21:00:00+00:00",
+        "timestamp": 1624050000,
+        "periods": {
+          "first": 1624050000,
+          "second": 1624053600
+        },
+        "venue": {
+          "id": 235,
+          "name": "Arena Pantanal",
+          "city": "Cuiabá, Mato Grosso"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group A - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 2383,
+          "name": "Chile",
+          "logo": "https://media.api-sports.io/football/teams/2383.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2381,
+          "name": "Bolivia",
+          "logo": "https://media.api-sports.io/football/teams/2381.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312553,
+        "referee": "E. Aquino",
+        "timezone": "UTC",
+        "date": "2021-06-17T21:00:00+00:00",
+        "timestamp": 1623963600,
+        "periods": {
+          "first": 1623963600,
+          "second": 1623967200
+        },
+        "venue": {
+          "id": 7311,
+          "name": "Estádio Olímpico Pedro Ludovico Teixeira",
+          "city": "Goiânia, Goiás"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group B - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 8,
+          "name": "Colombia",
+          "logo": "https://media.api-sports.io/football/teams/8.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2379,
+          "name": "Venezuela",
+          "logo": "https://media.api-sports.io/football/teams/2379.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312554,
+        "referee": "P. Loustau",
+        "timezone": "UTC",
+        "date": "2021-06-18T00:00:00+00:00",
+        "timestamp": 1623974400,
+        "periods": {
+          "first": 1623974400,
+          "second": 1623978000
+        },
+        "venue": {
+          "id": 218,
+          "name": "Estádio Nilton Santos",
+          "city": "Rio de Janeiro"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group B - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 6,
+          "name": "Brazil",
+          "logo": "https://media.api-sports.io/football/teams/6.png",
+          "winner": true
+        },
+        "away": {
+          "id": 30,
+          "name": "Peru",
+          "logo": "https://media.api-sports.io/football/teams/30.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312556,
+        "referee": "J. Valenzuela",
+        "timezone": "UTC",
+        "date": "2021-06-22T00:00:00+00:00",
+        "timestamp": 1624320000,
+        "periods": {
+          "first": 1624320000,
+          "second": 1624323600
+        },
+        "venue": {
+          "id": null,
+          "name": "Estádio Nacional de Brasília",
+          "city": "Brasília, Distrito Federal"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group A - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 26,
+          "name": "Argentina",
+          "logo": "https://media.api-sports.io/football/teams/26.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2380,
+          "name": "Paraguay",
+          "logo": "https://media.api-sports.io/football/teams/2380.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312557,
+        "referee": "Raphael Claus",
+        "timezone": "UTC",
+        "date": "2021-06-21T21:00:00+00:00",
+        "timestamp": 1624309200,
+        "periods": {
+          "first": 1624309200,
+          "second": 1624312800
+        },
+        "venue": {
+          "id": 235,
+          "name": "Arena Pantanal",
+          "city": "Cuiabá, Mato Grosso"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group A - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 7,
+          "name": "Uruguay",
+          "logo": "https://media.api-sports.io/football/teams/7.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2383,
+          "name": "Chile",
+          "logo": "https://media.api-sports.io/football/teams/2383.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312558,
+        "referee": "E. Ostojich",
+        "timezone": "UTC",
+        "date": "2021-06-21T00:00:00+00:00",
+        "timestamp": 1624233600,
+        "periods": {
+          "first": 1624233600,
+          "second": 1624237200
+        },
+        "venue": {
+          "id": 7311,
+          "name": "Estádio Olímpico Pedro Ludovico Teixeira",
+          "city": "Goiânia, Goiás"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group B - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 8,
+          "name": "Colombia",
+          "logo": "https://media.api-sports.io/football/teams/8.png",
+          "winner": false
+        },
+        "away": {
+          "id": 30,
+          "name": "Peru",
+          "logo": "https://media.api-sports.io/football/teams/30.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312560,
+        "referee": "R. Tobar",
+        "timezone": "UTC",
+        "date": "2021-06-20T21:00:00+00:00",
+        "timestamp": 1624222800,
+        "periods": {
+          "first": 1624222800,
+          "second": 1624226400
+        },
+        "venue": {
+          "id": 218,
+          "name": "Estádio Nilton Santos",
+          "city": "Rio de Janeiro"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group B - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 2379,
+          "name": "Venezuela",
+          "logo": "https://media.api-sports.io/football/teams/2379.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2382,
+          "name": "Ecuador",
+          "logo": "https://media.api-sports.io/football/teams/2382.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312562,
+        "referee": "W. Roldán",
+        "timezone": "UTC",
+        "date": "2021-06-25T00:00:00+00:00",
+        "timestamp": 1624579200,
+        "periods": {
+          "first": 1624579200,
+          "second": 1624582800
+        },
+        "venue": {
+          "id": null,
+          "name": "Estádio Nacional de Brasília",
+          "city": "Brasília, Distrito Federal"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group A - 4"
+      },
+      "teams": {
+        "home": {
+          "id": 2383,
+          "name": "Chile",
+          "logo": "https://media.api-sports.io/football/teams/2383.png",
+          "winner": false
+        },
+        "away": {
+          "id": 2380,
+          "name": "Paraguay",
+          "logo": "https://media.api-sports.io/football/teams/2380.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312563,
+        "referee": "A. Herrera",
+        "timezone": "UTC",
+        "date": "2021-06-24T21:00:00+00:00",
+        "timestamp": 1624568400,
+        "periods": {
+          "first": 1624568400,
+          "second": 1624572000
+        },
+        "venue": {
+          "id": 235,
+          "name": "Arena Pantanal",
+          "city": "Cuiabá, Mato Grosso"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group A - 4"
+      },
+      "teams": {
+        "home": {
+          "id": 2381,
+          "name": "Bolivia",
+          "logo": "https://media.api-sports.io/football/teams/2381.png",
+          "winner": false
+        },
+        "away": {
+          "id": 7,
+          "name": "Uruguay",
+          "logo": "https://media.api-sports.io/football/teams/7.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312565,
+        "referee": "N. Pitana",
+        "timezone": "UTC",
+        "date": "2021-06-24T00:00:00+00:00",
+        "timestamp": 1624492800,
+        "periods": {
+          "first": 1624492800,
+          "second": 1624496400
+        },
+        "venue": {
+          "id": 218,
+          "name": "Estádio Nilton Santos",
+          "city": "Rio de Janeiro"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group B - 4"
+      },
+      "teams": {
+        "home": {
+          "id": 6,
+          "name": "Brazil",
+          "logo": "https://media.api-sports.io/football/teams/6.png",
+          "winner": true
+        },
+        "away": {
+          "id": 8,
+          "name": "Colombia",
+          "logo": "https://media.api-sports.io/football/teams/8.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312566,
+        "referee": "Jesús Gil",
+        "timezone": "UTC",
+        "date": "2021-06-23T21:00:00+00:00",
+        "timestamp": 1624482000,
+        "periods": {
+          "first": 1624482000,
+          "second": 1624485600
+        },
+        "venue": {
+          "id": 7311,
+          "name": "Estádio Olímpico Pedro Ludovico Teixeira",
+          "city": "Goiânia, Goiás"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group B - 4"
+      },
+      "teams": {
+        "home": {
+          "id": 2382,
+          "name": "Ecuador",
+          "logo": "https://media.api-sports.io/football/teams/2382.png",
+          "winner": null
+        },
+        "away": {
+          "id": 30,
+          "name": "Peru",
+          "logo": "https://media.api-sports.io/football/teams/30.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312568,
+        "referee": "Raphael Claus",
+        "timezone": "UTC",
+        "date": "2021-06-29T00:00:00+00:00",
+        "timestamp": 1624924800,
+        "periods": {
+          "first": 1624924800,
+          "second": 1624928400
+        },
+        "venue": {
+          "id": 218,
+          "name": "Estádio Nilton Santos",
+          "city": "Rio de Janeiro"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group A - 5"
+      },
+      "teams": {
+        "home": {
+          "id": 7,
+          "name": "Uruguay",
+          "logo": "https://media.api-sports.io/football/teams/7.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2380,
+          "name": "Paraguay",
+          "logo": "https://media.api-sports.io/football/teams/2380.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312569,
+        "referee": "A. Rojas",
+        "timezone": "UTC",
+        "date": "2021-06-29T00:00:00+00:00",
+        "timestamp": 1624924800,
+        "periods": {
+          "first": 1624924800,
+          "second": 1624928400
+        },
+        "venue": {
+          "id": 235,
+          "name": "Arena Pantanal",
+          "city": "Cuiabá, Mato Grosso"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group A - 5"
+      },
+      "teams": {
+        "home": {
+          "id": 2381,
+          "name": "Bolivia",
+          "logo": "https://media.api-sports.io/football/teams/2381.png",
+          "winner": false
+        },
+        "away": {
+          "id": 26,
+          "name": "Argentina",
+          "logo": "https://media.api-sports.io/football/teams/26.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 3
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312572,
+        "referee": "R. Tobar",
+        "timezone": "UTC",
+        "date": "2021-06-27T21:00:00+00:00",
+        "timestamp": 1624827600,
+        "periods": {
+          "first": 1624827600,
+          "second": 1624831200
+        },
+        "venue": {
+          "id": 7311,
+          "name": "Estádio Olímpico Pedro Ludovico Teixeira",
+          "city": "Goiânia, Goiás"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group B - 5"
+      },
+      "teams": {
+        "home": {
+          "id": 6,
+          "name": "Brazil",
+          "logo": "https://media.api-sports.io/football/teams/6.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2382,
+          "name": "Ecuador",
+          "logo": "https://media.api-sports.io/football/teams/2382.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 312573,
+        "referee": "P. Loustau",
+        "timezone": "UTC",
+        "date": "2021-06-27T21:00:00+00:00",
+        "timestamp": 1624827600,
+        "periods": {
+          "first": 1624827600,
+          "second": 1624831200
+        },
+        "venue": {
+          "id": null,
+          "name": "Estádio Nacional de Brasília",
+          "city": "Brasília, Distrito Federal"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Group B - 5"
+      },
+      "teams": {
+        "home": {
+          "id": 2379,
+          "name": "Venezuela",
+          "logo": "https://media.api-sports.io/football/teams/2379.png",
+          "winner": false
+        },
+        "away": {
+          "id": 30,
+          "name": "Peru",
+          "logo": "https://media.api-sports.io/football/teams/30.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 718248,
+        "referee": "E. Ostojich",
+        "timezone": "UTC",
+        "date": "2021-07-02T21:00:00+00:00",
+        "timestamp": 1625259600,
+        "periods": {
+          "first": 1625259600,
+          "second": 1625263200
+        },
+        "venue": {
+          "id": 7311,
+          "name": "Estádio Olímpico Pedro Ludovico Teixeira",
+          "city": "Goiânia, Goiás"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "PEN",
+          "elapsed": 120
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Quarter-finals"
+      },
+      "teams": {
+        "home": {
+          "id": 30,
+          "name": "Peru",
+          "logo": "https://media.api-sports.io/football/teams/30.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2380,
+          "name": "Paraguay",
+          "logo": "https://media.api-sports.io/football/teams/2380.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 3
+        },
+        "extratime": {
+          "home": 0,
+          "away": 0
+        },
+        "penalty": {
+          "home": 4,
+          "away": 3
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 718249,
+        "referee": "P. Loustau",
+        "timezone": "UTC",
+        "date": "2021-07-03T00:00:00+00:00",
+        "timestamp": 1625270400,
+        "periods": {
+          "first": 1625270400,
+          "second": 1625274000
+        },
+        "venue": {
+          "id": 218,
+          "name": "Estádio Nilton Santos",
+          "city": "Rio de Janeiro"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Quarter-finals"
+      },
+      "teams": {
+        "home": {
+          "id": 6,
+          "name": "Brazil",
+          "logo": "https://media.api-sports.io/football/teams/6.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2383,
+          "name": "Chile",
+          "logo": "https://media.api-sports.io/football/teams/2383.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 718250,
+        "referee": "Jesús Gil",
+        "timezone": "UTC",
+        "date": "2021-07-03T22:00:00+00:00",
+        "timestamp": 1625349600,
+        "periods": {
+          "first": 1625349600,
+          "second": 1625353200
+        },
+        "venue": {
+          "id": null,
+          "name": "Estádio Nacional de Brasília",
+          "city": "Brasília, Distrito Federal"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "PEN",
+          "elapsed": 120
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Quarter-finals"
+      },
+      "teams": {
+        "home": {
+          "id": 7,
+          "name": "Uruguay",
+          "logo": "https://media.api-sports.io/football/teams/7.png",
+          "winner": false
+        },
+        "away": {
+          "id": 8,
+          "name": "Colombia",
+          "logo": "https://media.api-sports.io/football/teams/8.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 0
+        },
+        "extratime": {
+          "home": 0,
+          "away": 0
+        },
+        "penalty": {
+          "home": 2,
+          "away": 4
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 718251,
+        "referee": "Wilton Pereira Sampaio",
+        "timezone": "UTC",
+        "date": "2021-07-04T01:00:00+00:00",
+        "timestamp": 1625360400,
+        "periods": {
+          "first": 1625360400,
+          "second": 1625364000
+        },
+        "venue": {
+          "id": 7311,
+          "name": "Estádio Olímpico Pedro Ludovico Teixeira",
+          "city": "Goiânia, Goiás"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Quarter-finals"
+      },
+      "teams": {
+        "home": {
+          "id": 26,
+          "name": "Argentina",
+          "logo": "https://media.api-sports.io/football/teams/26.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2382,
+          "name": "Ecuador",
+          "logo": "https://media.api-sports.io/football/teams/2382.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 721124,
+        "referee": "R. Tobar",
+        "timezone": "UTC",
+        "date": "2021-07-05T23:00:00+00:00",
+        "timestamp": 1625526000,
+        "periods": {
+          "first": 1625526000,
+          "second": 1625529600
+        },
+        "venue": {
+          "id": 218,
+          "name": "Estádio Nilton Santos",
+          "city": "Rio de Janeiro"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Semi-finals"
+      },
+      "teams": {
+        "home": {
+          "id": 6,
+          "name": "Brazil",
+          "logo": "https://media.api-sports.io/football/teams/6.png",
+          "winner": true
+        },
+        "away": {
+          "id": 30,
+          "name": "Peru",
+          "logo": "https://media.api-sports.io/football/teams/30.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 721125,
+        "referee": "J. Valenzuela",
+        "timezone": "UTC",
+        "date": "2021-07-07T01:00:00+00:00",
+        "timestamp": 1625619600,
+        "periods": {
+          "first": 1625619600,
+          "second": 1625623200
+        },
+        "venue": {
+          "id": null,
+          "name": "Estádio Nacional de Brasília",
+          "city": "Brasília, Distrito Federal"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "PEN",
+          "elapsed": 120
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Semi-finals"
+      },
+      "teams": {
+        "home": {
+          "id": 26,
+          "name": "Argentina",
+          "logo": "https://media.api-sports.io/football/teams/26.png",
+          "winner": true
+        },
+        "away": {
+          "id": 8,
+          "name": "Colombia",
+          "logo": "https://media.api-sports.io/football/teams/8.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": 0,
+          "away": 0
+        },
+        "penalty": {
+          "home": 3,
+          "away": 2
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 723368,
+        "referee": "Raphael Claus",
+        "timezone": "UTC",
+        "date": "2021-07-10T00:00:00+00:00",
+        "timestamp": 1625875200,
+        "periods": {
+          "first": 1625875200,
+          "second": 1625878800
+        },
+        "venue": {
+          "id": null,
+          "name": "Estádio Nacional de Brasília",
+          "city": "Brasília, Distrito Federal"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "3rd Place Final"
+      },
+      "teams": {
+        "home": {
+          "id": 8,
+          "name": "Colombia",
+          "logo": "https://media.api-sports.io/football/teams/8.png",
+          "winner": true
+        },
+        "away": {
+          "id": 30,
+          "name": "Peru",
+          "logo": "https://media.api-sports.io/football/teams/30.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 723369,
+        "referee": "E. Ostojich",
+        "timezone": "UTC",
+        "date": "2021-07-11T00:00:00+00:00",
+        "timestamp": 1625961600,
+        "periods": {
+          "first": 1625961600,
+          "second": 1625965200
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio Jornalista Mário Filho",
+          "city": "Rio de Janeiro, Rio de Janeiro"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2021,
+        "round": "Final"
+      },
+      "teams": {
+        "home": {
+          "id": 26,
+          "name": "Argentina",
+          "logo": "https://media.api-sports.io/football/teams/26.png",
+          "winner": true
+        },
+        "away": {
+          "id": 6,
+          "name": "Brazil",
+          "logo": "https://media.api-sports.io/football/teams/6.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ]
+}
