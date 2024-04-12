@@ -57,7 +57,6 @@ export default function Predictions() {
       let correctPredictions = findCorrectPredictions(getParsedResultsArray(), user.predictionGroupStage)
       return { ...user, correctPredictions }
     })
-    console.log("rightScores", getParsedResultsArray())
 
     // Sort users alphabetically && Sort by correct predictions
     userWithCorrectPredictions.sort((a, b) => a.name.localeCompare(b.name)) // Sort by name
@@ -65,7 +64,7 @@ export default function Predictions() {
     const userArray = addUserRanking(userWithCorrectPredictions)
 
     return userArray.map((user: any, idx: number) => (
-      <div key={idx} className="flex justify-between text-lg font-bold">
+      <div key={idx} className="flex justify-between text-lg font-bold max-w-[400px] mx-auto">
         <div className="flex">
           <div className="w-12">
             {user.userRanking}
@@ -103,9 +102,11 @@ export default function Predictions() {
             zIndex: -1,
           }}
         />
-        <h2 className="text-4xl font-bold">Predictions</h2>
-        <div className="text-gray-300 text-sm">
-          <LastUpdatedAt />
+        <div className="lg:text-center">
+          <h2 className="text-4xl font-bold">Predictions</h2>
+          <div className="text-gray-300 text-sm">
+            <LastUpdatedAt />
+          </div>
         </div>
         <div className="my-10 space-y-6">{renderUserPredictions()}</div>
       </div>
