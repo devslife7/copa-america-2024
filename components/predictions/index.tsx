@@ -3,6 +3,7 @@ import background from "../../public/images/predictions-background.png"
 import userPredictions from "../../data/predictions.json"
 import Link from "next/link"
 import fixtures from "../../data/fixtures.json"
+import { format, compareAsc, isToday, isYesterday } from "date-fns"
 
 export default function Predictions() {
   // Sort by match start time
@@ -80,6 +81,13 @@ export default function Predictions() {
       </div>
     ))
   }
+
+  const LastUpdatedAt = () => {
+    const date = new Date()
+    if (isToday(date)) return format(date, "'Last Updated: Today at' h:mm aaa")
+    if (isYesterday(date)) return format(date, "'Last Updated: Yesterday at' h:mm aaa")
+    return format(date, "'Last Updated:' MMMM d, 'at'  h:mm aaa ")
+  }
   return (
     <section>
       <div className="relative rounded-[3rem] -mt-11 -mb-14 py-12 px-7 text-white overflow-hidden">
@@ -96,6 +104,9 @@ export default function Predictions() {
           }}
         />
         <h2 className="text-4xl font-bold">Predictions</h2>
+        <div className="text-gray-300 text-sm">
+          <LastUpdatedAt />
+        </div>
         <div className="my-10 space-y-6">{renderUserPredictions()}</div>
       </div>
     </section>
