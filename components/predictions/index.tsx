@@ -56,7 +56,7 @@ export default function Predictions() {
       let correctPredictions = findCorrectPredictions(getParsedResultsArray(), user.predictionGroupStage)
       return { ...user, correctPredictions }
     })
-    console.log("userRightMatches", userWithCorrectPredictions)
+    console.log("rightScores", getParsedResultsArray())
 
     // Sort users alphabetically && Sort by correct predictions
     userWithCorrectPredictions.sort((a, b) => a.name.localeCompare(b.name)) // Sort by name
@@ -82,7 +82,7 @@ export default function Predictions() {
   }
   return (
     <div>
-      <div className="relative rounded-[3rem] -mt-14 p-12 text-white overflow-hidden">
+      <div className="relative rounded-[3rem] -mt-14 py-12 px-7 text-white overflow-hidden">
         <Image src={background} className=" -z-10 h-full w-full object-cover" fill alt="prediction table" />
         <h2 className="text-4xl font-bold">Predictions</h2>
         <div className="my-10 space-y-6">{renderUserPredictions()}</div>
