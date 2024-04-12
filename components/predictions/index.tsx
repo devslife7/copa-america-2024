@@ -81,12 +81,23 @@ export default function Predictions() {
     ))
   }
   return (
-    <div>
-      <div className="relative rounded-[3rem] -mt-14 py-12 px-7 text-white overflow-hidden">
-        <Image src={background} className=" -z-10 h-full w-full object-cover" fill alt="prediction table" />
+    <section>
+      <div className="relative rounded-[3rem] -mt-11 -mb-14 py-12 px-7 text-white overflow-hidden">
+        <Image
+          src={background}
+          alt="User Predictions"
+          placeholder="blur"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+            zIndex: -1,
+          }}
+        />
         <h2 className="text-4xl font-bold">Predictions</h2>
         <div className="my-10 space-y-6">{renderUserPredictions()}</div>
       </div>
-    </div>
+    </section>
   )
 }
