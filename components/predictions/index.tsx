@@ -21,11 +21,13 @@ export default function Predictions() {
     return userPredictions.map((user, idx) => (
       <div key={idx} className="flex justify-between text-lg font-bold">
         <Link href={`/${user.id}`}>
-          {idx + 1}. {user.name}
+          {idx + 1}
+          st {user.name}
         </Link>
         <div className="flex space-x-10">
-          <p>22/39</p>
-          <p>56%</p>
+          <p className="text-xl">
+            22 <span className="text-sm">pts</span>
+          </p>
         </div>
       </div>
     ))
