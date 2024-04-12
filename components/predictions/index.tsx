@@ -7,11 +7,13 @@ export default function Predictions() {
   const renderUserPredictions = () => {
     // get official results
     // const officialResults = getOfficialResult()
+
     // Add user right matches
     // const userRightMatches = userData.map(user => {
     //   let rightMatches = findCorrectPredictions(officialResults, user.predictionsGS)
     //   return { ...user, rightMatches: rightMatches }
     // })
+
     // Sort users alphabetically || Sort by correct predictions || Add right matches
     // userRightMatches.sort((a, b) => a.first_name.localeCompare(b.first_name))
     // userRightMatches.sort((a, b) => b.rightMatches - a.rightMatches)
@@ -19,10 +21,12 @@ export default function Predictions() {
     return userPredictions.map((user, idx) => (
       <div key={idx} className="flex justify-between text-lg font-bold">
         <Link href={`/${user.id}`}>
-          {user.name} - {user.id}
+          {idx + 1}. {user.name}
         </Link>
-        <p>22/39</p>
-        <p>56%</p>
+        <div className="flex space-x-10">
+          <p>22/39</p>
+          <p>56%</p>
+        </div>
       </div>
     ))
   }
