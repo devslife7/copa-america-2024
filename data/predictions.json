@@ -1,142 +1,184 @@
 [
   {
-    "id": 5,
-    "name": "John Smith",
-    "description": "This is the prediction for John Smith",
+    "id": 3,
+    "name": "John Doe",
     "predictionGroupStage": [
-      "TIE",
-      "B1",
-      "A4",
-      "B3",
-      "C1",
-      "D3",
-      "C3",
-      "D1",
-      "B4",
-      "C3",
-      "TIE",
-      "E1",
-      "A3",
-      "B3",
-      "C1",
-      "D1",
-      "B2",
-      "A3",
-      "A4",
-      "B1",
-      "D4",
-      "C4",
-      "D1",
-      "C1"
+      2382, 11, 2381, 2380, 2383, 2384, 7, 2385, 2384, 2385, 2380, 2382, 2384, 2383, 2385, 2383, 2381, 2380, 29, 30,
+      2385, 2381, 6, 2379
     ],
-    "predictionQuarterFinals": ["B1", "D1", "A3", "C2", "B2", "C1", "D2", "C3"],
-    "predictionSemiFinals": ["B1", "C1", "B2", "C3"],
-    "prediction3rdPlace": ["C1"],
-    "predictionFinal": ["B1", "C3"]
+    "predictionQuarterFinals": [2385, 2380, 2384, 8, 2383, 2382, 2381, 16],
+    "predictionSemiFinals": [2381, 8, 2383, 2385],
+    "prediction3rdPlace": 29,
+    "predictionFinal": [2385, 16],
+    "predictionWinner": 2385
   },
   {
     "id": 6,
-    "name": "Jane Doe",
-    "description": "This is the prediction for Jane Doe",
+    "name": "Jane Smith",
     "predictionGroupStage": [
-      "TIE",
-      "A1",
-      "B4",
-      "C3",
-      "D2",
-      "A3",
-      "B2",
-      "C1",
-      "D4",
-      "TIE",
-      "E1",
-      "B1",
-      "C2",
-      "D3",
-      "A4",
-      "B3",
-      "C1",
-      "D1",
-      "A2",
-      "C4",
-      "B1",
-      "D4",
-      "C1",
-      "A3"
+      2384, 2380, 2380, 2384, 2382, 2381, 2383, 2379, 2383, 2385, 2382, 29, 2383, 30, 2385, 2381, 2384, 2382, 11, 6,
+      2382, 2381, 2380, 2385
     ],
-    "predictionQuarterFinals": ["A1", "C3", "A3", "D4", "B1", "D3", "C1", "A3"],
-    "predictionSemiFinals": ["A1", "A3", "B1", "C1"],
-    "prediction3rdPlace": ["A1"],
-    "predictionFinal": ["A1", "B1"]
+    "predictionQuarterFinals": [2380, 2381, 2384, 8, 2383, 2382, 2385, 2380],
+    "predictionSemiFinals": [2383, 2385, 2382, 2381],
+    "prediction3rdPlace": 29,
+    "predictionFinal": [2381, 2385],
+    "predictionWinner": 2385
   },
   {
-    "id": 7,
-    "name": "Emily Johnson",
-    "description": "This is the prediction for Emily Johnson",
+    "id": 9,
+    "name": "Alice Johnson",
     "predictionGroupStage": [
-      "TIE",
-      "A1",
-      "B4",
-      "C3",
-      "D2",
-      "A3",
-      "B2",
-      "C1",
-      "D4",
-      "TIE",
-      "E1",
-      "B1",
-      "C2",
-      "D3",
-      "A4",
-      "B3",
-      "C1",
-      "D1",
-      "A2",
-      "C4",
-      "B1",
-      "D4",
-      "C1",
-      "A3"
+      2380, 2385, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385,
+      2380, 2381, 2382, 2383, 2384
     ],
-    "predictionQuarterFinals": ["A1", "C3", "A3", "D4", "B1", "D3", "C1", "A3"],
-    "predictionSemiFinals": ["A1", "A3", "B1", "C1"],
-    "prediction3rdPlace": ["A1"],
-    "predictionFinal": ["A1", "B1"]
+    "predictionQuarterFinals": [2381, 2384, 2380, 2383, 2385, 2382, 2384, 2381],
+    "predictionSemiFinals": [2380, 2383, 2385, 2382],
+    "prediction3rdPlace": 2385,
+    "predictionFinal": [2383, 2382],
+    "predictionWinner": 2383
   },
   {
-    "id": 8,
-    "name": "Michael Brown",
-    "description": "This is the prediction for Michael Brown",
+    "id": 12,
+    "name": "David Brown",
     "predictionGroupStage": [
-      "TIE",
-      "A1",
-      "B4",
-      "C3",
-      "D2",
-      "A3",
-      "B2",
-      "C1",
-      "D4",
-      "TIE",
-      "E1",
-      "B1",
-      "C2",
-      "D3",
-      "A4",
-      "B3",
-      "C1",
-      "D1",
-      "A2",
-      "C4",
-      "B1",
-      "D4",
-      "C1",
-      "A3"
+      2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382,
+      2383, 2384, 2385, 2380, 2381
     ],
-    "predictionQuarterFinals": ["A1", "C3", "A3", "D4", "B1", "D3", "C1", "A3"],
-    "predictionSemiFinals": ["A1", "A3", "B1", "C1"],
-    "prediction3rdPlace": ["A1"],
-    "predictionFinal": ["A1", "B1"]
+    "predictionQuarterFinals": [2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383],
+    "predictionSemiFinals": [2384, 2385, 2380, 2381],
+    "prediction3rdPlace": 2380,
+    "predictionFinal": [2384, 2385],
+    "predictionWinner": 2384
+  },
+  {
+    "id": 15,
+    "name": "Emma Wilson",
+    "predictionGroupStage": [
+      2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385,
+      2380, 2381, 2382, 2383, 2384
+    ],
+    "predictionQuarterFinals": [2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380],
+    "predictionSemiFinals": [2381, 2382, 2383, 2384],
+    "prediction3rdPlace": 2385,
+    "predictionFinal": [2381, 2382],
+    "predictionWinner": 2381
+  },
+  {
+    "id": 18,
+    "name": "Michael Taylor",
+    "predictionGroupStage": [
+      2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381,
+      2382, 2383, 2384, 2385, 2380
+    ],
+    "predictionQuarterFinals": [2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382],
+    "predictionSemiFinals": [2383, 2384, 2385, 2380],
+    "prediction3rdPlace": 2381,
+    "predictionFinal": [2383, 2384],
+    "predictionWinner": 2383
+  },
+  {
+    "id": 21,
+    "name": "Olivia Martinez",
+    "predictionGroupStage": [
+      2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380,
+      2381, 2382, 2383, 2384, 2385
+    ],
+    "predictionQuarterFinals": [2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381],
+    "predictionSemiFinals": [2382, 2383, 2384, 2385],
+    "prediction3rdPlace": 2380,
+    "predictionFinal": [2382, 2383],
+    "predictionWinner": 2382
+  },
+  {
+    "id": 24,
+    "name": "William Anderson",
+    "predictionGroupStage": [
+      2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385,
+      2380, 2381, 2382, 2383, 2384
+    ],
+    "predictionQuarterFinals": [2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380],
+    "predictionSemiFinals": [2381, 2382, 2383, 2384],
+    "prediction3rdPlace": 2385,
+    "predictionFinal": [2381, 2382],
+    "predictionWinner": 2381
+  },
+  {
+    "id": 27,
+    "name": "Sophia Garcia",
+    "predictionGroupStage": [
+      2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382,
+      2383, 2384, 2385, 2380, 2381
+    ],
+    "predictionQuarterFinals": [2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383],
+    "predictionSemiFinals": [2384, 2385, 2380, 2381],
+    "prediction3rdPlace": 2382,
+    "predictionFinal": [2384, 2385],
+    "predictionWinner": 2384
+  },
+  {
+    "id": 30,
+    "name": "James Rodriguez",
+    "predictionGroupStage": [
+      2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384, 2385, 2380, 2381, 2382, 2383,
+      2384, 2385, 2380, 2381, 2382
+    ],
+    "predictionQuarterFinals": [2383, 2384, 2385, 2380, 2381, 2382, 2383, 2384],
+    "predictionSemiFinals": [2385, 2380, 2381, 2382],
+    "prediction3rdPlace": 2383,
+    "predictionFinal": [2385, 2380],
+    "predictionWinner": 2385
+  },
+  {
+    "id": 33,
+    "name": "Isabella Lopez",
+    "predictionGroupStage": [
+      2381, 2384, 2380, 2382, 2385, 2383, 2380, 2384, 2381, 2383, 2382, 2385, 2384, 2381, 2383, 2380, 2382, 2385, 2384,
+      2381, 2383, 2380, 2382, 2385
+    ],
+    "predictionQuarterFinals": [2381, 2384, 2380, 2382, 2385, 2383, 2380, 2384],
+    "predictionSemiFinals": [2381, 2383, 2382, 2385],
+    "prediction3rdPlace": 2384,
+    "predictionFinal": [2381, 2383],
+    "predictionWinner": 2383
+  },
+  {
+    "id": 36,
+    "name": "Alexander Hernandez",
+    "predictionGroupStage": [
+      2383, 2380, 2385, 2381, 2384, 2382, 2383, 2380, 2385, 2381, 2384, 2382, 2383, 2380, 2385, 2381, 2384, 2382, 2383,
+      2380, 2385, 2381, 2384, 2382
+    ],
+    "predictionQuarterFinals": [2383, 2380, 2385, 2381, 2384, 2382, 2383, 2380],
+    "predictionSemiFinals": [2385, 2381, 2384, 2382],
+    "prediction3rdPlace": 2383,
+    "predictionFinal": [2385, 2381],
+    "predictionWinner": 2385
+  },
+  {
+    "id": 39,
+    "name": "Mia Martinez",
+    "predictionGroupStage": [
+      2384, 2382, 2380, 2385, 2383, 2381, 2384, 2382, 2380, 2385, 2383, 2381, 2384, 2382, 2380, 2385, 2383, 2381, 2384,
+      2382, 2380, 2385, 2383, 2381
+    ],
+    "predictionQuarterFinals": [2384, 2382, 2380, 2385, 2383, 2381, 2384, 2382],
+    "predictionSemiFinals": [2380, 2385, 2383, 2381],
+    "prediction3rdPlace": 2384,
+    "predictionFinal": [2380, 2385],
+    "predictionWinner": 2380
+  },
+  {
+    "id": 42,
+    "name": "Charlotte Brown",
+    "predictionGroupStage": [
+      2382, 2380, 2385, 2383, 2381, 2384, 2382, 2380, 2385, 2383, 2381, 2384, 2382, 2380, 2385, 2383, 2381, 2384, 2382,
+      2380, 2385, 2383, 2381, 2384
+    ],
+    "predictionQuarterFinals": [2382, 2380, 2385, 2383, 2381, 2384, 2382, 2380],
+    "predictionSemiFinals": [2385, 2383, 2381, 2384],
+    "prediction3rdPlace": 2382,
+    "predictionFinal": [2385, 2383],
+    "predictionWinner": 2385
   }
 ]
