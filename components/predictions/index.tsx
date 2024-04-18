@@ -77,7 +77,6 @@ export default function Predictions() {
             <sup>{user.userRanking.superscript}</sup>
           </div>
           <Link
-            scroll={false}
             href={{
               pathname: `/${user.id}`,
               query: {

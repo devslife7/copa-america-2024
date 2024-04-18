@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "media.api-sports.io",
+      },
+    ],
+  },
+}
 
-export default nextConfig;
+export default nextConfig
