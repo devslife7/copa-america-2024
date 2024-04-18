@@ -31,17 +31,17 @@ export default function userPredictions({ params }: { params: { id: number } }) 
       </div>
 
       <div className="flex justify-between my-8 mx-4 font-bold">
-        <div className="bg-slate-800 p-6 rounded-md">
+        <div className="bg-secondary p-6 rounded-md">
           <div className="text-lg text-gray-200">Position</div>
           <p className="text-3xl text-center">
             1<sup>st</sup>
           </p>
         </div>
-        <div className="bg-slate-800 p-6 rounded-md">
+        <div className="bg-secondary p-6 rounded-md">
           <div className="text-lg text-gray-200">Points</div>
           <p className="text-3xl text-center">22</p>
         </div>
-        <div className="bg-slate-800 p-6 rounded-md">
+        <div className="bg-secondary p-6 rounded-md">
           <div className="text-lg text-gray-200">Percentage</div>
           <p className="text-2xl text-center">54%</p>
         </div>
