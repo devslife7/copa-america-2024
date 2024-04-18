@@ -40,13 +40,19 @@ export default function Predictions() {
     return correctPredictions
   }
 
-  // Add user ranking to array
+  // Add user ranking to array (1st, 2nd, 3rd, 4th, 5th, etc.)
   const addUserRanking = (users: any) => {
     let userRanking = 1
     let userArray: any = []
+
+    const calcSuperscript = (position: number) => (position === 1 ? "st" : position === 2 ? "nd" : position === 3 ? "rd" : "th")
+
     for (let i = 0; i < users.length; i++) {
       if (i !== 0) users[i].correctPredictions !== users[i - 1].correctPredictions && userRanking++
-      userArray = [...userArray, { ...users[i], userRanking: userRanking }]
+      userArray = [
+        ...userArray,
+        { ...users[i], userRanking: { ranking: userRanking, superscript: calcSuperscript(userRanking) } },
+      ]
     }
     return userArray
   }
@@ -67,10 +73,12 @@ export default function Predictions() {
       <div key={idx} className="flex justify-between text-lg font-bold max-w-[400px] mx-auto">
         <div className="flex">
           <div className="w-12">
-            {user.userRanking}
-            {user.userRanking === 1 ? "st" : user.userRanking === 2 ? "nd" : user.userRanking === 3 ? "rd" : "th"}
+            {user.userRanking.ranking}
+            <sup>{user.userRanking.superscript}</sup>
           </div>
-          <Link href={`/${user.id}`}>{user.name}</Link>
+          <Link scroll={false} href={`/${user.id}`}>
+            {user.name}
+          </Link>
         </div>
         <div className="flex space-x-10">
           <p className="text-xl">
