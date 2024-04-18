@@ -1,9 +1,9 @@
 import Image from "next/image"
 import usersPredictions from "../../data/predictions.json"
 import background from "../../public/images/predictions-background.png"
-import Link from "next/link"
-import Fixtures from "./fixtures"
 import BackButton from "./back-button"
+import Fixtures from "./fixtures"
+import { Position, Points, Percentage } from "./ranking"
 
 export default function userPredictions({ params }: { params: { id: number } }) {
   const user = usersPredictions.find(user => user.id == params.id)
@@ -31,21 +31,11 @@ export default function userPredictions({ params }: { params: { id: number } }) 
       </div>
 
       <div className="flex justify-between my-8 mx-4 font-bold text-center overflow-x-auto">
-        <div className="bg-secondary p-6 rounded-md">
-          <div className="text-lg text-gray-200">Position</div>
-          <p className="text-3xl">
-            1<sup>st</sup>
-          </p>
-        </div>
-        <div className="bg-secondary p-6 rounded-md">
-          <div className="text-lg text-gray-200">Points</div>
-          <p className="text-2xl">22/39</p>
-        </div>
-        <div className="bg-secondary p-6 rounded-md">
-          <div className="text-lg text-gray-200">Percentage</div>
-          <p className="text-2xl">54%</p>
-        </div>
+        <Position />
+        <Points />
+        <Percentage />
       </div>
+
       <div>
         <Fixtures predictionGroupStage={predictionGroupStage} />
       </div>
