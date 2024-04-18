@@ -83,9 +83,7 @@ export default function Predictions() {
 
   const LastUpdatedAt = () => {
     const date = new Date()
-    if (isToday(date)) return format(date, "'Last Updated: Today at' h:mm aaa")
-    if (isYesterday(date)) return format(date, "'Last Updated: Yesterday at' h:mm aaa")
-    return format(date, "'Last Updated:' MMMM d, 'at'  h:mm aaa ")
+    return format(date, "'Last Update:' MMMM d, 'at'  h:mm:ss aaa ")
   }
   return (
     <section>

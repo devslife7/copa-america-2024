@@ -2,6 +2,7 @@ import Image from "next/image"
 import usersPredictions from "../../data/predictions.json"
 import background from "../../public/images/predictions-background.png"
 import Link from "next/link"
+import Fixtures from "./Fixtures"
 
 export default function userPredictions({ params }: { params: { id: number } }) {
   const user = usersPredictions.find(user => user.id == params.id)
@@ -45,6 +46,9 @@ export default function userPredictions({ params }: { params: { id: number } }) 
           <div className="text-lg text-gray-200">Percentage</div>
           <p className="text-2xl text-center">54%</p>
         </div>
+      </div>
+      <div>
+        <Fixtures predictionGroupStage={predictionGroupStage} />
       </div>
     </div>
   )
