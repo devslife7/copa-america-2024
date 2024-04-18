@@ -76,7 +76,7 @@ export default function Predictions() {
             {user.userRanking.ranking}
             <sup>{user.userRanking.superscript}</sup>
           </div>
-          <Link scroll={false} href={`/${user.id}`}>
+          <Link scroll={false} href={{ pathname: `/${user.id}`, query: { name: "test" } }}>
             {user.name}
           </Link>
         </div>

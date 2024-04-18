@@ -2,8 +2,8 @@ import Image from "next/image"
 import usersPredictions from "../../data/predictions.json"
 import background from "../../public/images/predictions-background.png"
 import Link from "next/link"
-import Fixtures from "./Fixtures"
-import BackButton from "./backButton"
+import Fixtures from "./fixtures"
+import BackButton from "./back-button"
 
 export default function userPredictions({ params }: { params: { id: number } }) {
   const user = usersPredictions.find(user => user.id == params.id)
