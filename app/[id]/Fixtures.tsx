@@ -15,9 +15,9 @@ export default function Fixtures({ predictionGroupStage }: { predictionGroupStag
   console.log("predictionGroupStage", predictionGroupStage)
 
   const renderFixtures = () => {
-    const idx = 1
-    const fixture = AllFixtures.response[idx]
+    const idx = 0
 
+    const fixture = AllFixtures.response[idx]
     const teamId = predictionGroupStage[idx]
     const isCorrectPrediction = (correctPredictionsArray ?? [])[idx] === "1" ? true : false
 
@@ -50,25 +50,25 @@ export default function Fixtures({ predictionGroupStage }: { predictionGroupStag
       </div>
     )
 
-    // return AllFixtures.response.map((fixture: any) => {
-    //   return (
-    //     <div key={fixture.fixture.id} className="flex justify-between items-center bg-secondary p-4 rounded-md my-2 text-sm">
-    //       <div className="flex items-center">
-    //         {renderFlag(fixture.teams.home)}
-    //         <span className="ml-2">{fixture.teams.home.name}</span>
-    //       </div>
-    //       <div className="flex items-center">
-    //         <span>{fixture.goals.home}</span>
-    //         <span> - </span>
-    //         <span>{fixture.goals.away}</span>
-    //       </div>
-    //       <div className="flex items-center">
-    //         <span className="mr-2">{fixture.teams.away.name}</span>
-    //         {renderFlag(fixture.teams.away)}
-    //       </div>
-    //     </div>
-    //   )
-    // })
+    return AllFixtures.response.map((fixture: any) => {
+      return (
+        <div key={fixture.fixture.id} className="flex justify-between items-center bg-secondary p-4 rounded-md my-2 text-sm">
+          <div className="flex items-center">
+            {renderFlag(fixture.teams.home)}
+            <span className="ml-2">{fixture.teams.home.name}</span>
+          </div>
+          <div className="flex items-center">
+            <span>{fixture.goals.home}</span>
+            <span> - </span>
+            <span>{fixture.goals.away}</span>
+          </div>
+          <div className="flex items-center">
+            <span className="mr-2">{fixture.teams.away.name}</span>
+            {renderFlag(fixture.teams.away)}
+          </div>
+        </div>
+      )
+    })
   }
   return (
     <div>
@@ -82,13 +82,19 @@ const renderFixture = (fixture: any) => {
   return (
     <div className="flex justify-between p-2 bg-gray-800 rounded-md w-full">
       <div>
-        <h2 className="mb-1">{fixture.teams.home.name}</h2>
-        <h2>{fixture.teams.away.name}</h2>
+        <div className="mb-2 flex items-center space-x-3">
+          <span>{renderFlag(fixture.teams.home)}</span>
+          <span>{fixture.teams.home.name}</span>
+        </div>
+        <div className="flex items-center space-x-3">
+          <span>{renderFlag(fixture.teams.away)}</span>
+          <span>{fixture.teams.away.name}</span>
+        </div>
       </div>
       {fixture.fixture.status.short === "FT" ? (
         <div className="flex">
-          <div className="border-r-2 border-gray-600 pr-4">
-            <h2 className="mb-1">{fixture.goals.home}</h2>
+          <div className="border-r-2 border-gray-600 pr-4 flex flex-col justify-between my-1">
+            <h2>{fixture.goals.home}</h2>
             <h2>{fixture.goals.away}</h2>
           </div>
           <div className="flex items-center text-sm">
