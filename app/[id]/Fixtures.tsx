@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation"
 import XMarkSVG from "@/public/svgs/x-mark"
 import CircleSVG from "@/public/svgs/circle"
 import { format, fromUnixTime } from "date-fns"
+import { cn } from "@/lib/utils"
 
 export default function Fixtures({ predictionGroupStage }: { predictionGroupStage: any }) {
   const searchParams = useSearchParams()
@@ -18,7 +19,7 @@ export default function Fixtures({ predictionGroupStage }: { predictionGroupStag
   const renderFixtures = () => {
     return AllFixtures.response.map((fixture: any, idx: number) => {
       return (
-        <div key={fixture.fixture.id} className="flex bg-secondary h-[140px] p-4">
+        <div key={fixture.fixture.id} className="flex h-[140px] p-4 pr-6">
           <div className="relative w-10 text-xl text-gray-400 text-center">
             {fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN" ? (
               (isCorrectPredictionArray ?? [])[idx] ? (
@@ -30,7 +31,7 @@ export default function Fixtures({ predictionGroupStage }: { predictionGroupStag
               <CircleSVG className="text-gray-400 mx-auto mb-1" />
             )}
 
-            <div className="absolute left-4 top-[1.4rem]">
+            <div className={cn("absolute left-4 top-[1.4rem]", { hidden: AllFixtures.response.length - 1 === idx })}>
               <div className="text-xs">{"|"}</div>
               <div className="text-xs">{"|"}</div>
               <div className="text-xs">{"|"}</div>
@@ -53,12 +54,7 @@ export default function Fixtures({ predictionGroupStage }: { predictionGroupStag
       )
     })
   }
-  return (
-    <div>
-      <div className="text-3xl m-5 ">Fixtures</div>
-      {renderFixtures()}
-    </div>
-  )
+  return <div className="max-w-[700px] mx-auto bg-secondary">{renderFixtures()}</div>
 }
 
 const renderFixture = (fixture: any) => {

@@ -6,3 +6,7 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: #f7fafc;
 }
+
+.my-container {
+  @apply container mx-auto px-4 lg:px-8;
+}
