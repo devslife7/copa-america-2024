@@ -3,7 +3,7 @@ import background from "../../public/images/predictions-background.png"
 import userPredictions from "../../data/predictions.json"
 import Link from "next/link"
 import fixtures from "../../data/fixtures.json"
-import { format, compareAsc, isToday, isYesterday } from "date-fns"
+import { format } from "date-fns"
 
 export default function Predictions() {
   // Sort by match start time
@@ -33,11 +33,17 @@ export default function Predictions() {
   // Compare official results with user predictions and return how many correct predictions
   const findCorrectPredictions = (parsedResultsArray: (number | string)[], predictions: (number | string)[]) => {
     if (parsedResultsArray.length === 0) return
-    let correctPredictions = 0
+    let correctPredictions: number = 0
+    let correctPredictionsArray: number[] = []
     for (let i = 0; i < parsedResultsArray.length; i++) {
-      parsedResultsArray[i] === predictions[i] && correctPredictions++
+      if (parsedResultsArray[i] === predictions[i]) {
+        correctPredictions++
+        correctPredictionsArray.push(1)
+      } else {
+        correctPredictionsArray.push(0)
+      }
     }
-    return correctPredictions
+    return { correctPredictions, correctPredictionsArray }
   }
 
   // Add user ranking to array (1st, 2nd, 3rd, 4th, 5th, etc.)
@@ -60,8 +66,11 @@ export default function Predictions() {
   const renderUserPredictions = () => {
     // Get user points, compare with user preidctions with api parsed array of official match results.
     const userWithCorrectPredictions = userPredictions.map(user => {
-      let correctPredictions = findCorrectPredictions(getParsedResultsArray(), user.predictionGroupStage)
-      return { ...user, correctPredictions }
+      const { correctPredictions, correctPredictionsArray } = findCorrectPredictions(
+        getParsedResultsArray(),
+        user.predictionGroupStage
+      ) as { correctPredictions: number; correctPredictionsArray: number[] } // Add type assertion here
+      return { ...user, correctPredictions, correctPredictionsArray }
     })
 
     // Sort users alphabetically && Sort by correct predictions
@@ -83,6 +92,7 @@ export default function Predictions() {
                 points: user.correctPredictions,
                 ranking: user.userRanking.ranking,
                 superscript: user.userRanking.superscript,
+                correctPredictionsArray: user.correctPredictionsArray,
               },
             }}
           >

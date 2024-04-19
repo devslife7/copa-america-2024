@@ -1,12 +1,16 @@
 import AllFixtures from "@/data/fixtures.json"
 import CheckMarkSVG from "@/public/svgs/check-mark"
 import Image from "next/image"
+import TeamIds from "@/data/team-ids.json"
 
 export default function Fixtures({ predictionGroupStage }: { predictionGroupStage: any }) {
   console.log("predictionGroupStage", predictionGroupStage)
 
   const renderFixtures = () => {
-    const fixture = AllFixtures.response[0]
+    const idx = 0
+    const fixture = AllFixtures.response[idx]
+
+    const teamId = predictionGroupStage[idx]
 
     return (
       <div key={fixture.fixture.id} className="flex bg-secondary p-4 my-2 text-sm">
@@ -19,7 +23,7 @@ export default function Fixtures({ predictionGroupStage }: { predictionGroupStag
         </div>
         <div className="w-full">
           <div className="flex justify-between">
-            <h2 className="mb-2">Argentina</h2>
+            <h2 className="mb-2">{TeamIds[teamId as keyof typeof TeamIds]}</h2>
             <span>+1</span>
           </div>
 
