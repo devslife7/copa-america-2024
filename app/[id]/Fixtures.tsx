@@ -10,61 +10,44 @@ import { format, fromUnixTime } from "date-fns"
 
 export default function Fixtures({ predictionGroupStage }: { predictionGroupStage: any }) {
   const searchParams = useSearchParams()
-  const correctPredictionsArray = searchParams.get("correctPredictionsArray")?.split("") // Gets the string of url and splits it into an array
-
-  console.log("predictionGroupStage", predictionGroupStage)
+  // Gets the string of url and splits it into an array of strings
+  const correctPredictionsArrayString = searchParams.get("correctPredictionsArray")?.split("")
+  // Converts the array of strings into an array of booleans where 1 is true and 0 is false
+  const isCorrectPredictionArray = correctPredictionsArrayString?.map(item => item === "1")
 
   const renderFixtures = () => {
-    const idx = 0
-
-    const fixture = AllFixtures.response[idx]
-    const teamId = predictionGroupStage[idx]
-    const isCorrectPrediction = (correctPredictionsArray ?? [])[idx] === "1" ? true : false
-
-    return (
-      <div key={fixture.fixture.id} className="flex bg-secondary p-4 my-2">
-        <div className="w-10 text-xl text-gray-400 text-center">
-          {fixture.fixture.status.short === "FT" ? (
-            isCorrectPrediction ? (
-              <CheckMarkSVG className="text-green-400 mx-auto mb-1" />
-            ) : (
-              <XMarkSVG className="text-red-400 text-3xl mx-auto mb-1" />
-            )
-          ) : (
-            <CircleSVG className="text-gray-400 mx-auto mb-1" />
-          )}
-
-          {/* <div className="text-xs">{"|"}</div>
-          <div className="text-xs">{"|"}</div>
-          <div className="text-xs">{"|"}</div>
-          <div className="text-xs">{"|"}</div> */}
-        </div>
-        <div className="w-full">
-          <div className="flex justify-between">
-            <h2 className="mb-2">{TeamIds[teamId as keyof typeof TeamIds]}</h2>
-            {fixture.fixture.status.short === "FT" && (isCorrectPrediction ? <span>+1</span> : <span>+0</span>)}
-          </div>
-
-          {renderFixture(fixture)}
-        </div>
-      </div>
-    )
-
-    return AllFixtures.response.map((fixture: any) => {
+    return AllFixtures.response.map((fixture: any, idx: number) => {
       return (
-        <div key={fixture.fixture.id} className="flex justify-between items-center bg-secondary p-4 rounded-md my-2 text-sm">
-          <div className="flex items-center">
-            {renderFlag(fixture.teams.home)}
-            <span className="ml-2">{fixture.teams.home.name}</span>
+        <div key={fixture.fixture.id} className="flex bg-secondary h-[140px] p-4">
+          <div className="relative w-10 text-xl text-gray-400 text-center">
+            {fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN" ? (
+              (isCorrectPredictionArray ?? [])[idx] ? (
+                <CheckMarkSVG className="text-green-400 mx-auto mb-1" />
+              ) : (
+                <XMarkSVG className="text-red-400 text-3xl mx-auto mb-1" />
+              )
+            ) : (
+              <CircleSVG className="text-gray-400 mx-auto mb-1" />
+            )}
+
+            <div className="absolute left-4 top-[1.4rem]">
+              <div className="text-xs">{"|"}</div>
+              <div className="text-xs">{"|"}</div>
+              <div className="text-xs">{"|"}</div>
+              <div className="text-xs">{"|"}</div>
+              <div className="text-xs">{"|"}</div>
+              <div className="text-xs">{"|"}</div>
+              <div className="text-xs">{"|"}</div>
+            </div>
           </div>
-          <div className="flex items-center">
-            <span>{fixture.goals.home}</span>
-            <span> - </span>
-            <span>{fixture.goals.away}</span>
-          </div>
-          <div className="flex items-center">
-            <span className="mr-2">{fixture.teams.away.name}</span>
-            {renderFlag(fixture.teams.away)}
+          <div className="w-full">
+            <div className="flex justify-between">
+              <h2 className="mb-2">{TeamIds[predictionGroupStage[idx] as keyof typeof TeamIds]}</h2>
+              {fixture.fixture.status.short === "FT" &&
+                ((isCorrectPredictionArray ?? [])[idx] ? <span>+1</span> : <span>+0</span>)}
+            </div>
+
+            {renderFixture(fixture)}
           </div>
         </div>
       )
