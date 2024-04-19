@@ -5,11 +5,10 @@ import BackButton from "./back-button"
 import Fixtures from "./fixtures"
 import { Position, Points, Percentage } from "./ranking"
 
-export default function userPredictions({ params }: { params: { id: number } }) {
+export default function userPredictions({ params }: { params: any }) {
   const user = usersPredictions.find(user => user.id == params.id)
   if (!user) return <div>User not found</div>
   const { name, predictionGroupStage } = user
-  console.log("predictionGroupStage", predictionGroupStage)
 
   return (
     <div className="relative h-screen text-white">

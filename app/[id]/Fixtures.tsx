@@ -1,25 +1,30 @@
+"use client"
 import AllFixtures from "@/data/fixtures.json"
 import CheckMarkSVG from "@/public/svgs/check-mark"
 import Image from "next/image"
 import TeamIds from "@/data/team-ids.json"
+import { useSearchParams } from "next/navigation"
 
 export default function Fixtures({ predictionGroupStage }: { predictionGroupStage: any }) {
-  console.log("predictionGroupStage", predictionGroupStage)
+  const searchParams = useSearchParams()
+  const correctPredictionsArray = searchParams.get("correctPredictionsArray")?.split("") // Gets the string of url and splits it into an array
 
   const renderFixtures = () => {
     const idx = 0
     const fixture = AllFixtures.response[idx]
 
     const teamId = predictionGroupStage[idx]
+    const isCorrectPrediction = (correctPredictionsArray ?? [])[idx] === "1" ? true : false
 
     return (
       <div key={fixture.fixture.id} className="flex bg-secondary p-4 my-2 text-sm">
-        <div className="w-10 text-2xl text-gray-400 text-center">
-          <CheckMarkSVG className="text-green-400 mx-auto mb-1" />
+        <div className="w-10 text-xl text-gray-400 text-center">
+          {/* if match is final result then */}
+          {isCorrectPrediction ? <CheckMarkSVG className="text-green-400 mx-auto mb-1" /> : <div>X</div>}
+          {/* <div className="text-xs">{"|"}</div>
           <div className="text-xs">{"|"}</div>
           <div className="text-xs">{"|"}</div>
-          <div className="text-xs">{"|"}</div>
-          <div className="text-xs">{"|"}</div>
+          <div className="text-xs">{"|"}</div> */}
         </div>
         <div className="w-full">
           <div className="flex justify-between">

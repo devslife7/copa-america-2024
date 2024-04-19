@@ -34,13 +34,13 @@ export default function Predictions() {
   const findCorrectPredictions = (parsedResultsArray: (number | string)[], predictions: (number | string)[]) => {
     if (parsedResultsArray.length === 0) return
     let correctPredictions: number = 0
-    let correctPredictionsArray: number[] = []
+    let correctPredictionsArray: string = ""
     for (let i = 0; i < parsedResultsArray.length; i++) {
       if (parsedResultsArray[i] === predictions[i]) {
         correctPredictions++
-        correctPredictionsArray.push(1)
+        correctPredictionsArray = correctPredictionsArray + "1"
       } else {
-        correctPredictionsArray.push(0)
+        correctPredictionsArray = correctPredictionsArray + "0"
       }
     }
     return { correctPredictions, correctPredictionsArray }
@@ -69,7 +69,7 @@ export default function Predictions() {
       const { correctPredictions, correctPredictionsArray } = findCorrectPredictions(
         getParsedResultsArray(),
         user.predictionGroupStage
-      ) as { correctPredictions: number; correctPredictionsArray: number[] } // Add type assertion here
+      ) as { correctPredictions: number; correctPredictionsArray: string } // Add type assertion here
       return { ...user, correctPredictions, correctPredictionsArray }
     })
 
