@@ -4,6 +4,7 @@ import CheckMarkSVG from "@/public/svgs/check-mark"
 import Image from "next/image"
 import TeamIds from "@/data/team-ids.json"
 import { useSearchParams } from "next/navigation"
+import XMarkSVG from "@/public/svgs/x-mark"
 
 export default function Fixtures({ predictionGroupStage }: { predictionGroupStage: any }) {
   const searchParams = useSearchParams()
@@ -17,10 +18,16 @@ export default function Fixtures({ predictionGroupStage }: { predictionGroupStag
     const isCorrectPrediction = (correctPredictionsArray ?? [])[idx] === "1" ? true : false
 
     return (
-      <div key={fixture.fixture.id} className="flex bg-secondary p-4 my-2 text-sm">
+      <div key={fixture.fixture.id} className="flex bg-secondary p-4 my-2">
         <div className="w-10 text-xl text-gray-400 text-center">
           {/* if match is final result then */}
-          {isCorrectPrediction ? <CheckMarkSVG className="text-green-400 mx-auto mb-1" /> : <div>X</div>}
+          {isCorrectPrediction ? (
+            <CheckMarkSVG className="text-green-400 mx-auto mb-1" />
+          ) : (
+            <div>
+              <XMarkSVG />
+            </div>
+          )}
           {/* <div className="text-xs">{"|"}</div>
           <div className="text-xs">{"|"}</div>
           <div className="text-xs">{"|"}</div>
@@ -29,7 +36,7 @@ export default function Fixtures({ predictionGroupStage }: { predictionGroupStag
         <div className="w-full">
           <div className="flex justify-between">
             <h2 className="mb-2">{TeamIds[teamId as keyof typeof TeamIds]}</h2>
-            <span>+1</span>
+            {fixture.fixture.status.short === "FT" && (isCorrectPrediction ? <span>+1</span> : <span>+0</span>)}
           </div>
 
           {renderFixture(fixture)}
