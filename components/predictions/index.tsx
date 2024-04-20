@@ -81,7 +81,7 @@ export default function Predictions() {
     return userArray.map((user: any, idx: number) => (
       <div key={idx} className="flex justify-between text-lg font-bold max-w-[400px] mx-auto">
         <div className="flex">
-          <div className="w-12">
+          <div className="w-9">
             {user.userRanking.ranking}
             <sup>{user.userRanking.superscript}</sup>
           </div>
@@ -114,21 +114,21 @@ export default function Predictions() {
   }
   return (
     <section>
-      <div className="relative rounded-[3rem] -mt-11 -mb-14 py-12 px-7 text-white overflow-hidden">
+      <div className="relative rounded-[3rem] -mt-11 -mb-14 pt-12 pb-8 px-7 text-white overflow-hidden">
         <Image
           src={background}
-          alt="User Predictions"
+          alt="user predictions table"
           placeholder="blur"
           quality={100}
           fill
           sizes="100vw"
           style={{
             objectFit: "cover",
-            zIndex: -1,
           }}
+          className="z-[-1]"
         />
-        <div className="lg:text-center">
-          <h2 className="text-4xl font-bold">Predictions</h2>
+        <div className="lg:text-center z-10">
+          <h2 className="text-4xl font-bold z-50">Predictions</h2>
           <div className="text-gray-300 text-sm">
             <LastUpdatedAt />
           </div>

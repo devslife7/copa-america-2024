@@ -15,7 +15,7 @@ export default function Hero() {
         fill
         priority
         alt="Hero background"
-        className="-z-10"
+        className="z-[-1]"
       />
       <div className="mb-16 lg:mb-[6.5rem] text-center lg:space-y-2 font-bold">
         <h3 className="text-2xl lg:text-4xl">
