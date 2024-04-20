@@ -9,7 +9,7 @@ import CircleSVG from "@/public/svgs/circle"
 import { format, fromUnixTime } from "date-fns"
 import { cn } from "@/lib/utils"
 
-export default function Fixtures({ predictionGroupStage }: { predictionGroupStage: any }) {
+export default function Fixtures({ user }: { user: any }) {
   const searchParams = useSearchParams()
   // Gets the string of url and splits it into an array of strings
   const correctPredictionsArrayString = searchParams.get("correctPredictionsArray")?.split("")
@@ -43,7 +43,7 @@ export default function Fixtures({ predictionGroupStage }: { predictionGroupStag
           </div>
           <div className="w-full">
             <div className="flex justify-between">
-              <h2 className="mb-2">{TeamIds[predictionGroupStage[idx] as keyof typeof TeamIds]}</h2>
+              <h2 className="mb-2">{TeamIds[user.predictionGroupStage[idx] as keyof typeof TeamIds]}</h2>
               {fixture.fixture.status.short === "FT" &&
                 ((isCorrectPredictionArray ?? [])[idx] ? <span>+1</span> : <span>+0</span>)}
             </div>
@@ -70,7 +70,7 @@ const renderFixture = (fixture: any) => {
           <span>{fixture.teams.away.name}</span>
         </div>
       </div>
-      {fixture.fixture.status.short === "FT" ? (
+      {fixture.fixture.status.short !== "FT" ? (
         <div className="flex">
           <div className="border-r-2 border-gray-600 pr-4 flex flex-col justify-between my-1">
             <h2>{fixture.goals.home}</h2>
@@ -85,7 +85,7 @@ const renderFixture = (fixture: any) => {
         </div>
       ) : (
         <div className="flex items-end text-gray-300 text-sm">
-          {String(format(fromUnixTime(fixture.fixture.timestamp), "MMMM dd, h aaa"))}
+          {String(format(fromUnixTime(fixture.fixture.timestamp), "MMMM d, h aaa"))}
         </div>
       )}
     </div>

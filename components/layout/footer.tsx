@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { socialMediaLinks } from "@/lib/social-media-links"
 import FacebookSVG from "@/public/svgs/socials/facebook"
 import InstagramSVG from "@/public/svgs/socials/instagram"
 import WorldSVG from "@/public/svgs/socials/world"

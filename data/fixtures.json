@@ -1797,7 +1797,7 @@
         },
         "status": {
           "long": "Match Finished",
-          "short": "FT",
+          "short": "NS",
           "elapsed": 90
         }
       },
@@ -1865,7 +1865,7 @@
         },
         "status": {
           "long": "Match Finished",
-          "short": "FT",
+          "short": "NS",
           "elapsed": 90
         }
       },
