@@ -1,9 +1,10 @@
+import { cn } from "@/lib/utils"
 import { format, fromUnixTime } from "date-fns"
 import Image from "next/image"
 
-export default function RenderFixture({ fixture }: { fixture: any }) {
+export default function RenderFixture({ fixture, tbd, className }: { fixture: any; tbd?: boolean; className?: string }) {
   return (
-    <div className="flex justify-between p-2 bg-gray-800 rounded-md w-full">
+    <div className={cn("flex justify-between p-2 bg-gray-800 rounded-md w-full text-white", className)}>
       <div>
         <div className="mb-2 flex items-center space-x-3">
           <span>{renderFlag(fixture.teams.home)}</span>
@@ -14,7 +15,7 @@ export default function RenderFixture({ fixture }: { fixture: any }) {
           <span>{fixture.teams.away.name}</span>
         </div>
       </div>
-      {fixture.fixture.status.short !== "FT" ? (
+      {fixture.fixture.status.short === "FT" ? (
         <div className="flex">
           <div className="border-r-2 border-gray-600 pr-4 flex flex-col justify-between my-1">
             <h2>{fixture.goals.home}</h2>
@@ -38,6 +39,6 @@ export default function RenderFixture({ fixture }: { fixture: any }) {
 
 const renderFlag = (team: any) => {
   const teamsWithFlags = [2382, 7, 26, 6]
-  const height = teamsWithFlags.includes(team.id) ? 20 : 32
-  return <Image src={team.logo} alt={team.name} width={32} height={height} className="w-full h-auto" />
+  const height = teamsWithFlags.includes(team.id) ? 12 : 24
+  return <Image src={team.logo} alt={team.name} width={24} height={height} className="w-full h-auto" />
 }
