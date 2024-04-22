@@ -39,6 +39,6 @@ export default function RenderFixture({ fixture, tbd, className }: { fixture: an
 
 const renderFlag = (team: any) => {
   const teamsWithFlags = [2382, 7, 26, 6]
-  const height = teamsWithFlags.includes(team.id) ? 12 : 24
-  return <Image src={team.logo} alt={team.name} width={24} height={height} className="w-full h-auto" />
+  const height = teamsWithFlags.includes(team.id) ? 11 : 22
+  return <Image src={team.logo} alt={team.name} width={22} height={height} className="" />
 }

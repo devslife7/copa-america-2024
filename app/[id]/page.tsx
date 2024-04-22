@@ -5,7 +5,7 @@ import BackButton from "./back-button"
 
 import { Position, Points, Percentage } from "./ranking"
 import { format } from "date-fns"
-import Fixtures from "./test"
+import Fixtures from "./fixtures"
 
 export default function userPredictions({ params }: { params: any }) {
   const user = usersPredictions.find(user => user.id == params.id)
