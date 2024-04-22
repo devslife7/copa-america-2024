@@ -13,6 +13,7 @@ export default function userPredictions({ params }: { params: any }) {
 
   const LastUpdatedAt = () => {
     const date = new Date()
+    console.log("date: ", date)
     return format(date, "'Last Update:' MMMM d, 'at'  h:mm:ss aaa ")
   }
 
