@@ -43,14 +43,6 @@ export default function userPredictions({ params }: { params: any }) {
         <LastUpdatedAt />
       </div>
 
-      <div className="flex mb-4 ml-4 gap-2 overflow-auto text-sm text-gray-200">
-        <div className="bg-gray-100 text-secondary py-2 px-4 rounded-lg">All</div>
-        <div className="bg-secondary py-2 px-4 rounded-lg">Groups</div>
-        <div className="bg-secondary py-2 px-4 rounded-lg">Quarters</div>
-        <div className="bg-secondary py-2 px-4 rounded-lg">Semis</div>
-        <div className="bg-secondary py-2 px-4 rounded-lg">Final</div>
-      </div>
-
       <div>
         <Fixtures user={user} />
       </div>

@@ -81,13 +81,12 @@ export default function Predictions() {
     const userArray = addUserRanking(userWithCorrectPredictions)
 
     return userArray.map((user: any, idx: number) => (
-      // <div key={idx} className="flex justify-between text-lg font-bold max-w-[400px] mx-auto" >
       <div
         key={idx}
         className={cn("flex justify-between text-lg font-bold max-w-[400px] mx-auto", isWinnerStyle(user.userRanking.ranking))}
       >
-        <div className={cn("flex", isWinnerStyle(user.userRanking.ranking))}>
-          <div className={cn("w-9", isWinnerStyle(user.userRanking.ranking))}>
+        <div className="flex">
+          <div className="w-9">
             {user.userRanking.ranking}
             <sup>{user.userRanking.superscript}</sup>
           </div>
@@ -99,6 +98,7 @@ export default function Predictions() {
                 ranking: user.userRanking.ranking,
                 superscript: user.userRanking.superscript,
                 correctPredictionsArray: user.correctPredictionsArray,
+                sortBy: "All",
               },
             }}
           >

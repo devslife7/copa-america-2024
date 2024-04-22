@@ -9,9 +9,14 @@ import CircleSVG from "@/public/svgs/circle"
 import { format, fromUnixTime } from "date-fns"
 import { cn } from "@/lib/utils"
 import RenderFixture from "@/components/shared/render-fixture"
+import { useState } from "react"
+
+const sortByOptions = ["All", "Groups", "Quarters", "Semis", "Finals"]
 
 export default function Fixtures({ user }: { user: any }) {
   const searchParams = useSearchParams()
+  // const sortBy = searchParams.get("sortBy")
+  const [sortBy, setSortBy] = useState("All")
   // Gets the string of url and splits it into an array of strings
   const correctPredictionsArrayString = searchParams.get("correctPredictionsArray")?.split("")
   // Converts the array of strings into an array of booleans where 1 is true and 0 is false
@@ -55,5 +60,37 @@ export default function Fixtures({ user }: { user: any }) {
       )
     })
   }
-  return <div className="max-w-[700px] mx-auto bg-secondary">{renderFixtures()}</div>
+  const RenderSortingMenu = () => {
+    return (
+      <div className="flex mb-4 ml-4 gap-2 overflow-auto text-sm text-gray-200">
+        {sortByOptions.map(option => {
+          return (
+            <div
+              key={option}
+              className={cn(
+                "bg-secondary py-2 px-4 rounded-lg",
+                { "bg-gray-100 text-secondary": option === sortBy },
+                "cursor-pointer"
+              )}
+              onClick={() => setSortBy(option)}
+            >
+              {option}
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+
+  return (
+    <>
+      <RenderSortingMenu />\<div className="max-w-[700px] mx-auto bg-secondary">{renderFixtures()}</div>
+    </>
+  )
+}
+
+const sortByGroup = (fixtures: any) => {
+  return fixtures.response.filter((fixture: any) => {
+    return fixture.league.name === "Group Stage"
+  })
 }
