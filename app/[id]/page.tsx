@@ -12,7 +12,7 @@ export default function userPredictions({ params }: { params: any }) {
   if (!user) return <div>User not found</div>
 
   const LastUpdatedAt = () => {
-    const date = new Date()
+    const date = new Date().toLocaleString("en-US", { timeZone: "America/New_York" })
     console.log("date: ", date)
     return format(date, "'Last Update:' MMMM d, 'at'  h:mm:ss aaa ")
   }
