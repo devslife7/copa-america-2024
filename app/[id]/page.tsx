@@ -2,9 +2,10 @@ import Image from "next/image"
 import usersPredictions from "../../data/predictions.json"
 import background from "../../public/images/predictions-background.png"
 import BackButton from "./back-button"
-import Fixtures from "./fixtures"
+
 import { Position, Points, Percentage } from "./ranking"
 import { format } from "date-fns"
+import Fixtures from "./test"
 
 export default function userPredictions({ params }: { params: any }) {
   const user = usersPredictions.find(user => user.id == params.id)
