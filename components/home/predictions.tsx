@@ -5,6 +5,7 @@ import Link from "next/link"
 import fixtures from "../../data/fixtures.json"
 import { format } from "date-fns"
 import ExternalLinkSVG from "@/public/svgs/external-link"
+import { cn } from "@/lib/utils"
 
 export default function Predictions() {
   // Sort by match start time
@@ -80,9 +81,13 @@ export default function Predictions() {
     const userArray = addUserRanking(userWithCorrectPredictions)
 
     return userArray.map((user: any, idx: number) => (
-      <div key={idx} className="flex justify-between text-lg font-bold max-w-[400px] mx-auto">
-        <div className="flex">
-          <div className="w-9">
+      // <div key={idx} className="flex justify-between text-lg font-bold max-w-[400px] mx-auto" >
+      <div
+        key={idx}
+        className={cn("flex justify-between text-lg font-bold max-w-[400px] mx-auto", isWinnerStyle(user.userRanking.ranking))}
+      >
+        <div className={cn("flex", isWinnerStyle(user.userRanking.ranking))}>
+          <div className={cn("w-9", isWinnerStyle(user.userRanking.ranking))}>
             {user.userRanking.ranking}
             <sup>{user.userRanking.superscript}</sup>
           </div>
@@ -110,10 +115,6 @@ export default function Predictions() {
     ))
   }
 
-  const LastUpdatedAt = () => {
-    const date = new Date()
-    return format(date, "'Last Update:' MMMM d, 'at'  h:mm:ss aaa ")
-  }
   return (
     <section>
       <div className="relative rounded-[3rem] -mt-11 -mb-14 pt-12 pb-8 px-7 text-white overflow-hidden">
@@ -139,4 +140,13 @@ export default function Predictions() {
       </div>
     </section>
   )
+}
+
+const LastUpdatedAt = () => {
+  const date = new Date()
+  return format(date, "'Last Update:' MMMM d, 'at'  h:mm:ss aaa ")
+}
+
+const isWinnerStyle = (ranking: number) => {
+  return ranking === 1 ? "text-green-400" : ranking === 2 ? "text-yellow-200" : ranking === 3 ? "text-blue-400" : ""
 }
