@@ -17,7 +17,7 @@ export default function Credits() {
       </div>
 
       <div className="text-center">
-        <h2 className="mb-1 text-sm">Business inquireies:</h2>
+        <h2 className="mb-1 text-sm">Business inquireies at</h2>
         <p className="text-xl">devslife7@gmail.com</p>
       </div>
     </div>

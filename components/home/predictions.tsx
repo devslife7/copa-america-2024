@@ -4,6 +4,7 @@ import userPredictions from "../../data/predictions.json"
 import Link from "next/link"
 import fixtures from "../../data/fixtures.json"
 import { format } from "date-fns"
+import ExternalLinkSVG from "@/public/svgs/external-link"
 
 export default function Predictions() {
   // Sort by match start time
@@ -97,6 +98,7 @@ export default function Predictions() {
             }}
           >
             {user.name}
+            <ExternalLinkSVG className="w-[10px] ml-1 inline-block text-gray-400" />
           </Link>
         </div>
         <div className="flex space-x-10">

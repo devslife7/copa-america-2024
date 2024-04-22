@@ -39,7 +39,7 @@ export default function userPredictions({ params }: { params: any }) {
         <Points />
         <Percentage />
       </div>
-      <div className="mx-6 text-gray-400 mb-6 text-sm">
+      <div className="mx-6 text-gray-400 text-sm mb-[60px]">
         <LastUpdatedAt />
       </div>
 
