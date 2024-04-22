@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inika.className, inter.className)}>
+      <body className={cn("bg-slate-900", inika.className, inter.className)}>
         {children}
         <Footer />
       </body>
