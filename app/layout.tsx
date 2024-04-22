@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Inter, Inika } from "next/font/google"
 import "./globals.css"
 import Footer from "@/components/layout/footer"
+import { cn } from "@/lib/utils"
 
 const inter = Inter({ subsets: ["latin"] })
 const inika = Inika({
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inika.className}>
+      <body className={cn(inika.className, inter.className)}>
         {children}
         <Footer />
       </body>

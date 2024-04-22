@@ -11,6 +11,11 @@ const config: Config = {
       colors: {
         secondary: "#110739",
       },
+      fontFamily: {
+        inika: ["var(--font-inika)", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        roboto: ["var(--font-roboto)", "sans-serif"],
+      },
     },
   },
   plugins: [],

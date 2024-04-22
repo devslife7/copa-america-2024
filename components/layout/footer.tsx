@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className=" bg-slate-800 text-white">
+    <footer className=" bg-slate-800 text-white font-inter">
       <div className="my-container flex h-52 flex-col items-center justify-center gap-y-4 md:flex-row md:justify-between">
         <div className="text-center text-xl">
           <span className="text-primary">Marcos</span> Velasco
