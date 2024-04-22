@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function RenderFixture({ fixture, tbd, className }: { fixture: any; tbd?: boolean; className?: string }) {
   return (
-    <div className={cn("flex justify-between p-2 bg-gray-800 rounded-md w-full text-white", className)}>
+    <div className={cn("flex justify-between p-2 bg-gray-800 rounded-md w-full text-white max-w-[600px] mx-auto", className)}>
       <div>
         <div className="mb-2 flex items-center space-x-3">
           <span>{renderFlag(fixture.teams.home)}</span>
