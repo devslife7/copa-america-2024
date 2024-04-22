@@ -4,18 +4,12 @@ import background from "../../public/images/predictions-background.png"
 import BackButton from "./back-button"
 
 import { Position, Points, Percentage } from "./ranking"
-import { format } from "date-fns"
 import Fixtures from "./test"
+import LastUpdated from "@/components/shared/last-updated"
 
 export default function userPredictions({ params }: { params: any }) {
   const user = usersPredictions.find(user => user.id == params.id)
   if (!user) return <div>User not found</div>
-
-  const LastUpdatedAt = () => {
-    const date = new Date().toLocaleString("en-US", { timeZone: "America/New_York" })
-    console.log("date: ", date)
-    return format(date, "'Last Update:' MMMM d, 'at'  h:mm:ss aaa ")
-  }
 
   return (
     <div className="relative h-screen text-white">
@@ -41,9 +35,8 @@ export default function userPredictions({ params }: { params: any }) {
         <Points />
         <Percentage />
       </div>
-      <div className="mx-6 text-gray-400 text-sm mb-[60px]">
-        <LastUpdatedAt />
-      </div>
+
+      <LastUpdated className=" mx-6 mb-[60px]" />
 
       <div>
         <Fixtures user={user} />

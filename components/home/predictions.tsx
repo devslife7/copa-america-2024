@@ -6,6 +6,7 @@ import fixtures from "../../data/fixtures.json"
 import { format } from "date-fns"
 import ExternalLinkSVG from "@/public/svgs/external-link"
 import { cn } from "@/lib/utils"
+import LastUpdated from "../shared/last-updated"
 
 export default function Predictions() {
   // Sort by match start time
@@ -132,19 +133,13 @@ export default function Predictions() {
         />
         <div className="lg:text-center z-10">
           <h2 className="text-4xl font-bold z-50">Predictions</h2>
-          <div className="text-gray-300 text-sm">
-            <LastUpdatedAt />
-          </div>
+          {/* <div className="text-gray-300 text-sm">{lastUpdatedAt()}</div> */}
+          <LastUpdated />
         </div>
         <div className="my-10 space-y-6">{renderUserPredictions()}</div>
       </div>
     </section>
   )
-}
-
-const LastUpdatedAt = () => {
-  const date = new Date()
-  return format(date, "'Last Update:' MMMM d, 'at'  h:mm:ss aaa ")
 }
 
 const isWinnerStyle = (ranking: number) => {
