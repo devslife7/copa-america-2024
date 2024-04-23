@@ -6,7 +6,9 @@ import fixtures from "../../data/fixtures.json"
 import { format } from "date-fns"
 import ExternalLinkSVG from "@/public/svgs/external-link"
 import { cn } from "@/lib/utils"
-import LastUpdated from "../shared/last-updated"
+import dynamic from "next/dynamic"
+// import LastUpdated from "../shared/last-updated"
+const LastUpdated = dynamic(() => import("@/components/shared/last-updated"), { ssr: false })
 
 export default function Predictions() {
   // Sort by match start time

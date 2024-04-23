@@ -5,7 +5,10 @@ import BackButton from "./back-button"
 
 import { Position, Points, Percentage } from "./ranking"
 import Fixtures from "./fixtures"
-import LastUpdated from "@/components/shared/last-updated"
+// import LastUpdated from "@/components/shared/last-updated"
+import dynamic from "next/dynamic"
+
+const LastUpdated = dynamic(() => import("@/components/shared/last-updated"), { ssr: false })
 
 export default function userPredictions({ params }: { params: any }) {
   const user = usersPredictions.find(user => user.id == params.id)

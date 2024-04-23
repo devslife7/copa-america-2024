@@ -44,17 +44,11 @@ export default function Fixtures({ user }: { user: any }) {
   }
 
   const renderFixtures = (sortBy: string) => {
-    if (sortBy === "All") {
-      return renderGroupFixtures("All")
-    } else if (sortBy === "Groups") {
-      return renderGroupFixtures("Group")
-    } else if (sortBy === "Quarters") {
-      return renderGroupFixtures("Quarter-finals")
-    } else if (sortBy === "Semis") {
-      return renderGroupFixtures("Semi-finals")
-    } else if (sortBy === "Finals") {
-      return renderGroupFixtures("Final")
-    }
+    if (sortBy === "Groups") return renderGroupFixtures("Group")
+    if (sortBy === "Quarters") return renderGroupFixtures("Quarter-finals")
+    if (sortBy === "Semis") return renderGroupFixtures("Semi-finals")
+    if (sortBy === "Finals") return renderGroupFixtures("Final")
+    return renderGroupFixtures("All")
   }
 
   const filterByGroup = (fixtures: any, filterBy: string) => {
@@ -65,6 +59,7 @@ export default function Fixtures({ user }: { user: any }) {
   }
 
   const renderGroupFixtures = (filterBy: string) => {
+    console.log("render fixtures here filterBy:", filterBy)
     let sortedFixtures = filterByGroup(AllFixtures, filterBy)
 
     return sortedFixtures.map((fixture: any, idx: number) => {
@@ -106,50 +101,60 @@ export default function Fixtures({ user }: { user: any }) {
     })
   }
 
-  const renderAllFixtures = () => {
-    return AllFixtures.response.map((fixture: any, idx: number) => {
-      return (
-        <div key={fixture.fixture.id} className="flex h-[140px] p-4 pr-6">
-          <div className="relative w-10 text-xl text-gray-400 text-center flex justify-center">
-            {fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN" ? (
-              (isCorrectPredictionArray ?? [])[idx] ? (
-                <CheckMarkSVG className="text-green-400 " />
-              ) : (
-                <XMarkSVG className="text-red-400 text-3xl" />
-              )
-            ) : (
-              <CircleSVG className="text-gray-400" />
-            )}
+  // const renderAllFixtures = () => {
+  //   return AllFixtures.response.map((fixture: any, idx: number) => {
+  //     return (
+  //       <div key={fixture.fixture.id} className="flex h-[140px] p-4 pr-6">
+  //         <div className="relative w-10 text-xl text-gray-400 text-center flex justify-center">
+  //           {fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN" ? (
+  //             (isCorrectPredictionArray ?? [])[idx] ? (
+  //               <CheckMarkSVG className="text-green-400 " />
+  //             ) : (
+  //               <XMarkSVG className="text-red-400 text-3xl" />
+  //             )
+  //           ) : (
+  //             <CircleSVG className="text-gray-400" />
+  //           )}
 
-            <div className={cn("absolute left-4 top-[1.4rem]", { hidden: AllFixtures.response.length - 1 === idx })}>
-              <div className="text-xs">{"|"}</div>
-              <div className="text-xs">{"|"}</div>
-              <div className="text-xs">{"|"}</div>
-              <div className="text-xs">{"|"}</div>
-              <div className="text-xs">{"|"}</div>
-              <div className="text-xs">{"|"}</div>
-              <div className="text-xs">{"|"}</div>
-            </div>
-          </div>
-          <div className="w-full">
-            <div className="flex justify-between">
-              <h2 className="mb-2">{TeamIds[user.predictionGroupStage[idx] as keyof typeof TeamIds]}</h2>
-              {/* {fixture.fixture.status.short === "FT" &&
-                ((isCorrectPredictionArray ?? [])[idx] ? <span>+1</span> : <span>+0</span>)} */}
-              <div className="text-sm">{fixture.league.round}</div>
-            </div>
+  //           <div className={cn("absolute left-4 top-[1.4rem]", { hidden: AllFixtures.response.length - 1 === idx })}>
+  //             <div className="text-xs">{"|"}</div>
+  //             <div className="text-xs">{"|"}</div>
+  //             <div className="text-xs">{"|"}</div>
+  //             <div className="text-xs">{"|"}</div>
+  //             <div className="text-xs">{"|"}</div>
+  //             <div className="text-xs">{"|"}</div>
+  //             <div className="text-xs">{"|"}</div>
+  //           </div>
+  //         </div>
+  //         <div className="w-full">
+  //           <div className="flex justify-between">
+  //             <h2 className="mb-2">{TeamIds[user.predictionGroupStage[idx] as keyof typeof TeamIds]}</h2>
+  //             {/* {fixture.fixture.status.short === "FT" &&
+  //               ((isCorrectPredictionArray ?? [])[idx] ? <span>+1</span> : <span>+0</span>)} */}
+  //             <div className="text-sm">{fixture.league.round}</div>
+  //           </div>
 
-            <RenderFixture fixture={fixture} />
-          </div>
-        </div>
-      )
-    })
+  //           <RenderFixture fixture={fixture} />
+  //         </div>
+  //       </div>
+  //     )
+  //   })
+  // }
+  const ReturnWhenTrue = () => {
+    console.log("this is truthy")
+    return <div>this is truthy</div>
+  }
+
+  const ReturnWhenFalse = () => {
+    console.log("this is falsy")
+    return <div>this is falsy</div>
   }
 
   return (
     <>
       <RenderSortingMenu />
       <div className="max-w-[700px] mx-auto bg-secondary">{renderFixtures(sortBy)}</div>
+      {/* <div className="max-w-[700px] mx-auto bg-secondary">{true ? <ReturnWhenTrue /> : <ReturnWhenFalse />}</div> */}
     </>
   )
 }
