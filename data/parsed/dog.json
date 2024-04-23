@@ -1,0 +1,8 @@
+{
+  "nickname": "Yoshi",
+  "age": 5,
+  "dog": {
+    "nickname": "Yoshi",
+    "age": 5
+  }
+}

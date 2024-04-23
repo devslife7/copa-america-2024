@@ -3,7 +3,6 @@ import background from "../../public/images/predictions-background.png"
 import userPredictions from "../../data/predictions.json"
 import Link from "next/link"
 import fixtures from "../../data/fixtures.json"
-import { format } from "date-fns"
 import ExternalLinkSVG from "@/public/svgs/external-link"
 import { cn } from "@/lib/utils"
 import dynamic from "next/dynamic"
@@ -73,7 +72,7 @@ export default function Predictions() {
     const userWithCorrectPredictions = userPredictions.map(user => {
       const { correctPredictions, correctPredictionsArray } = findCorrectPredictions(
         getParsedResultsArray(),
-        user.predictionGroupStage
+        user.predictions.groupStage
       ) as { correctPredictions: number; correctPredictionsArray: string } // Add type assertion here
       return { ...user, correctPredictions, correctPredictionsArray }
     })
