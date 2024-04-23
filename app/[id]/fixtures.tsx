@@ -62,7 +62,6 @@ export default function Fixtures({ user }: { user: any }) {
   const renderGroupFixtures = (filterBy: string) => {
     let filteredFixtures = filterByGroup(AllFixtures, filterBy)
     let sortedFixtures = filteredFixtures.sort((a: any, b: any) => a.fixture.timestamp - b.fixture.timestamp)
-    console.log("sortedFixtures", sortedFixtures)
     return sortedFixtures.map((fixture: any, idx: number) => {
       return (
         <div key={fixture.fixture.id} className="flex h-[140px] p-4 pr-6">

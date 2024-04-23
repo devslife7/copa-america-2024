@@ -6,10 +6,23 @@ import Fixtures from "@/data/fixtures2022.json"
 import userPredictions from "@/data/predictions.json"
 import { revalidatePath } from "next/cache"
 
+export async function setTimestamp() {
+  saveData({ NextMatchTimestamp: 1111111 }, "update-info.json")
+  revalidatePath("/")
+}
+
 export async function updateData() {
+  revalidatePath("/")
   // Check if data is outdated
   const nowUnixTimestampInSeconds = Date.now() / 1000
   if (nowUnixTimestampInSeconds < UpdateInfo.NextMatchTimestamp) return // returns if data is not outdated
+  // save next match fixture object
+  // if next match timestamp < now then
+  //    fetch game with gameid
+  //    if gameStatus !== FT || gameStatus !== PEN then
+  //        update current fixture data. to the fixtures 2024.json revalidatePath() and return
+  //      else
+  //     update next fixturedata and also all data
   console.log("Updating data...")
   // update next match timestamp
   // find next match timestamp
@@ -21,7 +34,6 @@ export async function updateData() {
   let semiFinalFixtures: any[] = []
   let finalFixtures: any[] = []
   let fixtureFinalResults: (string | number)[] = []
-  let usersCorrectPredictions = []
 
   const data = Fixtures.response.map(fixture => {
     const gameStatus = fixture.fixture.status.short
@@ -32,7 +44,7 @@ export async function updateData() {
     const fixtureRound = fixture.league.round
 
     // if match is finished, save id of winning team into array
-    if (gameStatus === "FT") {
+    if (gameStatus === "FT" || gameStatus === "PEN") {
       if (goalsHome === goalsAway) fixtureFinalResults.push("TIE")
       else if (goalsHome > goalsAway) fixtureFinalResults.push(homeTeamId)
       else fixtureFinalResults.push(awayTeamId)
