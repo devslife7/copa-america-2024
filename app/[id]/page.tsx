@@ -4,7 +4,7 @@ import background from "../../public/images/predictions-background.png"
 import BackButton from "./back-button"
 
 import { Position, Points, Percentage } from "./ranking"
-import Fixtures from "./test"
+import Fixtures from "./something"
 import LastUpdated from "@/components/shared/last-updated"
 
 export default function userPredictions({ params }: { params: any }) {
