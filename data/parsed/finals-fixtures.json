@@ -1,0 +1,138 @@
+[
+  {
+    "fixture": {
+      "id": 723368,
+      "referee": "Raphael Claus",
+      "timezone": "UTC",
+      "date": "2021-07-10T00:00:00+00:00",
+      "timestamp": 1625875200,
+      "periods": {
+        "first": 1625875200,
+        "second": 1625878800
+      },
+      "venue": {
+        "id": null,
+        "name": "Estádio Nacional de Brasília",
+        "city": "Brasília, Distrito Federal"
+      },
+      "status": {
+        "long": "Match Finished",
+        "short": "NS",
+        "elapsed": 90
+      }
+    },
+    "league": {
+      "id": 9,
+      "name": "Copa America",
+      "country": "World",
+      "logo": "https://media.api-sports.io/football/leagues/9.png",
+      "flag": null,
+      "season": 2021,
+      "round": "3rd Place Final"
+    },
+    "teams": {
+      "home": {
+        "id": 8,
+        "name": "Colombia",
+        "logo": "https://media.api-sports.io/football/teams/8.png",
+        "winner": true
+      },
+      "away": {
+        "id": 30,
+        "name": "Peru",
+        "logo": "https://media.api-sports.io/football/teams/30.png",
+        "winner": false
+      }
+    },
+    "goals": {
+      "home": 3,
+      "away": 2
+    },
+    "score": {
+      "halftime": {
+        "home": 0,
+        "away": 1
+      },
+      "fulltime": {
+        "home": 3,
+        "away": 2
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    }
+  },
+  {
+    "fixture": {
+      "id": 723369,
+      "referee": "E. Ostojich",
+      "timezone": "UTC",
+      "date": "2021-07-11T00:00:00+00:00",
+      "timestamp": 1625961600,
+      "periods": {
+        "first": 1625961600,
+        "second": 1625965200
+      },
+      "venue": {
+        "id": null,
+        "name": "Estadio Jornalista Mário Filho",
+        "city": "Rio de Janeiro, Rio de Janeiro"
+      },
+      "status": {
+        "long": "Match Finished",
+        "short": "NS",
+        "elapsed": 90
+      }
+    },
+    "league": {
+      "id": 9,
+      "name": "Copa America",
+      "country": "World",
+      "logo": "https://media.api-sports.io/football/leagues/9.png",
+      "flag": null,
+      "season": 2021,
+      "round": "Final"
+    },
+    "teams": {
+      "home": {
+        "id": 26,
+        "name": "Argentina",
+        "logo": "https://media.api-sports.io/football/teams/26.png",
+        "winner": true
+      },
+      "away": {
+        "id": 6,
+        "name": "Brazil",
+        "logo": "https://media.api-sports.io/football/teams/6.png",
+        "winner": false
+      }
+    },
+    "goals": {
+      "home": 1,
+      "away": 0
+    },
+    "score": {
+      "halftime": {
+        "home": 1,
+        "away": 0
+      },
+      "fulltime": {
+        "home": 1,
+        "away": 0
+      },
+      "extratime": {
+        "home": null,
+        "away": null
+      },
+      "penalty": {
+        "home": null,
+        "away": null
+      }
+    }
+  }
+]

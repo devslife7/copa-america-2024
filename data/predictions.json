@@ -9,7 +9,9 @@
       "3rdPlace": "29",
       "final": ["2385", "2381"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 18,
+    "correctPredictionsArray": "11100000000000000000000"
   },
   {
     "id": 2,
@@ -21,7 +23,9 @@
       "3rdPlace": "29",
       "final": ["2385", "2381"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 14,
+    "correctPredictionsArray": "01001000000000000000000"
   },
   {
     "id": 3,
@@ -33,7 +37,9 @@
       "3rdPlace": "29",
       "final": ["2385", "16"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 9,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 4,
@@ -45,7 +51,9 @@
       "3rdPlace": "29",
       "final": ["2385", "2381"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 5,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 5,
@@ -57,7 +65,9 @@
       "3rdPlace": "29",
       "final": ["2385", "2381"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 3,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 6,
@@ -87,7 +97,9 @@
       "3rdPlace": "6",
       "final": ["2385", "2380"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 2,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 7,
@@ -117,7 +129,9 @@
       "3rdPlace": "16",
       "final": ["2385", "2381"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 2,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 8,
@@ -147,7 +161,9 @@
       "3rdPlace": "8",
       "final": ["2385", "2381"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 1,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 9,
@@ -177,7 +193,9 @@
       "3rdPlace": "11",
       "final": ["2381", "2385"],
       "winner": "2381"
-    }
+    },
+    "correctPredictions": 1,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 10,
@@ -207,7 +225,9 @@
       "3rdPlace": "30",
       "final": ["2385", "2381"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 0,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 11,
@@ -237,7 +257,9 @@
       "3rdPlace": "8",
       "final": ["2381", "2385"],
       "winner": "2381"
-    }
+    },
+    "correctPredictions": 0,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 12,
@@ -267,7 +289,9 @@
       "3rdPlace": "30",
       "final": ["2381", "2385"],
       "winner": "2381"
-    }
+    },
+    "correctPredictions": 0,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 13,
@@ -297,7 +321,9 @@
       "3rdPlace": "8",
       "final": ["2385", "2381"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 0,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 14,
@@ -327,7 +353,9 @@
       "3rdPlace": "8",
       "final": ["2385", "2381"],
       "winner": "2385"
-    }
+    },
+    "correctPredictions": 0,
+    "correctPredictionsArray": "00000000000000000000000"
   },
   {
     "id": 15,
@@ -357,6 +385,8 @@
       "3rdPlace": "8",
       "final": ["2381", "2385"],
       "winner": "2381"
-    }
+    },
+    "correctPredictions": 0,
+    "correctPredictionsArray": "00000000000000000000000"
   }
 ]

@@ -16,9 +16,10 @@ export default function Fixtures({ user }: { user: any }) {
   // const sortBy = searchParams.get("sortBy")
   const [sortBy, setSortBy] = useState("Groups")
   // Gets the string of url and splits it into an array of strings
-  const correctPredictionsArrayString = searchParams.get("correctPredictionsArray")?.split("")
+  const correctPredictionsArrayString = user.correctPredictionsArray?.split("")
+  // const correctPredictionsArrayString = searchParams.get("correctPredictionsArray")?.split("")
   // Converts the array of strings into an array of booleans where 1 is true and 0 is false
-  const isCorrectPredictionArray = correctPredictionsArrayString?.map(item => item === "1")
+  const isCorrectPredictionArray = correctPredictionsArrayString?.map((item: string) => item === "1")
 
   const RenderSortingMenu = () => {
     const sortByOptions = ["All", "Groups", "Quarters", "Semis", "Finals"]
@@ -59,9 +60,9 @@ export default function Fixtures({ user }: { user: any }) {
   }
 
   const renderGroupFixtures = (filterBy: string) => {
-    console.log("render fixtures here filterBy:", filterBy)
-    let sortedFixtures = filterByGroup(AllFixtures, filterBy)
-
+    let filteredFixtures = filterByGroup(AllFixtures, filterBy)
+    let sortedFixtures = filteredFixtures.sort((a: any, b: any) => a.fixture.timestamp - b.fixture.timestamp)
+    console.log("sortedFixtures", sortedFixtures)
     return sortedFixtures.map((fixture: any, idx: number) => {
       return (
         <div key={fixture.fixture.id} className="flex h-[140px] p-4 pr-6">

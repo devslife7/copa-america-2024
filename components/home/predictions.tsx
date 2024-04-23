@@ -1,6 +1,6 @@
 import Image from "next/image"
 import background from "../../public/images/predictions-background.png"
-import userPredictions from "../../data/predictions.json"
+import userWithCorrectPredictions from "../../data/predictions.json"
 import Link from "next/link"
 import fixtures from "../../data/fixtures2022.json"
 import ExternalLinkSVG from "@/public/svgs/external-link"
@@ -69,13 +69,15 @@ export default function Predictions() {
 
   const renderUserPredictions = () => {
     // Get user points, compare with user preidctions with api parsed array of official match results.
-    const userWithCorrectPredictions = userPredictions.map(user => {
-      const { correctPredictions, correctPredictionsArray } = findCorrectPredictions(
-        getParsedResultsArray(),
-        user.predictions.groupStage
-      ) as { correctPredictions: number; correctPredictionsArray: string } // Add type assertion here
-      return { ...user, correctPredictions, correctPredictionsArray }
-    })
+    // const userWithCorrectPredictions = userPredictions.map(user => {
+    //   const { correctPredictions, correctPredictionsArray } = findCorrectPredictions(
+    //     getParsedResultsArray(),
+    //     user.predictions.groupStage
+    //   ) as { correctPredictions: number; correctPredictionsArray: string } // Add type assertion here
+    //   return { ...user, correctPredictions, correctPredictionsArray }
+    // })
+
+    // no longer using old way of getting correct predictions
 
     // Sort users alphabetically && Sort by correct predictions
     userWithCorrectPredictions.sort((a, b) => a.name.localeCompare(b.name)) // Sort by name
