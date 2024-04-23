@@ -1,0 +1,1647 @@
+{
+  "get": "fixtures",
+  "parameters": {
+    "league": "9",
+    "season": "2024"
+  },
+  "errors": [],
+  "results": 24,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "fixture": {
+        "id": 1146301,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-22T00:00:00+00:00",
+        "timestamp": 1719014400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "AT&T Stadium",
+          "city": "Arlington, Texas"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 30,
+          "name": "Peru",
+          "logo": "https://media.api-sports.io/football/teams/30.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2383,
+          "name": "Chile",
+          "logo": "https://media.api-sports.io/football/teams/2383.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146302,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-22T22:00:00+00:00",
+        "timestamp": 1719093600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Levi's Stadium",
+          "city": "Santa Clara, California"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 2382,
+          "name": "Ecuador",
+          "logo": "https://media.api-sports.io/football/teams/2382.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2379,
+          "name": "Venezuela",
+          "logo": "https://media.api-sports.io/football/teams/2379.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146303,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-23T01:00:00+00:00",
+        "timestamp": 1719104400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "NRG Stadium",
+          "city": "Houston, Texas"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 16,
+          "name": "Mexico",
+          "logo": "https://media.api-sports.io/football/teams/16.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2385,
+          "name": "Jamaica",
+          "logo": "https://media.api-sports.io/football/teams/2385.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146304,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-23T22:00:00+00:00",
+        "timestamp": 1719180000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "AT&T Stadium",
+          "city": "Arlington, Texas"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 2384,
+          "name": "USA",
+          "logo": "https://media.api-sports.io/football/teams/2384.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2381,
+          "name": "Bolivia",
+          "logo": "https://media.api-sports.io/football/teams/2381.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146305,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-24T01:00:00+00:00",
+        "timestamp": 1719190800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Hard Rock Stadium",
+          "city": "Miami Gardens, Florida"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 7,
+          "name": "Uruguay",
+          "logo": "https://media.api-sports.io/football/teams/7.png",
+          "winner": null
+        },
+        "away": {
+          "id": 11,
+          "name": "Panama",
+          "logo": "https://media.api-sports.io/football/teams/11.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146306,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-24T22:00:00+00:00",
+        "timestamp": 1719266400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "NRG Stadium",
+          "city": "Houston, Texas"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 8,
+          "name": "Colombia",
+          "logo": "https://media.api-sports.io/football/teams/8.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2380,
+          "name": "Paraguay",
+          "logo": "https://media.api-sports.io/football/teams/2380.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146307,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-26T01:00:00+00:00",
+        "timestamp": 1719363600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "MetLife Stadium",
+          "city": "East Rutherford, New Jersey"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 2383,
+          "name": "Chile",
+          "logo": "https://media.api-sports.io/football/teams/2383.png",
+          "winner": null
+        },
+        "away": {
+          "id": 26,
+          "name": "Argentina",
+          "logo": "https://media.api-sports.io/football/teams/26.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146308,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-26T22:00:00+00:00",
+        "timestamp": 1719439200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Allegiant Stadium",
+          "city": "Las Vegas, Nevada"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 2382,
+          "name": "Ecuador",
+          "logo": "https://media.api-sports.io/football/teams/2382.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2385,
+          "name": "Jamaica",
+          "logo": "https://media.api-sports.io/football/teams/2385.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146309,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-27T01:00:00+00:00",
+        "timestamp": 1719450000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "SoFi Stadium",
+          "city": "Inglewood, California"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 2379,
+          "name": "Venezuela",
+          "logo": "https://media.api-sports.io/football/teams/2379.png",
+          "winner": null
+        },
+        "away": {
+          "id": 16,
+          "name": "Mexico",
+          "logo": "https://media.api-sports.io/football/teams/16.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146310,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-27T22:00:00+00:00",
+        "timestamp": 1719525600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1898,
+          "name": "Mercedes-Benz Stadium",
+          "city": "Atlanta, Georgia"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 11,
+          "name": "Panama",
+          "logo": "https://media.api-sports.io/football/teams/11.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2384,
+          "name": "USA",
+          "logo": "https://media.api-sports.io/football/teams/2384.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146311,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-28T01:00:00+00:00",
+        "timestamp": 1719536400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "MetLife Stadium",
+          "city": "East Rutherford, New Jersey"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 7,
+          "name": "Uruguay",
+          "logo": "https://media.api-sports.io/football/teams/7.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2381,
+          "name": "Bolivia",
+          "logo": "https://media.api-sports.io/football/teams/2381.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146312,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-29T01:00:00+00:00",
+        "timestamp": 1719622800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Allegiant Stadium",
+          "city": "Las Vegas, Nevada"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 2380,
+          "name": "Paraguay",
+          "logo": "https://media.api-sports.io/football/teams/2380.png",
+          "winner": null
+        },
+        "away": {
+          "id": 6,
+          "name": "Brazil",
+          "logo": "https://media.api-sports.io/football/teams/6.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146313,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-30T00:00:00+00:00",
+        "timestamp": 1719705600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Hard Rock Stadium",
+          "city": "Miami Gardens, Florida"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 26,
+          "name": "Argentina",
+          "logo": "https://media.api-sports.io/football/teams/26.png",
+          "winner": null
+        },
+        "away": {
+          "id": 30,
+          "name": "Peru",
+          "logo": "https://media.api-sports.io/football/teams/30.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146314,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-07-01T00:00:00+00:00",
+        "timestamp": 1719792000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 11535,
+          "name": "Q2 Stadium",
+          "city": "Austin, Texas"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 2385,
+          "name": "Jamaica",
+          "logo": "https://media.api-sports.io/football/teams/2385.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2379,
+          "name": "Venezuela",
+          "logo": "https://media.api-sports.io/football/teams/2379.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146315,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-07-01T00:00:00+00:00",
+        "timestamp": 1719792000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "State Farm Stadium",
+          "city": "Glendale, Arizona"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 16,
+          "name": "Mexico",
+          "logo": "https://media.api-sports.io/football/teams/16.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2382,
+          "name": "Ecuador",
+          "logo": "https://media.api-sports.io/football/teams/2382.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146316,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-07-02T01:00:00+00:00",
+        "timestamp": 1719882000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1838,
+          "name": "Exploria Stadium",
+          "city": "Orlando, Florida"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 2381,
+          "name": "Bolivia",
+          "logo": "https://media.api-sports.io/football/teams/2381.png",
+          "winner": null
+        },
+        "away": {
+          "id": 11,
+          "name": "Panama",
+          "logo": "https://media.api-sports.io/football/teams/11.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146317,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-07-02T01:00:00+00:00",
+        "timestamp": 1719882000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Arrowhead Stadium",
+          "city": "Kansas City, Missouri"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 2384,
+          "name": "USA",
+          "logo": "https://media.api-sports.io/football/teams/2384.png",
+          "winner": null
+        },
+        "away": {
+          "id": 7,
+          "name": "Uruguay",
+          "logo": "https://media.api-sports.io/football/teams/7.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1146318,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-07-03T01:00:00+00:00",
+        "timestamp": 1719968400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Levi's Stadium",
+          "city": "Santa Clara, California"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 6,
+          "name": "Brazil",
+          "logo": "https://media.api-sports.io/football/teams/6.png",
+          "winner": null
+        },
+        "away": {
+          "id": 8,
+          "name": "Colombia",
+          "logo": "https://media.api-sports.io/football/teams/8.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1189120,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-21T00:00:00+00:00",
+        "timestamp": 1718928000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1898,
+          "name": "Mercedes-Benz Stadium",
+          "city": "Atlanta, Georgia"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 26,
+          "name": "Argentina",
+          "logo": "https://media.api-sports.io/football/teams/26.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5529,
+          "name": "Canada",
+          "logo": "https://media.api-sports.io/football/teams/5529.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1189121,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-25T01:00:00+00:00",
+        "timestamp": 1719277200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "SoFi Stadium",
+          "city": "Inglewood, California"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 1"
+      },
+      "teams": {
+        "home": {
+          "id": 6,
+          "name": "Brazil",
+          "logo": "https://media.api-sports.io/football/teams/6.png",
+          "winner": null
+        },
+        "away": {
+          "id": 29,
+          "name": "Costa Rica",
+          "logo": "https://media.api-sports.io/football/teams/29.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1189122,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-25T22:00:00+00:00",
+        "timestamp": 1719352800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1615,
+          "name": "Children's Mercy Park",
+          "city": "Kansas City, Kansas"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 30,
+          "name": "Peru",
+          "logo": "https://media.api-sports.io/football/teams/30.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5529,
+          "name": "Canada",
+          "logo": "https://media.api-sports.io/football/teams/5529.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1189123,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-28T22:00:00+00:00",
+        "timestamp": 1719612000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "State Farm Stadium",
+          "city": "Glendale, Arizona"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 8,
+          "name": "Colombia",
+          "logo": "https://media.api-sports.io/football/teams/8.png",
+          "winner": null
+        },
+        "away": {
+          "id": 29,
+          "name": "Costa Rica",
+          "logo": "https://media.api-sports.io/football/teams/29.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1189124,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-06-30T00:00:00+00:00",
+        "timestamp": 1719705600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 20500,
+          "name": "Inter&Co Stadium",
+          "city": "Orlando, Florida"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 5529,
+          "name": "Canada",
+          "logo": "https://media.api-sports.io/football/teams/5529.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2383,
+          "name": "Chile",
+          "logo": "https://media.api-sports.io/football/teams/2383.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1189125,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2024-07-03T01:00:00+00:00",
+        "timestamp": 1719968400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 11535,
+          "name": "Q2 Stadium",
+          "city": "Austin, Texas"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 9,
+        "name": "Copa America",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/9.png",
+        "flag": null,
+        "season": 2024,
+        "round": "Group Stage - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 29,
+          "name": "Costa Rica",
+          "logo": "https://media.api-sports.io/football/teams/29.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2380,
+          "name": "Paraguay",
+          "logo": "https://media.api-sports.io/football/teams/2380.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ]
+}

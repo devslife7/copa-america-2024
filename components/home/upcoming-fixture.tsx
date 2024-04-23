@@ -1,6 +1,6 @@
 import RenderFixture from "../shared/render-fixture"
 
-import fixtures from "../../data/fixtures.json"
+import fixtures from "../../data/fixtures2022.json"
 
 export default function UpcomingFixtures() {
   // Calculate upcioming and previous fixtures

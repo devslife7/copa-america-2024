@@ -1,5 +1,5 @@
 "use client"
-import AllFixtures from "@/data/fixtures.json"
+import AllFixtures from "@/data/fixtures2022.json"
 import CheckMarkSVG from "@/public/svgs/check-mark"
 import Image from "next/image"
 import TeamIds from "@/data/team-ids.json"
@@ -88,7 +88,7 @@ export default function Fixtures({ user }: { user: any }) {
           </div>
           <div className="w-full">
             <div className="flex justify-between">
-              <h2 className="mb-2">{TeamIds[user.predictionGroupStage[idx] as keyof typeof TeamIds]}</h2>
+              <h2 className="mb-2">{TeamIds[user.predictions.groupStage[idx] as keyof typeof TeamIds]}</h2>
               {/* {fixture.fixture.status.short === "FT" &&
                 ((isCorrectPredictionArray ?? [])[idx] ? <span>+1</span> : <span>+0</span>)} */}
               <div className="text-sm">{fixture.league.round}</div>
@@ -140,21 +140,11 @@ export default function Fixtures({ user }: { user: any }) {
   //     )
   //   })
   // }
-  const ReturnWhenTrue = () => {
-    console.log("this is truthy")
-    return <div>this is truthy</div>
-  }
-
-  const ReturnWhenFalse = () => {
-    console.log("this is falsy")
-    return <div>this is falsy</div>
-  }
 
   return (
     <>
       <RenderSortingMenu />
       <div className="max-w-[700px] mx-auto bg-secondary">{renderFixtures(sortBy)}</div>
-      {/* <div className="max-w-[700px] mx-auto bg-secondary">{true ? <ReturnWhenTrue /> : <ReturnWhenFalse />}</div> */}
     </>
   )
 }
