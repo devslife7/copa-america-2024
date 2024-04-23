@@ -1,6 +1,6 @@
 import Credits from "@/components/home/credits"
 import Hero from "@/components/home/hero"
-import NextFixtures from "@/components/home/next-fixture"
+import UpcomingFixtures from "@/components/home/next-fixture"
 import Predictions from "@/components/home/predictions"
 import ThanksTo from "@/components/home/thanks-to"
 
@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <Hero />
       <Predictions />
-      <NextFixtures />
+      <UpcomingFixtures />
       <ThanksTo />
       <Credits />
     </main>

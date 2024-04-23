@@ -99,7 +99,7 @@ export default function Predictions() {
                 ranking: user.userRanking.ranking,
                 superscript: user.userRanking.superscript,
                 correctPredictionsArray: user.correctPredictionsArray,
-                sortBy: "All",
+                sortBy: "Group",
               },
             }}
           >

@@ -6,7 +6,6 @@ import TeamIds from "@/data/team-ids.json"
 import { useSearchParams } from "next/navigation"
 import XMarkSVG from "@/public/svgs/x-mark"
 import CircleSVG from "@/public/svgs/circle"
-import { format, fromUnixTime } from "date-fns"
 import { cn } from "@/lib/utils"
 import RenderFixture from "@/components/shared/render-fixture"
 import { useState } from "react"
@@ -66,7 +65,6 @@ export default function Fixtures({ user }: { user: any }) {
 
   const renderGroupFixtures = (filterBy: string) => {
     let sortedFixtures = filterByGroup(AllFixtures, filterBy)
-    console.log("sortedFixtures", sortedFixtures)
 
     return sortedFixtures.map((fixture: any, idx: number) => {
       return (

@@ -2,7 +2,7 @@ import RenderFixture from "../shared/render-fixture"
 
 import fixtures from "../../data/fixtures.json"
 
-export default function NextFixtures() {
+export default function UpcomingFixtures() {
   return (
     <section className="px-6 pt-[100px] pb-[90px] text-white">
       <div className="max-w-[600px] mx-auto">

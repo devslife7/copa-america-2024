@@ -66,7 +66,6 @@ export default function Fixtures({ user }: { user: any }) {
 
   const renderGroupFixtures = (filterBy: string) => {
     let sortedFixtures = filterByGroup(AllFixtures, filterBy)
-    console.log("sortedFixtures", sortedFixtures)
 
     return sortedFixtures.map((fixture: any, idx: number) => {
       return (
