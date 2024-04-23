@@ -1,3 +1,4 @@
+import ExternalLinkSVG from "@/public/svgs/external-link"
 import Link from "next/link"
 
 export default function Credits() {
@@ -13,6 +14,7 @@ export default function Credits() {
           aria-label="Portfolio link"
         >
           marcosvelasco.com
+          <ExternalLinkSVG className="w-[20px] ml-1 inline-block text-gray-400" />
         </Link>
       </div>
 

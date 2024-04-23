@@ -98,8 +98,8 @@ export default function Predictions() {
                 points: user.correctPredictions,
                 ranking: user.userRanking.ranking,
                 superscript: user.userRanking.superscript,
-                correctPredictionsArray: user.correctPredictionsArray,
                 sortBy: "Group",
+                correctPredictionsArray: user.correctPredictionsArray,
               },
             }}
           >
