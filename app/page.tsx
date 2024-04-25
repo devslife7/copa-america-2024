@@ -7,8 +7,6 @@ import UpcomingFixtures from "@/components/home/upcoming-fixture"
 
 export default async function Home(props: any) {
   const response = await updateData()
-  console.log("renders Home", props)
-
   return (
     <main>
       <Hero />

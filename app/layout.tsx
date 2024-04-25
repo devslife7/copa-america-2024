@@ -3,6 +3,8 @@ import { Inter, Inika } from "next/font/google"
 import "./globals.css"
 import Footer from "@/components/layout/footer"
 import { cn } from "@/lib/utils"
+import { getFixtures } from "@/actions/fixtures"
+import FetchFixtures from "@/components/layout/fetch-fixtures"
 
 const inter = Inter({ subsets: ["latin"] })
 const inika = Inika({
@@ -16,13 +18,16 @@ export const metadata: Metadata = {
   description: "Copa America Predictions 2024",
 }
 
-export default function RootLayout(props: any) {
-  console.log("renders layout")
-  props.params.newProp = "testing"
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="en">
       <body className={cn("bg-slate-900", inika.className, inter.className)}>
-        {props.children}
+        <FetchFixtures />
+        {children}
         <Footer />
       </body>
     </html>

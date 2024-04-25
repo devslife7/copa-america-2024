@@ -1,7 +1,12 @@
+"use client"
 import Image from "next/image"
 import background from "@/public/images/hero-background.jpg"
+import { userStore } from "@/store"
 
 export default function Hero() {
+  const user = userStore((state: any) => state.user)
+  const updateUser = userStore((state: any) => state.updateUser)
+
   return (
     <section className="relative h-[70vh] flex items-end justify-center text-white">
       <Image
@@ -20,6 +25,8 @@ export default function Hero() {
       <div className="mb-16 lg:mb-[6.5rem] text-center lg:space-y-2 font-bold">
         <h3 className="text-2xl lg:text-4xl">
           1<sup>st</sup> $1170
+          <div>{user.fullName}</div>
+          <input className="text-black" type="text" onChange={e => updateUser({ fullName: e.target.value })} />
         </h3>
         <h3 className="text-xl lg:text-3xl">
           2<sup>nd</sup> $585

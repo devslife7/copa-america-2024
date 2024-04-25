@@ -6,6 +6,10 @@ import Fixtures from "@/data/fixtures2022.json"
 import userPredictions from "@/data/predictions.json"
 import { revalidatePath } from "next/cache"
 
+export async function getFixtures() {
+  return Fixtures
+}
+
 export async function setTimestamp() {
   saveData({ NextMatchTimestamp: 1111111 }, "update-info.json")
   revalidatePath("/")
