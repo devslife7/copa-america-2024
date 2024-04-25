@@ -1,6 +1,8 @@
 "use client"
 import fixtures from "@/data/fixtures2022.json"
 import users from "@/data/predictions.json"
+import { userStore } from "@/store"
+import { format } from "date-fns"
 
 export default function FetchFixtures() {
   console.log("Fetching fixtures... from layout")
@@ -55,18 +57,27 @@ export default function FetchFixtures() {
         correctPredictionsArray = correctPredictionsArray + "0"
       }
     }
-
     return { ...user, correctPredictions, correctPredictionsArray }
   })
 
-  // save last updated at here...
+  const getLastUpdated = () => {
+    const date = new Date().toLocaleString("en-US", { timeZone: "America/New_York" })
+    return format(date, "'Last Update:' MMMM d, 'at'  h:mm:ss aaa ")
+  }
 
   // save to zustand store
 
   // saveData(groupFixtures, "parsed/group-fixtures.json")
+
+  const user = userStore((state: any) => state.user)
+  const updateUser = userStore((state: any) => state.updateUser)
+
   // saveData(quarterFinalFixtures, "parsed/quarter-fixtures.json")
   // saveData(semiFinalFixtures, "parsed/semis-fixtures.json")
   // saveData(finalFixtures, "parsed/finals-fixtures.json")
   // saveData(usersWithCorrectPredictions, "predictions.json")
+
+  // save last updated at here...
+
   return <></>
 }
