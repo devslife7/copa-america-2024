@@ -1,12 +1,11 @@
 import { create } from "zustand"
-import fixtures from "@/data/fixtures2022.json"
 
 export const userStore = create(set => ({
   user: {
     fullName: "John Doe",
   },
+  updatedAt: "",
   fixtures: {
-    updatedAt: "",
     upcomingFixtures: { upcoming: [], past: {} },
     groupFixtures: [],
     quarterFinalFixtures: [],
@@ -15,6 +14,8 @@ export const userStore = create(set => ({
   },
   users: [],
 
-  updateUsers: (parsedUsers: any[]) => set(() => ({ users: parsedUsers })),
-  updateFixtures: (fixtures: any) => set(() => ({ fixtures: fixtures })),
+  updateUser: (user: any) => set(() => ({ user })),
+  updateUsers: (users: any[]) => set(() => ({ users })),
+  updateFixtures: (fixtures: any) => set(() => ({ fixtures })),
+  updateUpdatedAt: (updatedAt: string) => set(() => ({ updatedAt })),
 }))

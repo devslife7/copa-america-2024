@@ -1,22 +1,18 @@
 "use server"
-const fs = require("fs")
 import UpdateInfo from "@/data/parsed/update-info.json"
 // Mock Rapid API response
 import Fixtures from "@/data/fixtures2022.json"
 import userPredictions from "@/data/predictions.json"
-import { revalidatePath } from "next/cache"
 
 export async function getFixtures() {
   return Fixtures
 }
 
 export async function setTimestamp() {
-  saveData({ NextMatchTimestamp: 1111111 }, "update-info.json")
-  revalidatePath("/")
+  // saveData({ NextMatchTimestamp: 1111111 }, "update-info.json")
 }
 
 export async function updateData() {
-  revalidatePath("/")
   // Check if data is outdated
   const nowUnixTimestampInSeconds = Date.now() / 1000
   if (nowUnixTimestampInSeconds < UpdateInfo.NextMatchTimestamp) return // returns if data is not outdated
@@ -92,23 +88,17 @@ export async function updateData() {
   })
 
   // Update data
-  saveData(
-    {
-      NextMatchTimestamp: nextMatchTimestamp,
-    },
-    "update-info.json"
-  )
-  saveData(groupFixtures, "parsed/group-fixtures.json")
-  saveData(quarterFinalFixtures, "parsed/quarter-fixtures.json")
-  saveData(semiFinalFixtures, "parsed/semis-fixtures.json")
-  saveData(finalFixtures, "parsed/finals-fixtures.json")
-  saveData(usersWithCorrectPredictions, "predictions.json")
+
+  // saveData(groupFixtures, "parsed/group-fixtures.json")
+  // saveData(quarterFinalFixtures, "parsed/quarter-fixtures.json")
+  // saveData(semiFinalFixtures, "parsed/semis-fixtures.json")
+  // saveData(finalFixtures, "parsed/finals-fixtures.json")
+  // saveData(usersWithCorrectPredictions, "predictions.json")
 
   // revalidate path
-  revalidatePath("/")
 }
 
-const saveData = (data: any, file: string) => {
-  const jsonData = JSON.stringify(data, null, 2)
-  fs.writeFileSync(`data/${file}`, jsonData)
-}
+// const saveData = (data: any, file: string) => {
+//   const jsonData = JSON.stringify(data, null, 2)
+//   fs.writeFileSync(`data/${file}`, jsonData)
+// }

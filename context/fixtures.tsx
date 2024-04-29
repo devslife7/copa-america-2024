@@ -3,6 +3,40 @@ import fixtures from "@/data/fixtures2022.json"
 import users from "@/data/predictions.json"
 import { userStore } from "@/store"
 import { format } from "date-fns"
+import React, { useContext, useState, useEffect, createContext } from "react"
+
+const FixturesContext = createContext({})
+
+export function FixturesContextProvider({ children }: any) {
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("https://jsonplaceholder.typicode.com/users")
+      const data = await response.json()
+
+      setUsers(data)
+    }
+    fetchData()
+  }, [])
+  return (
+    <FixturesContext.Provider
+      value={{
+        users,
+      }}
+    >
+      {children}
+    </FixturesContext.Provider>
+  )
+}
+
+export function useFixturesContext() {
+  const context = useContext(FixturesContext)
+  if (context === undefined) {
+    throw new Error("Context must be used within a Provider")
+  }
+  return context
+}
 
 function fetchFixtures() {
   const { updateUsers, updateFixtures, updateUpdatedAt } = userStore((state: any) => state)

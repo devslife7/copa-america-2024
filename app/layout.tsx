@@ -3,8 +3,7 @@ import { Inter, Inika } from "next/font/google"
 import "./globals.css"
 import Footer from "@/components/layout/footer"
 import { cn } from "@/lib/utils"
-import { getFixtures } from "@/actions/fixtures"
-import FetchFixtures from "@/components/layout/fetch-fixtures"
+import { FixturesContextProvider } from "@/context/fixtures"
 
 const inter = Inter({ subsets: ["latin"] })
 const inika = Inika({
@@ -26,8 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("bg-slate-900", inika.className, inter.className)}>
-        <FetchFixtures />
-        {children}
+        <FixturesContextProvider>{children}</FixturesContextProvider>
         <Footer />
       </body>
     </html>
