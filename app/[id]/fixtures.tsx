@@ -67,7 +67,7 @@ export default function Fixtures() {
               (isCorrectPredictionArray ?? [])[idx] ? (
                 <CheckMarkSVG className="text-green-400 " />
               ) : (
-                <XMarkSVG className="text-red-400 text-3xl" />
+                <XMarkSVG className="text-red-400" />
               )
             ) : (
               <CircleSVG className="text-gray-400" />
@@ -103,18 +103,40 @@ export default function Fixtures() {
     else if (stage === "Semi-finals") stageFixtures = fixtures.semiFinalFixtures
     else if (stage === "Final") stageFixtures = fixtures.finalFixtures
 
+    // if guess from user exist in the array of correct predictions, render checkmark, else render xmark if all matches are fnished, else render black circle
+
     return (
       <>
-        <div>Names</div>
+        {/* <div className="relative w-10 text-xl text-gray-400 text-center flex justify-center">
+          {fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN" ? (
+            (isCorrectPredictionArray ?? [])[idx] ? (
+              <CheckMarkSVG className="text-green-400" />
+            ) : (
+              <XMarkSVG className="text-red-400 text-3xl" />
+            )
+          ) : (
+            <CircleSVG className="text-gray-400" />
+          )}
+
+          <div className={cn("absolute left-4 top-[1.4rem]", { hidden: stageFixtures.length - 1 === idx })}>
+            <div className="text-xs">{"|"}</div>
+            <div className="text-xs">{"|"}</div>
+            <div className="text-xs">{"|"}</div>
+            <div className="text-xs">{"|"}</div>
+            <div className="text-xs">{"|"}</div>
+            <div className="text-xs">{"|"}</div>
+            <div className="text-xs">{"|"}</div>
+          </div>
+        </div> */}
         {stageFixtures.map((fixture: any, idx: number) => {
           return (
             <div key={fixture.fixture.id} className="flex h-[140px] p-4 pr-6">
               <div className="relative w-10 text-xl text-gray-400 text-center flex justify-center">
                 {fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN" ? (
                   (isCorrectPredictionArray ?? [])[idx] ? (
-                    <CheckMarkSVG className="text-green-400 " />
+                    <XMarkSVG className="text-red-400" />
                   ) : (
-                    <XMarkSVG className="text-red-400 text-3xl" />
+                    <CheckMarkSVG className="text-green-400 " />
                   )
                 ) : (
                   <CircleSVG className="text-gray-400" />
@@ -194,45 +216,3 @@ export default function Fixtures() {
     </>
   )
 }
-
-// const renderGroupFixtures = () => {
-//   let filteredFixtures = filterByGroup(AllFixtures, filterBy)
-//   let sortedFixtures = filteredFixtures.sort((a: any, b: any) => a.fixture.timestamp - b.fixture.timestamp)
-//   return sortedFixtures.map((fixture: any, idx: number) => {
-//     return (
-//       <div key={fixture.fixture.id} className="flex h-[140px] p-4 pr-6">
-//         <div className="relative w-10 text-xl text-gray-400 text-center flex justify-center">
-//           {fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN" ? (
-//             (isCorrectPredictionArray ?? [])[idx] ? (
-//               <CheckMarkSVG className="text-green-400 " />
-//             ) : (
-//               <XMarkSVG className="text-red-400 text-3xl" />
-//             )
-//           ) : (
-//             <CircleSVG className="text-gray-400" />
-//           )}
-
-//           <div className={cn("absolute left-4 top-[1.4rem]", { hidden: sortedFixtures.length - 1 === idx })}>
-//             <div className="text-xs">{"|"}</div>
-//             <div className="text-xs">{"|"}</div>
-//             <div className="text-xs">{"|"}</div>
-//             <div className="text-xs">{"|"}</div>
-//             <div className="text-xs">{"|"}</div>
-//             <div className="text-xs">{"|"}</div>
-//             <div className="text-xs">{"|"}</div>
-//           </div>
-//         </div>
-//         <div className="w-full">
-//           <div className="flex justify-between">
-//             <h2 className="mb-2">{TeamIds[user.predictions.groupStage[idx] as keyof typeof TeamIds]}</h2>
-//             {/* {fixture.fixture.status.short === "FT" &&
-//               ((isCorrectPredictionArray ?? [])[idx] ? <span>+1</span> : <span>+0</span>)} */}
-//             <div className="text-sm">{fixture.league.round}</div>
-//           </div>
-
-//           <RenderFixture fixture={fixture} />
-//         </div>
-//       </div>
-//     )
-//   })
-// }

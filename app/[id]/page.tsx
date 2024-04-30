@@ -30,7 +30,6 @@ export default function userPredictions({ params }: { params: any }) {
       <div className="pt-2">
         <BackButton />
         <Title />
-        {/* <h2 className="font-bold text-3xl pt-2 text-center">{user.name}</h2> */}
       </div>
 
       <div className="flex justify-between mt-8 mb-2 mx-4 font-bold text-center overflow-x-auto">
