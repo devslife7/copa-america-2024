@@ -4,6 +4,7 @@ import users from "@/data/predictions.json"
 import { format } from "date-fns"
 import { useContext, useState, useEffect, createContext, ReactNode } from "react"
 
+const groupStageFixturesCount = 24
 const initialData = {
   fixtures: {
     upcomingFixtures: {
@@ -100,12 +101,14 @@ function parseData(data: any) {
   })
 
   // calculate and save user correct predictions and table position
+  console.log("finalResutlData", finalResutlData)
+  console.log("userPredictions", users[0].predictions.groupStage)
   const usersWithCorrectPredictions = users.map(user => {
     if (finalResutlData.length === 0) return
     let correctPredictions: number = 0
     let correctPredictionsArray: string = ""
-    for (let i = 0; i < finalResutlData.length; i++) {
-      if (finalResutlData[i] === user.predictions.groupStage[i]) {
+    for (let i = 0; i < user.predictions.groupStage.length; i++) {
+      if (finalResutlData[i] == user.predictions.groupStage[i]) {
         correctPredictions++
         correctPredictionsArray = correctPredictionsArray + "1"
       } else {
@@ -114,6 +117,21 @@ function parseData(data: any) {
     }
     return { ...user, correctPredictions, correctPredictionsArray }
   })
+
+  // Sort users alphabetically && Sort by correct predictions
+  usersWithCorrectPredictions.sort((a, b) => {
+    if (a && b) {
+      return a.name.localeCompare(b.name) // Sort by name
+    }
+    return 0
+  })
+  usersWithCorrectPredictions.sort((a, b) => {
+    if (a && b) {
+      return (b.correctPredictions || 0) - (a.correctPredictions || 0) // Sort by prediction
+    }
+    return 0
+  })
+  const usersArray = addUserRanking(usersWithCorrectPredictions)
 
   // returns fixtures and users with correct predictions
   return {
@@ -124,7 +142,7 @@ function parseData(data: any) {
       semiFinalFixtures,
       finalFixtures,
     },
-    users: usersWithCorrectPredictions,
+    users: usersArray,
     lastUpdated: getLastUpdated(),
   }
 }
@@ -132,4 +150,18 @@ function parseData(data: any) {
 const getLastUpdated = () => {
   const date = new Date().toLocaleString("en-US", { timeZone: "America/New_York" })
   return format(date, "'Last Update:' MMMM d, 'at'  h:mm:ss aaa")
+}
+
+// Add user ranking to array (1st, 2nd, 3rd, 4th, 5th, etc.)
+const addUserRanking = (users: any) => {
+  let userRanking = 1
+  let userArray: any = []
+
+  const calcSuperscript = (position: number) => (position === 1 ? "st" : position === 2 ? "nd" : position === 3 ? "rd" : "th")
+
+  for (let i = 0; i < users.length; i++) {
+    if (i !== 0) users[i].correctPredictions !== users[i - 1].correctPredictions && userRanking++
+    userArray = [...userArray, { ...users[i], userRanking: { ranking: userRanking, superscript: calcSuperscript(userRanking) } }]
+  }
+  return userArray
 }
