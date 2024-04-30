@@ -10,7 +10,6 @@ const LastUpdated = dynamic(() => import("@/components/shared/last-updated"), { 
 
 export default function Predictions() {
   const { users } = useFixturesContext()
-  console.log("data from Predictions", users)
 
   const renderUserPredictions = () => {
     return users.map((user: any, idx: number) => (

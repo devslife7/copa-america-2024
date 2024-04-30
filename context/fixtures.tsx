@@ -39,7 +39,6 @@ const FixturesContext = createContext<DataType | undefined>(undefined)
 
 export function FixturesContextProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<DataType>(initialData)
-  console.log("renders FixturesContextProvider")
 
   useEffect(() => {
     async function fetchData() {
@@ -101,8 +100,6 @@ function parseData(data: any) {
   })
 
   // calculate and save user correct predictions and table position
-  console.log("finalResutlData", finalResutlData)
-  console.log("userPredictions", users[0].predictions.groupStage)
   const usersWithCorrectPredictions = users.map(user => {
     if (finalResutlData.length === 0) return
     let correctPredictions: number = 0
