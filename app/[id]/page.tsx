@@ -40,7 +40,7 @@ export default function userPredictions({ params }: { params: any }) {
       <LastUpdated className=" mx-6 mb-[60px]" />
 
       <div>
-        <Fixtures user={user} />
+        <Fixtures />
       </div>
     </div>
   )
