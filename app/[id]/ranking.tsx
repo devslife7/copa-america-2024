@@ -1,10 +1,27 @@
 "use client"
-import { useSearchParams } from "next/navigation"
+import { useFixturesContext } from "@/context/fixtures"
+import { usePathname } from "next/navigation"
 
-export function Position() {
-  const searchParams = useSearchParams()
-  const ranking = searchParams.get("ranking")
-  const superscript = searchParams.get("superscript")
+export default function UserStats() {
+  const { users } = useFixturesContext()
+  const pathname = usePathname()
+  const id = pathname.split("/")[1]
+  const user = users.find(user => user.id == id)
+
+  if (user === undefined) return null
+
+  return (
+    <>
+      <Position user={user} />
+      <Points user={user} />
+      <Percentage user={user} />
+    </>
+  )
+}
+
+export function Position({ user }: { user?: any }) {
+  const ranking = user.userRanking.ranking
+  const superscript = user.userRanking.superscript
   return (
     <div className="bg-secondary p-6 rounded-md">
       <div className="text-lg text-gray-200">Position</div>
@@ -15,9 +32,8 @@ export function Position() {
     </div>
   )
 }
-export function Points() {
-  const searchParams = useSearchParams()
-  const points = searchParams.get("points")
+export function Points({ user }: { user: any }) {
+  const points = user.correctPredictions
   return (
     <div className="bg-secondary p-6 rounded-md">
       <div className="text-lg text-gray-200">Points</div>
@@ -26,9 +42,8 @@ export function Points() {
   )
 }
 
-export function Percentage() {
-  const searchParams = useSearchParams()
-  const points = searchParams.get("points")
+export function Percentage({ user }: { user: any }) {
+  const points = user.correctPredictions
 
   const percentage = Math.round((parseInt(points!) / 39) * 100)
   return (

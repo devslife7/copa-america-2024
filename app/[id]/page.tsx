@@ -3,11 +3,10 @@ import usersPredictions from "../../data/predictions.json"
 import background from "../../public/images/predictions-background.png"
 import BackButton from "./back-button"
 
-import { Position, Points, Percentage } from "./ranking"
+import UserStats, { Position, Points, Percentage } from "./ranking"
 import Fixtures from "./fixtures"
 import dynamic from "next/dynamic"
-
-// import LastUpdated from "@/components/shared/last-updated"
+import Title from "./title"
 const LastUpdated = dynamic(() => import("@/components/shared/last-updated"), { ssr: false })
 
 export default function userPredictions({ params }: { params: any }) {
@@ -30,13 +29,12 @@ export default function userPredictions({ params }: { params: any }) {
       />
       <div className="pt-2">
         <BackButton />
-        <h2 className="font-bold text-3xl pt-2 text-center">{user.name}</h2>
+        <Title />
+        {/* <h2 className="font-bold text-3xl pt-2 text-center">{user.name}</h2> */}
       </div>
 
       <div className="flex justify-between mt-8 mb-2 mx-4 font-bold text-center overflow-x-auto">
-        <Position />
-        <Points />
-        <Percentage />
+        <UserStats />
       </div>
 
       <LastUpdated className=" mx-6 mb-[60px]" />
