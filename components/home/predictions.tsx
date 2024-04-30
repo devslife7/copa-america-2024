@@ -1,88 +1,28 @@
+"use client"
 import Image from "next/image"
 import background from "../../public/images/predictions-background.png"
 import userWithCorrectPredictions from "../../data/predictions.json"
 import Link from "next/link"
-import fixtures from "../../data/fixtures2022.json"
 import ExternalLinkSVG from "@/public/svgs/external-link"
 import { cn } from "@/lib/utils"
 import dynamic from "next/dynamic"
-// import LastUpdated from "../shared/last-updated"
+import { useFixturesContext } from "@/context/fixtures"
 const LastUpdated = dynamic(() => import("@/components/shared/last-updated"), { ssr: false })
 
 export default function Predictions() {
-  // Sort by match start time
-  fixtures.response.sort((a, b) => {
-    return a.fixture.timestamp - b.fixture.timestamp
-  })
+  const data = useFixturesContext()
+  console.log("data from Predictions", data)
 
-  // API parsed array of official match results
-  const getParsedResultsArray = () => {
-    let officialResults: (number | string)[] = []
-    fixtures.response.forEach(fixture => {
-      const gameStatus = fixture.fixture.status.short
-      const goalsHome = fixture.goals.home
-      const goalsAway = fixture.goals.away
-      const homeTeamId = fixture.teams.home.id
-      const awayTeamId = fixture.teams.away.id
-
-      if (gameStatus === "FT") {
-        if (goalsHome === goalsAway) officialResults.push("TIE")
-        else if (goalsHome > goalsAway) officialResults.push(homeTeamId)
-        else officialResults.push(awayTeamId)
-      }
-    })
-    return officialResults
-  }
-
-  // Compare official results with user predictions and return how many correct predictions
-  const findCorrectPredictions = (parsedResultsArray: (number | string)[], predictions: (number | string)[]) => {
-    if (parsedResultsArray.length === 0) return
-    let correctPredictions: number = 0
-    let correctPredictionsArray: string = ""
-    for (let i = 0; i < parsedResultsArray.length; i++) {
-      if (parsedResultsArray[i] === predictions[i]) {
-        correctPredictions++
-        correctPredictionsArray = correctPredictionsArray + "1"
-      } else {
-        correctPredictionsArray = correctPredictionsArray + "0"
-      }
-    }
-    return { correctPredictions, correctPredictionsArray }
-  }
-
-  // Add user ranking to array (1st, 2nd, 3rd, 4th, 5th, etc.)
-  const addUserRanking = (users: any) => {
-    let userRanking = 1
-    let userArray: any = []
-
-    const calcSuperscript = (position: number) => (position === 1 ? "st" : position === 2 ? "nd" : position === 3 ? "rd" : "th")
-
-    for (let i = 0; i < users.length; i++) {
-      if (i !== 0) users[i].correctPredictions !== users[i - 1].correctPredictions && userRanking++
-      userArray = [
-        ...userArray,
-        { ...users[i], userRanking: { ranking: userRanking, superscript: calcSuperscript(userRanking) } },
-      ]
-    }
-    return userArray
-  }
-
+  // const data = useFixturesContext()
+  // console.log("data", data)
   const renderUserPredictions = () => {
-    // Get user points, compare with user preidctions with api parsed array of official match results.
-    // const userWithCorrectPredictions = userPredictions.map(user => {
-    //   const { correctPredictions, correctPredictionsArray } = findCorrectPredictions(
-    //     getParsedResultsArray(),
-    //     user.predictions.groupStage
-    //   ) as { correctPredictions: number; correctPredictionsArray: string } // Add type assertion here
-    //   return { ...user, correctPredictions, correctPredictionsArray }
-    // })
-
-    // no longer using old way of getting correct predictions
-
     // Sort users alphabetically && Sort by correct predictions
+
     userWithCorrectPredictions.sort((a, b) => a.name.localeCompare(b.name)) // Sort by name
     userWithCorrectPredictions.sort((a, b) => (b.correctPredictions || 0) - (a.correctPredictions || 0)) // Sort by prediction
     const userArray = addUserRanking(userWithCorrectPredictions)
+
+    console.log("userArray", userArray)
 
     return userArray.map((user: any, idx: number) => (
       <div
@@ -136,7 +76,6 @@ export default function Predictions() {
         />
         <div className="lg:text-center z-10">
           <h2 className="text-4xl font-bold z-50">Predictions</h2>
-          {/* <div className="text-gray-300 text-sm">{lastUpdatedAt()}</div> */}
           <LastUpdated />
         </div>
         <div className="my-10 space-y-6">{renderUserPredictions()}</div>
@@ -147,4 +86,18 @@ export default function Predictions() {
 
 const isWinnerStyle = (ranking: number) => {
   return ranking === 1 ? "text-green-400" : ranking === 2 ? "text-yellow-200" : ranking === 3 ? "text-blue-400" : ""
+}
+
+// Add user ranking to array (1st, 2nd, 3rd, 4th, 5th, etc.)
+const addUserRanking = (users: any) => {
+  let userRanking = 1
+  let userArray: any = []
+
+  const calcSuperscript = (position: number) => (position === 1 ? "st" : position === 2 ? "nd" : position === 3 ? "rd" : "th")
+
+  for (let i = 0; i < users.length; i++) {
+    if (i !== 0) users[i].correctPredictions !== users[i - 1].correctPredictions && userRanking++
+    userArray = [...userArray, { ...users[i], userRanking: { ranking: userRanking, superscript: calcSuperscript(userRanking) } }]
+  }
+  return userArray
 }

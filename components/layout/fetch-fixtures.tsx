@@ -6,8 +6,6 @@ import { format } from "date-fns"
 
 function fetchFixtures() {
   const { updateUsers, updateFixtures, updateUpdatedAt } = userStore((state: any) => state)
-
-  // console.log("Fetching fixtures... from layout")
   // fetch fixtures
   const data = fixtures.response
 

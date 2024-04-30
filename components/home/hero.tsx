@@ -1,13 +1,8 @@
 "use client"
 import Image from "next/image"
 import background from "@/public/images/hero-background.jpg"
-import { useFixturesContext } from "@/context/fixtures"
-// import { userStore } from "@/store"
 
 export default function Hero() {
-  const data = useFixturesContext()
-  console.log("data from HERO", data)
-
   return (
     <section className="relative h-[70vh] flex items-end justify-center text-white">
       <Image
