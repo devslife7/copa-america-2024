@@ -105,7 +105,7 @@ export default function Fixtures() {
 
     return (
       <>
-        <div className="pt-4 px-[22.5px] pb-6">
+        <div className="pt-4 px-[22.5px] pb-2">
           {userPredictions.map((team: string, idx: number) => {
             return (
               <div key={idx} className="flex">
@@ -144,7 +144,6 @@ export default function Fixtures() {
 
     const finalMatch = fixtures.finalFixtures[1]
     const thirdPlaceMatch = fixtures.finalFixtures[0]
-    const finalFixtures = fixtures.finalFixtures
     // Array of teams that are in the final match
     const teamsInFinalFixtures = [finalMatch.teams.home.id, finalMatch.teams.away.id]
 
@@ -203,6 +202,19 @@ export default function Fixtures() {
     )
   }
 
+  const renderAllFixtures = () => {
+    return (
+      <>
+        {renderGroupFixtures()}
+        <div className="px-6 text-xl mt-8">Quarter Finals</div>
+        {renderEliminationStage("Quarter-finals")}
+        <div className="px-6 text-xl mt-10">Semi Finals</div>
+        {renderEliminationStage("Semi-finals")}
+        {renderFinals()}
+      </>
+    )
+  }
+
   return (
     <>
       <RenderSortingMenu />
@@ -211,7 +223,7 @@ export default function Fixtures() {
         {sortBy === "Quarters" && renderEliminationStage("Quarter-finals")}
         {sortBy === "Semis" && renderEliminationStage("Semi-finals")}
         {sortBy === "Finals" && renderFinals()}
-        {sortBy === "All" && renderEliminationStage("All")}
+        {sortBy === "All" && renderAllFixtures()}
       </div>
     </>
   )
