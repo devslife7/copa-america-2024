@@ -7,8 +7,8 @@
       "quarterFinals": ["30", "2380", "2382", "2381", "2384", "8", "2385", "26"],
       "semiFinals": ["26", "2383", "30", "2385"],
       "3rdPlace": "29",
-      "final": ["2385", "2381"],
-      "winner": "2385"
+      "final": ["26", "2381"],
+      "winner": "26"
     },
     "correctPredictions": 16,
     "correctPredictionsArray": "01100000000000000000000"
