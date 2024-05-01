@@ -14,7 +14,7 @@ export default function userPredictions({ params }: { params: any }) {
   if (!user) return <div>User not found</div>
 
   return (
-    <div className="relative text-white">
+    <div className="relative text-white h-[90vh]">
       <Image
         src={background}
         alt="User Predictions"
@@ -36,7 +36,7 @@ export default function userPredictions({ params }: { params: any }) {
         <UserStats />
       </div>
 
-      <LastUpdated className=" mx-6 mb-[60px]" />
+      <LastUpdated className=" mx-6 mb-[50px]" />
 
       <div>
         <Fixtures />

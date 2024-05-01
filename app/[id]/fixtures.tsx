@@ -140,8 +140,8 @@ export default function Fixtures() {
     )
   }
   const renderFinals = () => {
-    console.log("predictions", user.predictions)
-    console.log("fixtures", fixtures)
+    // console.log("predictions", user.predictions)
+    // console.log("fixtures", fixtures)
     const winnerPrediction = user.predictions.winner
     const finalPredictions = user.predictions.final
 
@@ -155,7 +155,7 @@ export default function Fixtures() {
         <div className="relative pt-4 px-[22.5px] pb-6">
           <span className="absolute bg-gray-700 px-4  py-1 rounded-md top-2 right-6">+2 pts</span>
 
-          <div className="space-y-2 mb-10">
+          <div className="space-y-2 mb-8">
             <h2 className="text-xl">Champions</h2>
             <div className="flex space-x-2 text-center">
               {false ? (
@@ -170,7 +170,7 @@ export default function Fixtures() {
             <div className="bg-[#1F2A38] px-3 py-1 rounded-md inline-block w-[100px] mt-2">TBD</div>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-4">
             <h2 className="text-xl mb-2">Final</h2>
             <div className="flex space-x-2">
               {teamsInFinalFixtures.includes(+finalPredictions[0]) ? (
@@ -182,8 +182,8 @@ export default function Fixtures() {
               )}
               <h2>{TeamIds[finalPredictions[0] as keyof typeof TeamIds]}</h2>
             </div>
-            <div className="text-xs ml-[9.5px] mb-[2px]">{"|"}</div>
-            <div className="flex space-x-2">
+            {/* <div className="text-xs ml-[9.5px] mb-[2px]">{"|"}</div> */}
+            <div className="flex space-x-2 mt-2">
               {teamsInFinalFixtures.includes(+finalPredictions[1]) ? (
                 <CheckMarkSVG className="text-green-400" />
               ) : false ? (

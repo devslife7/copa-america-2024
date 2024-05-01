@@ -15,7 +15,7 @@ export default function UpcomingFixtures() {
   const upcomingFixtures = fixtures.upcomingFixtures.upcoming
   const pastFixture = fixtures.upcomingFixtures.past
 
-  console.log("pastFixture", pastFixture)
+  // console.log("pastFixture", pastFixture)
   return (
     <section className="px-6 pt-[100px] pb-[90px] text-white">
       <div className="max-w-[600px] mx-auto">
