@@ -3,7 +3,7 @@ import usersPredictions from "../../data/predictions.json"
 import background from "../../public/images/predictions-background.png"
 import BackButton from "./back-button"
 
-import UserStats, { Position, Points, Percentage } from "./ranking"
+import UserStats from "./ranking"
 import Fixtures from "./fixtures"
 import dynamic from "next/dynamic"
 import Title from "./title"

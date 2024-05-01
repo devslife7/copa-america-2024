@@ -10,7 +10,7 @@ import { useState } from "react"
 import { useFixturesContext } from "@/context/fixtures"
 
 export default function Fixtures() {
-  const [sortBy, setSortBy] = useState("Finals")
+  const [sortBy, setSortBy] = useState("Groups")
   const { users, fixtures } = useFixturesContext()
   const pathname = usePathname()
   const id = pathname.split("/")[1]
