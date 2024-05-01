@@ -46,7 +46,9 @@ export default function Fixtures() {
 
     return fixtures.groupFixtures.map((fixture: any, idx: number) => {
       return (
-        <div key={fixture.fixture.id} className="flex h-[140px] p-4 pr-6">
+        <div key={fixture.fixture.id} className="relative flex h-[140px] p-4 pr-6">
+          <span className={cn("absolute bg-gray-700 px-4 py-1 rounded-md top-2 right-6", { hidden: idx !== 0 })}>+12 pts</span>
+
           <div className="relative w-10 text-xl text-gray-400 text-center flex justify-center">
             {fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN" ? (
               (isCorrectPredictionArray ?? [])[idx] ? (
@@ -105,7 +107,8 @@ export default function Fixtures() {
 
     return (
       <>
-        <div className="pt-4 px-[22.5px] pb-2">
+        <div className="relative pt-4 px-[22.5px] pb-2">
+          <span className="absolute bg-gray-700 px-4  py-1 rounded-md top-2 right-6">+5 pts</span>
           {userPredictions.map((team: string, idx: number) => {
             return (
               <div key={idx} className="flex">
@@ -149,8 +152,10 @@ export default function Fixtures() {
 
     return (
       <>
-        <div className="pt-4 px-[22.5px] pb-6 space-y-8">
-          <div className="mt-2 space-y-2">
+        <div className="relative pt-4 px-[22.5px] pb-6">
+          <span className="absolute bg-gray-700 px-4  py-1 rounded-md top-2 right-6">+2 pts</span>
+
+          <div className="space-y-2 mb-10">
             <h2 className="text-xl">Champions</h2>
             <div className="flex space-x-2 text-center">
               {false ? (
@@ -165,7 +170,7 @@ export default function Fixtures() {
             <div className="bg-[#1F2A38] px-3 py-1 rounded-md inline-block w-[100px] mt-2">TBD</div>
           </div>
 
-          <div>
+          <div className="mb-8">
             <h2 className="text-xl mb-2">Final</h2>
             <div className="flex space-x-2">
               {teamsInFinalFixtures.includes(+finalPredictions[0]) ? (
