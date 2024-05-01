@@ -14,7 +14,7 @@ export default function userPredictions({ params }: { params: any }) {
   if (!user) return <div>User not found</div>
 
   return (
-    <div className="relative h-screen text-white">
+    <div className="relative text-white">
       <Image
         src={background}
         alt="User Predictions"

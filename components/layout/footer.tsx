@@ -9,9 +9,7 @@ export default function Footer() {
   return (
     <footer className=" bg-slate-800 text-white font-inter">
       <div className="my-container flex h-52 flex-col items-center justify-center gap-y-4 md:flex-row md:justify-between">
-        <div className="text-center text-xl font-semibold">
-          <span className="text-primary">Marcos</span> Velasco
-        </div>
+        <div className="text-center text-xl font-semibold">Copa America USA 2024</div>
         <div className="text-center text-sm">
           Copyright © {currentYear} <span className="text-primary">Marcos</span> Velasco. All rights reserved.
         </div>

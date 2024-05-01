@@ -106,7 +106,7 @@ export default function Fixtures() {
     }
 
     return (
-      <>
+      <div className="pb-[40px]">
         <div className="relative pt-4 px-[22.5px] pb-2">
           <span className="absolute bg-gray-700 px-4  py-1 rounded-md top-2 right-6">+5 pts</span>
           {userPredictions.map((team: string, idx: number) => {
@@ -136,7 +136,7 @@ export default function Fixtures() {
             </div>
           )
         })}
-      </>
+      </div>
     )
   }
   const renderFinals = () => {
