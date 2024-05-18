@@ -64,7 +64,7 @@ export function useFixturesContext() {
 
 function parseData(data: any) {
   if (data === undefined) return initialData
-  // Calculate user correct predictions && save fixtures to separate files && save to zustand store
+  // Calculate user correct predictions && save fixtures to separate files && save to goblal store
   let upcomingFixtures: any = { upcoming: [], past: {} }
   let groupFixtures: any[] = []
   let quarterFinalFixtures: any[] = []
