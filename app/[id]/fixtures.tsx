@@ -73,7 +73,7 @@ export default function Fixtures() {
           <div className="w-full">
             <div className="flex justify-between">
               <h2 className="mb-2">{TeamIds[user.predictions.groupStage[idx] as keyof typeof TeamIds]}</h2>
-              {/* <div className="text-sm">{idx !== 0 && fixture.league.round}</div> */}
+              <div className="text-sm">{idx !== 0 && fixture.league.round}</div>
             </div>
 
             <RenderFixture fixture={fixture} />
