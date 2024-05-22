@@ -87,8 +87,8 @@ export default function Fixtures() {
     let stageFixtures = []
     let userPredictions = []
     if (stage === "Quarter-finals") {
+      if (stageFixtures.length === 0) return <div className="text-center text-xl mt-10">To Be Determined</div>
       stageFixtures = fixtures.quarterFinalFixtures
-      if (stageFixtures.length === 0) return null
       userPredictions = user.predictions.quarterFinals
 
       stageFixtures.map((fixture: any) => {
@@ -96,6 +96,7 @@ export default function Fixtures() {
         teamsInQuarterFinals?.push(fixture.teams.away.id)
       })
     } else if (stage === "Semi-finals") {
+      if (stageFixtures.length === 0) return <div className="text-center text-xl mt-10">To Be Determined</div>
       stageFixtures = fixtures.semiFinalFixtures
       userPredictions = user.predictions.semiFinals
 
@@ -144,6 +145,8 @@ export default function Fixtures() {
     // console.log("fixtures", fixtures)
     const winnerPrediction = user.predictions.winner
     const finalPredictions = user.predictions.final
+
+    if (fixtures.finalFixtures.length === 0) return <div className="text-center text-xl mt-10">To Be Determined</div>
 
     const finalMatch = fixtures.finalFixtures[1]
     const thirdPlaceMatch = fixtures.finalFixtures[0]
