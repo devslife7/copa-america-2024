@@ -1,5 +1,5 @@
 "use client"
-import fixtures from "@/data/fixtures2022.json"
+import fixtures from "@/data/fixtures2024.json"
 import users from "@/data/predictions.json"
 import { format } from "date-fns"
 import { useContext, useState, useEffect, createContext, ReactNode } from "react"
@@ -42,12 +42,12 @@ export function FixturesContextProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     async function fetchData() {
-      // const response = await fetch("https://jsonplaceholder.typicode.com/users")
+      // const response = await fetch("https://api-football-v1.p.rapidapi.com/v3/fixtures?league=9&season=2024", {
+      //   headers: { "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPID_API_KEY! },
+      // })
       // const data = await response.json()
-      const data = fixtures.response
-
-      const parsedData: DataType = parseData(data)
-      setData(parsedData)
+      const data = fixtures
+      setData(parseData(data.response))
     }
     fetchData()
   }, [])
@@ -72,6 +72,7 @@ function parseData(data: any) {
   let finalFixtures: any[] = []
 
   // sort by fixture start time
+  console.log("Data: ", data)
   data.sort((a: any, b: any) => a.fixture.timestamp - b.fixture.timestamp)
 
   const finalResutlData = data.map((fixture: any) => {

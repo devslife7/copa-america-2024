@@ -5,7 +5,8 @@ import RenderFixture from "../shared/render-fixture"
 import { useFixturesContext } from "@/context/fixtures"
 
 export default function UpcomingFixtures() {
-  // Calculate upcioming and previous fixtures
+  console.log("renders fixtures")
+  // Calculate upcoming and previous fixtures
   // in this format: { upcoming: [fixture1, fixture2], previous: [fixture3] }
   const upcoming = { upcoming: [26, 25], previous: [0] }
 
