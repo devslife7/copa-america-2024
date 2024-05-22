@@ -9,7 +9,6 @@ export default async function Home(props: any) {
     <main>
       <Hero />
       <Predictions />
-      <h2>Upcoming Fixtures</h2>
       <UpcomingFixtures />
       <ThanksTo />
       <Credits />

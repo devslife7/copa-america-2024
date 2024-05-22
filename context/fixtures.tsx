@@ -1,6 +1,7 @@
 "use client"
 import { getFixtures } from "@/actions/fixtures"
-import fixtures from "@/data/fixtures2022.json"
+import fixtures2022 from "@/data/fixtures2022.json"
+import fixtures2024 from "@/data/fixtures2024.json"
 import users from "@/data/predictions.json"
 import { format } from "date-fns"
 import { useContext, useState, useEffect, createContext, ReactNode } from "react"
@@ -43,7 +44,8 @@ export function FixturesContextProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     async function fetchData() {
-      const fixtures = await getFixtures()
+      // const fixtures = await getFixtures()
+      const fixtures = fixtures2024.response
       setData(parseData(fixtures))
     }
     fetchData()
