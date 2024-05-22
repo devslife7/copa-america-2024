@@ -11,7 +11,8 @@ export default function UpcomingFixtures() {
   const upcoming = { upcoming: [26, 25], previous: [0] }
 
   const { fixtures } = useFixturesContext()
-  if (fixtures.upcomingFixtures.upcoming === undefined) return null
+  if (fixtures.upcomingFixtures.upcoming.length == 0) return null
+  if (fixtures.upcomingFixtures.upcoming[0].league === undefined) return null
 
   const upcomingFixtures = fixtures.upcomingFixtures.upcoming
   const pastFixture = fixtures.upcomingFixtures.past
