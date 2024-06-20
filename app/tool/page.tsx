@@ -1,5 +1,11 @@
 "use client"
-import { fixturesArray } from "@/data/predictionTool"
+import { countryCodes, fixturesArrayIDs } from "@/data/predictionTool"
+
+interface CountryCodes {
+  [key: string]: string
+}
+
+// Rest of the code...
 import { useState } from "react"
 
 export default function Tool() {
@@ -21,13 +27,13 @@ export default function Tool() {
 
     // left
     if (keyDown === 37) {
-      setPredictions([...predictions, fixturesArray[counter][1]])
+      setPredictions([...predictions, fixturesArrayIDs[counter][0]])
       // console.log(fixturesArray[counter][1])
 
       // console.log("left")
       // right
     } else if (keyDown === 39) {
-      setPredictions([...predictions, fixturesArray[counter][0]])
+      setPredictions([...predictions, fixturesArrayIDs[counter][1]])
       // up/down
     } else if (keyDown === 38 || keyDown === 40) {
       setPredictions([...predictions, "TIE"])
@@ -40,8 +46,8 @@ export default function Tool() {
     let arr: any = []
 
     for (let i = 0; i < predictions.length; i++) {
-      for (const key in countryCodes) {
-        if (predictions[i] === key) {
+      for (const key in countryCodes as CountryCodes) {
+        if (predictions[i] == key) {
           arr = [...arr, countryCodes[key]]
         }
       }
@@ -67,13 +73,14 @@ export default function Tool() {
         <input onKeyDown={checkKey} className="w-full bg-gray-400 h-44 text-white" />
         <div style={{ margin: "2rem 0 2rem 0" }}>Predictions Array:</div>
 
-        <div style={{ margin: "0 20rem 2rem 20rem" }}>{`['${predictions.join("', '")}']`}</div>
+        <div style={{ margin: "0 20rem 2rem 20rem" }}>{`["${predictions.join('", "')}"]`}</div>
         <div
           style={{
             margin: "0 0 12rem 0",
             minHeight: "20rem",
             textAlign: "left",
             paddingLeft: "45vw",
+            backgroundColor: "yellow",
           }}
         >
           {renderCountriesPredictions()}

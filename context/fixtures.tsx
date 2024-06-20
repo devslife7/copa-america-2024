@@ -2,7 +2,7 @@
 import { getFixtures } from "@/actions/fixtures"
 import fixtures2022 from "@/data/fixtures2022.json"
 import fixtures2024 from "@/data/fixtures2024.json"
-import users from "@/data/predictions.json"
+import users from "@/data/predictions-official.json"
 import { format } from "date-fns"
 import { useContext, useState, useEffect, createContext, ReactNode } from "react"
 
@@ -103,8 +103,8 @@ function parseData(data: any) {
     if (finalResutlData.length === 0) return
     let correctPredictions: number = 0
     let correctPredictionsArray: string = ""
-    for (let i = 0; i < user.predictions.groupStage.length; i++) {
-      if (finalResutlData[i] == user.predictions.groupStage[i]) {
+    for (let i = 0; i < user.predictions.group_stage.length; i++) {
+      if (finalResutlData[i] == user.predictions.group_stage[i]) {
         correctPredictions++
         correctPredictionsArray = correctPredictionsArray + "1"
       } else {
@@ -153,11 +153,15 @@ const addUserRanking = (users: any) => {
   let userRanking = 1
   let userArray: any = []
 
-  const calcSuperscript = (position: number) => (position === 1 ? "st" : position === 2 ? "nd" : position === 3 ? "rd" : "th")
+  const calcSuperscript = (position: number) =>
+    position === 1 ? "st" : position === 2 ? "nd" : position === 3 ? "rd" : "th"
 
   for (let i = 0; i < users.length; i++) {
     if (i !== 0) users[i].correctPredictions !== users[i - 1].correctPredictions && userRanking++
-    userArray = [...userArray, { ...users[i], userRanking: { ranking: userRanking, superscript: calcSuperscript(userRanking) } }]
+    userArray = [
+      ...userArray,
+      { ...users[i], userRanking: { ranking: userRanking, superscript: calcSuperscript(userRanking) } },
+    ]
   }
   return userArray
 }

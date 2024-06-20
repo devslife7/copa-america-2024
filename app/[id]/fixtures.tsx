@@ -47,7 +47,9 @@ export default function Fixtures() {
     return fixtures.groupFixtures.map((fixture: any, idx: number) => {
       return (
         <div key={fixture.fixture.id} className="relative flex h-[140px] p-4 pr-6">
-          <span className={cn("absolute bg-gray-700 px-4 py-1 rounded-md top-2 right-6", { hidden: idx !== 0 })}>+12 pts</span>
+          <span className={cn("absolute bg-gray-700 px-4 py-1 rounded-md top-2 right-6", { hidden: idx !== 0 })}>
+            +12 pts
+          </span>
 
           <div className="relative w-10 text-xl text-gray-400 text-center flex justify-center">
             {fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN" ? (
@@ -72,7 +74,7 @@ export default function Fixtures() {
           </div>
           <div className="w-full">
             <div className="flex justify-between">
-              <h2 className="mb-2">{TeamIds[user.predictions.groupStage[idx] as keyof typeof TeamIds]}</h2>
+              <h2 className="mb-2">{TeamIds[user.predictions.group_stage[idx] as keyof typeof TeamIds]}</h2>
               <div className="text-sm">{idx !== 0 && fixture.league.round}</div>
             </div>
 
