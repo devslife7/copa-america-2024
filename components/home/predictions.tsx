@@ -15,7 +15,10 @@ export default function Predictions() {
     return users.map((user: any, idx: number) => (
       <div
         key={idx}
-        className={cn("flex justify-between text-lg font-bold max-w-[400px] mx-auto", isWinnerStyle(user.userRanking.ranking))}
+        className={cn(
+          "flex justify-between text-lg font-bold max-w-[400px] mx-auto",
+          isWinnerStyle(user.userRanking.ranking)
+        )}
       >
         <div className="flex">
           <div className="w-9">
@@ -62,5 +65,7 @@ export default function Predictions() {
 }
 
 const isWinnerStyle = (ranking: number) => {
-  return ranking === 1 ? "text-green-400" : ranking === 2 ? "text-yellow-200" : ranking === 3 ? "text-blue-400" : ""
+  // FLAG: enable after a few days
+  // return ranking === 1 ? "text-green-400" : ranking === 2 ? "text-yellow-200" : ranking === 3 ? "text-blue-400" : ""
+  return "text-white"
 }
