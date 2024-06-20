@@ -48,6 +48,7 @@ export default function Tool() {
     for (let i = 0; i < predictions.length; i++) {
       for (const key in countryCodes as CountryCodes) {
         if (predictions[i] == key) {
+          //@ts-ignore
           arr = [...arr, countryCodes[key]]
         }
       }
