@@ -51,6 +51,7 @@ export function FixturesContextProvider({ children }: { children: ReactNode }) {
       setData(prev => {
         return parseData(fixtures)
       })
+      console.log("parsedData:", parseData(fixtures))
     }
     fetchData()
   }, [])
