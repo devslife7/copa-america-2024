@@ -46,6 +46,7 @@ export function FixturesContextProvider({ children }: { children: ReactNode }) {
     async function fetchData() {
       const fixtures = await getFixtures()
       setData(parseData(fixtures))
+      // console.log("fixtures", fixtures) // SHOWS FIXTURES ONLY
     }
     fetchData()
   }, [])

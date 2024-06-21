@@ -1,5 +1,5 @@
 import Image from "next/image"
-import usersPredictions from "../../data/predictions.json"
+import usersPredictions from "../../data/predictions-official.json"
 import background from "../../public/images/predictions-background.png"
 import BackButton from "./back-button"
 
