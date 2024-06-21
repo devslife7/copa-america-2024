@@ -47,6 +47,8 @@ export function FixturesContextProvider({ children }: { children: ReactNode }) {
       const fixtures = await getFixtures()
       // console.log("fixtures", fixtures)
       // const fixtures = fixtures2024.response
+      // const fixtures = fixtures2024.response
+      // const fixtures = fixtures2024.response
       // setData(prev => parseData(fixtures))
       setData(prev => {
         return parseData(fixtures)
