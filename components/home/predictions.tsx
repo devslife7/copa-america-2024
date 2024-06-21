@@ -6,13 +6,17 @@ import ExternalLinkSVG from "@/public/svgs/external-link"
 import { cn } from "@/lib/utils"
 import dynamic from "next/dynamic"
 import { useFixturesContext } from "@/context/fixtures"
+import { useEffect } from "react"
 const LastUpdated = dynamic(() => import("@/components/shared/last-updated"), { ssr: false })
 
 export default function Predictions() {
   const { users } = useFixturesContext()
+  useEffect(() => {
+    console.log("users", users)
+  }, [users])
 
   const renderUserPredictions = () => {
-    console.log("users", users)
+    // console.log("users", users)
     return users.map((user: any, idx: number) => (
       <div
         key={idx}
