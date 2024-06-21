@@ -44,8 +44,8 @@ export function FixturesContextProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     async function fetchData() {
-      // const fixtures = await getFixtures()
-      const fixtures = fixtures2024.response
+      const fixtures = await getFixtures()
+      // const fixtures = fixtures2024.response
       setData(parseData(fixtures))
     }
     fetchData()
