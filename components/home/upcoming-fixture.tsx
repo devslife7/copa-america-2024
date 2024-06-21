@@ -5,7 +5,6 @@ import RenderFixture from "../shared/render-fixture"
 import { useFixturesContext } from "@/context/fixtures"
 
 export default function UpcomingFixtures() {
-  console.log("renders fixtures")
   // Calculate upcoming and previous fixtures
   // in this format: { upcoming: [fixture1, fixture2], previous: [fixture3] }
   const upcoming = { upcoming: [26, 25], previous: [0] }
@@ -25,9 +24,9 @@ export default function UpcomingFixtures() {
         <RenderFixture fixture={upcomingFixtures[0]} className="mt-2 mb-4" />
         <h3>{upcomingFixtures[1].league.round}</h3>
         <RenderFixture fixture={upcomingFixtures[1]} className="mt-2 mb-8" />
-        {/* <div className="text-white font-bold text-2xl mb-2">Previous</div>
+        <div className="text-white font-bold text-2xl mb-2">Previous</div>
         <h3>{pastFixture.league.round}</h3>
-        <RenderFixture fixture={pastFixture} className="mt-2 mb-8" /> */}
+        <RenderFixture fixture={pastFixture} className="mt-2 mb-8" />
       </div>
     </section>
   )

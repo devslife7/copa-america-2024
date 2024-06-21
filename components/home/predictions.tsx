@@ -12,6 +12,7 @@ export default function Predictions() {
   const { users } = useFixturesContext()
 
   const renderUserPredictions = () => {
+    console.log("users", users)
     return users.map((user: any, idx: number) => (
       <div
         key={idx}
