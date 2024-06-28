@@ -65,6 +65,7 @@ export function useFixturesContext() {
 
 function parseData(data: any) {
   if (data === undefined) return initialData
+  // remove after testing
   // FLAG: Manually enter quarter finals array
   const quarterFinalsArray = [
     // Argentina 26
