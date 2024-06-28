@@ -20,6 +20,7 @@ const initialData = {
   },
   users: [],
   lastUpdated: "",
+  quarterFinalsArray: [],
 }
 
 interface DataType {
@@ -35,6 +36,7 @@ interface DataType {
   }
   users: any[]
   lastUpdated: string
+  quarterFinalsArray: number[]
 }
 
 const FixturesContext = createContext<DataType | undefined>(undefined)
@@ -63,6 +65,7 @@ export function useFixturesContext() {
 
 function parseData(data: any) {
   if (data === undefined) return initialData
+  const quarterFinalsArray = [26, 2379]
   // Calculate user correct predictions && save fixtures to separate files && save to goblal store
   let upcomingFixtures: any = { upcoming: [], past: {} }
   let groupFixtures: any[] = []
@@ -102,7 +105,9 @@ function parseData(data: any) {
   const usersWithCorrectPredictions = users.map(user => {
     if (finalResutlData.length === 0) return
     let correctPredictions: number = 0
+    let correctPredictionsQuarterFinals: number = 0
     let correctPredictionsArray: string = ""
+
     for (let i = 0; i < user.predictions.group_stage.length; i++) {
       if (finalResutlData[i] == user.predictions.group_stage[i]) {
         correctPredictions++
@@ -111,7 +116,16 @@ function parseData(data: any) {
         correctPredictionsArray = correctPredictionsArray + "0"
       }
     }
-    return { ...user, correctPredictions, correctPredictionsArray }
+
+    // Continue to add the correct predictions to the array
+    for (let i = 0; i < user.predictions.quarter_final.length; i++) {
+      if (quarterFinalsArray.includes(+user.predictions.quarter_final[i])) {
+        correctPredictions++
+        correctPredictionsQuarterFinals++
+      }
+    }
+
+    return { ...user, correctPredictions, correctPredictionsArray, correctPredictionsQuarterFinals }
   })
 
   // Sort users alphabetically && Sort by correct predictions
@@ -140,6 +154,8 @@ function parseData(data: any) {
     },
     users: usersArray,
     lastUpdated: getLastUpdated(),
+    // FLAG: Manually enter quarter finals array
+    quarterFinalsArray: quarterFinalsArray,
   }
 }
 
