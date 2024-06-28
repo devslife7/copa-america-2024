@@ -1,7 +1,7 @@
 "use client"
 import CheckMarkSVG from "@/public/svgs/check-mark"
 import TeamIds from "@/data/team-ids.json"
-import { usePathname, useSearchParams } from "next/navigation"
+import { usePathname } from "next/navigation"
 import XMarkSVG from "@/public/svgs/x-mark"
 import CircleSVG from "@/public/svgs/circle"
 import { cn } from "@/lib/utils"
@@ -44,12 +44,13 @@ export default function Fixtures() {
     // Gets the string of url and splits it into an array of strings
     const correctPredictionsArrayString = user.correctPredictionsArray?.split("")
     const isCorrectPredictionArray = correctPredictionsArrayString?.map((item: string) => item === "1")
+    const totalCorrectPredictions = isCorrectPredictionArray?.filter((item: boolean) => item === true).length
 
     return fixtures.groupFixtures.map((fixture: any, idx: number) => {
       return (
         <div key={fixture.fixture.id} className="relative flex h-[140px] p-4 pr-6">
           <span className={cn("absolute bg-gray-700 px-4 py-1 rounded-md top-2 right-6", { hidden: idx !== 0 })}>
-            +12 pts
+            {`+${totalCorrectPredictions} pts`}
           </span>
 
           <div className="relative w-10 text-xl text-gray-400 text-center flex justify-center">
