@@ -69,27 +69,27 @@ function parseData(data: any) {
   // FLAG: Manually enter quarter finals array
   const quarterFinalsArray = [
     // Argentina 26
-    26,
     // Peru 30
     // Chile 2383
     // Canada 5529
+    26,
 
     // Mexico 16
     // Ecuador 2382
     // Velezuela 2379
-    2379,
     // Jamaica 2385
+    2379,
 
-    // USA: 2384
-    // Uruguay:7
+    // USA 2384
+    // Uruguay 7
+    // Panama 11
+    // Bolivia 2381
     7,
-    // Panama:11
-    // Bolivia: 2381
 
-    // Brazil: 6
-    // Colombia: 8
-    // Paraguay: 2380
-    // Costa Rica: 29
+    // Brazil 6
+    // Colombia 8
+    // Paraguay 2380
+    // Costa Rica 29
   ]
 
   // Calculate user correct predictions && save fixtures to separate files && save to goblal store
