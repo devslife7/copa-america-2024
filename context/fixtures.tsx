@@ -91,6 +91,7 @@ function parseData(data: any) {
     // Paraguay 2380
     // Costa Rica 29
     8,
+    6,
   ]
 
   // Calculate user correct predictions && save fixtures to separate files && save to goblal store
