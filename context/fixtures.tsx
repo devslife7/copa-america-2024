@@ -73,6 +73,7 @@ function parseData(data: any) {
     // Chile 2383
     // Canada 5529
     26,
+    5529,
 
     // Mexico 16
     // Ecuador 2382
