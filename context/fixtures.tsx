@@ -78,7 +78,7 @@ function parseData(data: any) {
     // Ecuador 2382
     // Velezuela 2379
     // Jamaica 2385
-    2379,
+    2379, 2382,
 
     // USA 2384
     // Uruguay 7
