@@ -84,7 +84,7 @@ function parseData(data: any) {
     // Uruguay 7
     // Panama 11
     // Bolivia 2381
-    7,
+    7,11,
 
     // Brazil 6
     // Colombia 8
