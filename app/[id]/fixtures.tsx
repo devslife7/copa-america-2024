@@ -87,7 +87,6 @@ export default function Fixtures() {
     })
   }
   const renderQuarterFinalsStage = () => {
-    let teamsInQuarterFinals: any = []
     let stageFixtures = []
     let userPredictions = []
 
@@ -112,11 +111,16 @@ export default function Fixtures() {
                 <div className="text-center">
                   {quarterFinalsArray.includes(+team) ? (
                     <CheckMarkSVG className="text-green-400" />
+                  ) : (
+                    <XMarkSVG className="text-red-400" />
+                  )}
+                  {/* {quarterFinalsArray.includes(+team) ? (
+                    <CheckMarkSVG className="text-green-400" />
                   ) : false ? (
                     <XMarkSVG className="text-red-400" />
                   ) : (
                     <CircleSVG className="text-gray-400" />
-                  )}
+                  )} */}
                   <div className={cn("text-xs", { hidden: userPredictions.length == idx + 1 })}>{"|"}</div>
                 </div>
                 <div className="ml-2">
