@@ -24,7 +24,7 @@ const initialData = {
   winners: {
     quarterFinals: [],
     semiFinals: [],
-    finals: [],
+    champion: 26,
   },
 }
 
@@ -45,7 +45,7 @@ interface DataType {
   winners: {
     quarterFinals: any[]
     semiFinals: any[]
-    finals: any[]
+    champion: number
   }
 }
 
@@ -111,7 +111,7 @@ function parseData(data: any) {
 
   let quarterFinalsWinners: any = []
   let semiFinalsWinners: any = []
-  let finalsWinners: any = []
+  let finalWinner: any = []
 
   // sort by fixture start time
   data.sort((a: any, b: any) => a.fixture.timestamp - b.fixture.timestamp)
@@ -132,7 +132,7 @@ function parseData(data: any) {
     // Get winners of elimination stage
     quarterFinalsWinners = getWinners(quarterFinalFixtures)
     semiFinalsWinners = getWinners(semiFinalFixtures)
-    finalsWinners = getWinners(finalFixtures.length > 1 ? finalFixtures[1] : [])
+    finalWinner = getWinners(finalFixtures.length > 1 ? [finalFixtures[1]] : [])
 
     // if match is finished, save id of winning team or "TIE" into return array
     if (gameStatus === "FT" || gameStatus === "PEN") {
@@ -182,13 +182,13 @@ function parseData(data: any) {
       }
     }
 
-    // TODO:Add correct predictions from finals
-    // for (let i = 0; i < user.predictions.final.length; i++) {
-    //   if (quarterFinalsArray.includes(+user.predictions.quarter_final[i])) {
-    //     correctPredictions++
-    //     correctPredictionsQuarterFinals++
-    //   }
-    // }
+    // Add correct predictions from finals
+    for (let i = 0; i < user.predictions.final.length; i++) {
+      if (semiFinalsWinners.includes(+user.predictions.final[i])) {
+        correctPredictions++
+        correctPredictionsFinals++
+      }
+    }
 
     return {
       ...user,
@@ -230,7 +230,7 @@ function parseData(data: any) {
     winners: {
       quarterFinals: quarterFinalsWinners,
       semiFinals: semiFinalsWinners,
-      finals: finalsWinners,
+      champion: finalWinner,
     },
   }
 }

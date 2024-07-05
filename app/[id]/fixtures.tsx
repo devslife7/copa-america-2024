@@ -190,17 +190,19 @@ export default function Fixtures() {
     const winnerPrediction = user.predictions.winner
     const finalPredictions = user.predictions.final
 
-    if (fixtures.finalFixtures.length === 0) return <div className="text-center text-xl mt-10">To Be Determined</div>
+    // if (fixtures.finalFixtures.length === 0) return <div className="text-center text-xl mt-10">To Be Determined</div>
 
-    const finalMatch = fixtures.finalFixtures[1]
-    const thirdPlaceMatch = fixtures.finalFixtures[0]
+    const finalMatch = fixtures.finalFixtures[1] ? fixtures.finalFixtures[1] : {}
+    const thirdPlaceMatch = fixtures.finalFixtures[0] ? fixtures.finalFixtures[0] : {}
     // Array of teams that are in the final match
-    const teamsInFinalFixtures = [finalMatch.teams.home.id, finalMatch.teams.away.id]
+    // const teamsInFinalFixtures = [finalMatch.teams.home.id, finalMatch.teams.away.id]
+    const teamsInFinalFixtures = winners.semiFinals
+    const finalMatchWinner = winners.champion
 
     return (
       <>
         <div className="relative pt-4 px-[22.5px] pb-6">
-          <span className="absolute bg-gray-700 px-4  py-1 rounded-md top-2 right-6">+2 pts</span>
+          <span className="absolute bg-gray-700 px-4  py-1 rounded-md top-2 right-6">+0 pts</span>
 
           <div className="space-y-2 mb-8">
             <h2 className="text-xl">Champions</h2>
