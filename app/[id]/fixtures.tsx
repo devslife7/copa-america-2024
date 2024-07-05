@@ -11,7 +11,7 @@ import { useFixturesContext } from "@/context/fixtures"
 
 export default function Fixtures() {
   const [sortBy, setSortBy] = useState("Groups")
-  const { users, fixtures, quarterFinalsArray } = useFixturesContext()
+  const { users, fixtures, quarterFinalsArray, winners } = useFixturesContext()
 
   const pathname = usePathname()
   const id = pathname.split("/")[1]
@@ -114,13 +114,6 @@ export default function Fixtures() {
                   ) : (
                     <XMarkSVG className="text-red-400" />
                   )}
-                  {/* {quarterFinalsArray.includes(+team) ? (
-                    <CheckMarkSVG className="text-green-400" />
-                  ) : false ? (
-                    <XMarkSVG className="text-red-400" />
-                  ) : (
-                    <CircleSVG className="text-gray-400" />
-                  )} */}
                   <div className={cn("text-xs", { hidden: userPredictions.length == idx + 1 })}>{"|"}</div>
                 </div>
                 <div className="ml-2">
@@ -140,44 +133,39 @@ export default function Fixtures() {
       </div>
     )
   }
-  const renderEliminationStage = (stage: string) => {
+  const renderSemiFinals = () => {
     let teamsInQuarterFinals: any = []
     let stageFixtures = []
     let userPredictions = []
-    if (stage === "Quarter-finals") {
-      if (stageFixtures.length === 0) return <div className="text-center text-xl mt-10">To Be Determined</div>
-      stageFixtures = fixtures.quarterFinalFixtures
-      userPredictions = user.predictions.quarter_final
 
-      stageFixtures?.map((fixture: any) => {
+    stageFixtures = fixtures.semiFinalFixtures
+    userPredictions = user.predictions.semi_final
+
+    fixtures.quarterFinalFixtures // TODO: Get teams in quarter finals
+      .map((fixture: any) => {
         teamsInQuarterFinals?.push(fixture.teams.home.id)
         teamsInQuarterFinals?.push(fixture.teams.away.id)
       })
-    } else if (stage === "Semi-finals") {
-      if (stageFixtures.length === 0) return <div className="text-center text-xl mt-10">To Be Determined</div>
-      stageFixtures = fixtures.semiFinalFixtures
-      userPredictions = user.predictions.semi_final
-
-      stageFixtures.map((fixture: any) => {
-        teamsInQuarterFinals?.push(fixture.teams.home.id)
-        teamsInQuarterFinals?.push(fixture.teams.away.id)
-      })
-    }
+    console.log("userPredictions", userPredictions)
+    console.log("teamsInQuarterFinals", teamsInQuarterFinals)
+    console.log("fixtures.quarterFinalFixtures", fixtures.quarterFinalFixtures)
 
     return (
       <div className="pb-[40px]">
         <div className="relative pt-4 px-[22.5px] pb-2">
-          <span className="absolute bg-gray-700 px-4 py-1 rounded-md top-2 right-6">+5 pts</span>
+          <span className="absolute bg-gray-700 px-4 py-1 rounded-md top-2 right-6">
+            +{user.correctPredictionsSemiFinals} pts
+          </span>
           {userPredictions.map((team: string, idx: number) => {
             return (
               <div key={idx} className="flex">
                 <div className="text-center">
-                  {teamsInQuarterFinals.includes(+team) ? (
+                  {winners.quarterFinals.includes(+team) ? (
                     <CheckMarkSVG className="text-green-400" />
-                  ) : false ? (
-                    <XMarkSVG className="text-red-400" />
-                  ) : (
+                  ) : teamsInQuarterFinals.includes(+team) ? (
                     <CircleSVG className="text-gray-400" />
+                  ) : (
+                    <XMarkSVG className="text-red-400" />
                   )}
                   <div className={cn("text-xs", { hidden: userPredictions.length == idx + 1 })}>{"|"}</div>
                 </div>
@@ -273,7 +261,7 @@ export default function Fixtures() {
         <div className="px-6 text-xl mt-8">Quarter Finals</div>
         {renderQuarterFinalsStage()}
         <div className="px-6 text-xl mt-10">Semi Finals</div>
-        {renderEliminationStage("Semi-finals")}
+        {renderSemiFinals()}
         {renderFinals()}
       </>
     )
@@ -285,7 +273,7 @@ export default function Fixtures() {
       <div className="max-w-[700px] mx-auto bg-secondary">
         {sortBy === "Groups" && renderGroupFixtures()}
         {sortBy === "Quarters" && renderQuarterFinalsStage()}
-        {sortBy === "Semis" && renderEliminationStage("Semi-finals")}
+        {sortBy === "Semis" && renderSemiFinals()}
         {sortBy === "Finals" && renderFinals()}
         {sortBy === "All" && renderAllFixtures()}
       </div>

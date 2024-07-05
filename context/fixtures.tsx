@@ -21,6 +21,11 @@ const initialData = {
   users: [],
   lastUpdated: "",
   quarterFinalsArray: [],
+  winners: {
+    quarterFinals: [],
+    semiFinals: [],
+    finals: [],
+  },
 }
 
 interface DataType {
@@ -37,6 +42,11 @@ interface DataType {
   users: any[]
   lastUpdated: string
   quarterFinalsArray: number[]
+  winners: {
+    quarterFinals: any[]
+    semiFinals: any[]
+    finals: any[]
+  }
 }
 
 const FixturesContext = createContext<DataType | undefined>(undefined)
@@ -65,8 +75,7 @@ export function useFixturesContext() {
 
 function parseData(data: any) {
   if (data === undefined) return initialData
-  // remove after testing
-  // FLAG: Manually enter quarter finals array
+  // Quarters qualifiers
   const quarterFinalsArray = [
     // Argentina 26
     // Peru 30
@@ -84,7 +93,7 @@ function parseData(data: any) {
     // Uruguay 7
     // Panama 11
     // Bolivia 2381
-    7,11,
+    7, 11,
 
     // Brazil 6
     // Colombia 8
@@ -99,6 +108,10 @@ function parseData(data: any) {
   let quarterFinalFixtures: any[] = []
   let semiFinalFixtures: any[] = []
   let finalFixtures: any[] = []
+
+  let quarterFinalsWinners: any = []
+  let semiFinalsWinners: any = []
+  let finalsWinners: any = []
 
   // sort by fixture start time
   data.sort((a: any, b: any) => a.fixture.timestamp - b.fixture.timestamp)
@@ -115,6 +128,11 @@ function parseData(data: any) {
     else if (fixtureRound.includes("Quarter-finals")) quarterFinalFixtures.push(fixture)
     else if (fixtureRound.includes("Semi-finals")) semiFinalFixtures.push(fixture)
     else if (fixtureRound.includes("Final")) finalFixtures.push(fixture)
+
+    // Get winners of elimination stage
+    quarterFinalsWinners = getWinners(quarterFinalFixtures)
+    semiFinalsWinners = getWinners(semiFinalFixtures)
+    finalsWinners = getWinners(finalFixtures.length > 1 ? finalFixtures[1] : [])
 
     // if match is finished, save id of winning team or "TIE" into return array
     if (gameStatus === "FT" || gameStatus === "PEN") {
@@ -133,8 +151,11 @@ function parseData(data: any) {
     if (finalResutlData.length === 0) return
     let correctPredictions: number = 0
     let correctPredictionsQuarterFinals: number = 0
+    let correctPredictionsSemiFinals: number = 0
+    let correctPredictionsFinals: number = 0
     let correctPredictionsArray: string = ""
 
+    // Add correct predictions from group stage
     for (let i = 0; i < user.predictions.group_stage.length; i++) {
       if (finalResutlData[i] == user.predictions.group_stage[i]) {
         correctPredictions++
@@ -144,7 +165,7 @@ function parseData(data: any) {
       }
     }
 
-    // Continue to add the correct predictions to the array
+    // Add correct predictions from quarter finals
     for (let i = 0; i < user.predictions.quarter_final.length; i++) {
       if (quarterFinalsArray.includes(+user.predictions.quarter_final[i])) {
         correctPredictions++
@@ -152,7 +173,31 @@ function parseData(data: any) {
       }
     }
 
-    return { ...user, correctPredictions, correctPredictionsArray, correctPredictionsQuarterFinals }
+    // Add correct predictions for semi finals predictions
+    // const quarterFinalsWinners = getWinners(quarterFinalFixtures)
+    for (let i = 0; i < user.predictions.semi_final.length; i++) {
+      if (quarterFinalsWinners.includes(+user.predictions.semi_final[i])) {
+        correctPredictions++
+        correctPredictionsSemiFinals++
+      }
+    }
+
+    // TODO:Add correct predictions from finals
+    // for (let i = 0; i < user.predictions.final.length; i++) {
+    //   if (quarterFinalsArray.includes(+user.predictions.quarter_final[i])) {
+    //     correctPredictions++
+    //     correctPredictionsQuarterFinals++
+    //   }
+    // }
+
+    return {
+      ...user,
+      correctPredictions,
+      correctPredictionsArray,
+      correctPredictionsQuarterFinals,
+      correctPredictionsSemiFinals,
+      correctPredictionsFinals,
+    }
   })
 
   // Sort users alphabetically && Sort by correct predictions
@@ -182,6 +227,11 @@ function parseData(data: any) {
     users: usersArray,
     lastUpdated: getLastUpdated(),
     quarterFinalsArray: quarterFinalsArray,
+    winners: {
+      quarterFinals: quarterFinalsWinners,
+      semiFinals: semiFinalsWinners,
+      finals: finalsWinners,
+    },
   }
 }
 
@@ -206,4 +256,18 @@ const addUserRanking = (users: any) => {
     ]
   }
   return userArray
+}
+
+const getWinners = (fixtures: any) => {
+  let winners: any = []
+  fixtures.map((fixture: any) => {
+    if (fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN") {
+      if (fixture.teams.home.winner) {
+        winners.push(fixture.teams.home.id)
+      } else {
+        winners.push(fixture.teams.away.id)
+      }
+    }
+  })
+  return winners
 }
