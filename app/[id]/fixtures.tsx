@@ -154,9 +154,6 @@ export default function Fixtures() {
           teamsInQuarterFinals?.push(fixture.teams.away.id)
         }
       })
-    console.log("userPredictions", userPredictions)
-    console.log("teamsInQuarterFinals", teamsInQuarterFinals)
-    console.log("fixtures.quarterFinalFixtures", fixtures.quarterFinalFixtures)
 
     return (
       <div className="pb-[40px]">
@@ -197,6 +194,7 @@ export default function Fixtures() {
   const renderFinals = () => {
     const winnerPrediction = user.predictions.winner
     const finalPredictions = user.predictions.final
+    const championPredictions = user.predictions.champion
 
     // if (fixtures.finalFixtures.length === 0) return <div className="text-center text-xl mt-10">To Be Determined</div>
 
@@ -206,6 +204,7 @@ export default function Fixtures() {
     // const teamsInFinalFixtures = [finalMatch.teams.home.id, finalMatch.teams.away.id]
     const teamsInFinalFixtures = winners.semiFinals
     const finalMatchWinner = winners.champion
+    console.log("finalMatchWinner", finalMatchWinner)
 
     return (
       <>
@@ -213,7 +212,7 @@ export default function Fixtures() {
           <span className="absolute bg-gray-700 px-4  py-1 rounded-md top-2 right-6">+0 pts</span>
 
           <div className="space-y-2 mb-8">
-            <h2 className="text-xl">Champions</h2>
+            <h2 className="text-xl">Champion</h2>
             <div className="flex space-x-2 text-center">
               {false ? (
                 <CheckMarkSVG className="text-green-400" />
@@ -222,9 +221,9 @@ export default function Fixtures() {
               ) : (
                 <CircleSVG className="text-gray-400" />
               )}
-              <h2>{TeamIds[winnerPrediction as keyof typeof TeamIds]}</h2>
+              <h2>{TeamIds[championPredictions as keyof typeof TeamIds]}</h2>
             </div>
-            <div className="bg-[#1F2A38] px-3 py-1 rounded-md inline-block w-[100px] mt-2">TBD</div>
+            {/* <div className="bg-[#1F2A38] px-3 py-1 rounded-md inline-block w-[100px] mt-2">TBD</div> */}
           </div>
 
           <div className="mb-4">
@@ -255,10 +254,10 @@ export default function Fixtures() {
             </div>
           </div>
 
-          <div className="py-3">
+          {/* <div className="py-3">
             <h2 className="text-xl mb-2">3rd Place</h2>
             <RenderFixture fixture={thirdPlaceMatch} />
-          </div>
+          </div> */}
         </div>
       </>
     )
