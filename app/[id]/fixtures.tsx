@@ -141,10 +141,18 @@ export default function Fixtures() {
     stageFixtures = fixtures.semiFinalFixtures
     userPredictions = user.predictions.semi_final
 
-    fixtures.quarterFinalFixtures // TODO: Get teams in quarter finals
+    fixtures.quarterFinalFixtures // TODO: Get teams in semi finals
       .map((fixture: any) => {
-        teamsInQuarterFinals?.push(fixture.teams.home.id)
-        teamsInQuarterFinals?.push(fixture.teams.away.id)
+        if (fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN") {
+          if (fixture.teams.home.winner) {
+            teamsInQuarterFinals?.push(fixture.teams.home.id)
+          } else {
+            teamsInQuarterFinals?.push(fixture.teams.away.id)
+          }
+        } else {
+          teamsInQuarterFinals?.push(fixture.teams.home.id)
+          teamsInQuarterFinals?.push(fixture.teams.away.id)
+        }
       })
     console.log("userPredictions", userPredictions)
     console.log("teamsInQuarterFinals", teamsInQuarterFinals)
