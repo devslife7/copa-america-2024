@@ -26,7 +26,7 @@ export default function UpcomingFixtures() {
             <RenderFixture fixture={upcomingFixtures[1]} className="mt-2 mb-8" /> */}
           </div>
         )}
-        {pastFixture.fixture.id && (
+        {pastFixture.league && (
           <div>
             <div className="text-white font-bold text-2xl mb-2">Previous</div>
             <h3>{pastFixture.league?.round}</h3>
