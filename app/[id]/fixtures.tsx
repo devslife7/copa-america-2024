@@ -192,10 +192,8 @@ export default function Fixtures() {
     )
   }
   const renderFinals = () => {
-    const winnerPrediction = user.predictions.winner
-    const finalPredictions = user.predictions.final
     const championPredictions = user.predictions.champion
-
+    const finalPredictions = user.predictions.final
     // if (fixtures.finalFixtures.length === 0) return <div className="text-center text-xl mt-10">To Be Determined</div>
 
     const finalMatch = fixtures.finalFixtures[1] ? fixtures.finalFixtures[1] : {}
@@ -203,8 +201,6 @@ export default function Fixtures() {
     // Array of teams that are in the final match
     // const teamsInFinalFixtures = [finalMatch.teams.home.id, finalMatch.teams.away.id]
     const teamsInFinalFixtures = winners.semiFinals
-    const finalMatchWinner = winners.champion
-    console.log("finalMatchWinner", finalMatchWinner)
 
     return (
       <>
