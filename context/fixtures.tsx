@@ -153,6 +153,7 @@ function parseData(data: any) {
     let correctPredictionsQuarterFinals: number = 0
     let correctPredictionsSemiFinals: number = 0
     let correctPredictionsFinals: number = 0
+    let correctPredictionsChampion: number = 0
     let correctPredictionsArray: string = ""
 
     // Add correct predictions from group stage
@@ -190,6 +191,11 @@ function parseData(data: any) {
       }
     }
 
+    if (finalWinner.includes(+user.predictions.champion)) {
+      correctPredictions++
+      correctPredictionsChampion++
+    }
+
     return {
       ...user,
       correctPredictions,
@@ -197,6 +203,7 @@ function parseData(data: any) {
       correctPredictionsQuarterFinals,
       correctPredictionsSemiFinals,
       correctPredictionsFinals,
+      correctPredictionsChampion,
     }
   })
 

@@ -229,7 +229,9 @@ export default function Fixtures() {
     return (
       <>
         <div className="relative pt-4 px-[22.5px] pb-6">
-          {/* <span className="absolute bg-gray-700 px-4 py-1 rounded-md top-2 right-6">+0 pts</span> */}
+          <span className="absolute bg-gray-700 px-4 py-1 rounded-md top-2 right-6">
+            +{user.correctPredictionsFinals + user.correctPredictionsChampion} pts
+          </span>
 
           <div className="space-y-2 mb-8">
             <h2 className="text-xl">Champion</h2>
