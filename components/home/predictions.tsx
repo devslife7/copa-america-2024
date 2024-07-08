@@ -66,6 +66,6 @@ export default function Predictions() {
 
 const isWinnerStyle = (ranking: number) => {
   // FLAG: enable after a few days
-  // return ranking === 1 ? "text-green-400" : ranking === 2 ? "text-yellow-200" : ranking === 3 ? "text-blue-400" : ""
-  return "text-white"
+  return ranking === 1 ? "text-green-400" : ranking === 2 ? "text-yellow-200" : ranking === 3 ? "text-red-400" : ""
+  // return "text-white"
 }
