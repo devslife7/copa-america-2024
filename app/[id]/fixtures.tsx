@@ -141,19 +141,19 @@ export default function Fixtures() {
     stageFixtures = fixtures.semiFinalFixtures
     userPredictions = user.predictions.semi_final
 
-    fixtures.quarterFinalFixtures // TODO: Get teams in semi finals
-      .map((fixture: any) => {
-        if (fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN") {
-          if (fixture.teams.home.winner) {
-            teamsInQuarterFinals?.push(fixture.teams.home.id)
-          } else {
-            teamsInQuarterFinals?.push(fixture.teams.away.id)
-          }
-        } else {
+    // Get teams in semi finals
+    fixtures.quarterFinalFixtures.map((fixture: any) => {
+      if (fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN") {
+        if (fixture.teams.home.winner) {
           teamsInQuarterFinals?.push(fixture.teams.home.id)
+        } else {
           teamsInQuarterFinals?.push(fixture.teams.away.id)
         }
-      })
+      } else {
+        teamsInQuarterFinals?.push(fixture.teams.home.id)
+        teamsInQuarterFinals?.push(fixture.teams.away.id)
+      }
+    })
 
     return (
       <div className="pb-[40px]">
@@ -192,58 +192,81 @@ export default function Fixtures() {
     )
   }
   const renderFinals = () => {
-    const championPredictions = user.predictions.champion
-    const finalPredictions = user.predictions.final
-    // if (fixtures.finalFixtures.length === 0) return <div className="text-center text-xl mt-10">To Be Determined</div>
+    let officialChampion: string = ""
+    const teamsInFinals: number[] = []
+    const championPrediction: string = user.predictions.champion
+    const finalsPredictions: string[] = user.predictions.final
 
+    // Final matches
     const finalMatch = fixtures.finalFixtures[1] ? fixtures.finalFixtures[1] : {}
     const thirdPlaceMatch = fixtures.finalFixtures[0] ? fixtures.finalFixtures[0] : {}
-    // Array of teams that are in the final match
-    // const teamsInFinalFixtures = [finalMatch.teams.home.id, finalMatch.teams.away.id]
-    const teamsInFinalFixtures = winners.semiFinals
+
+    // Get teams in finals
+    fixtures.semiFinalFixtures.map((fixture: any) => {
+      if (fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN") {
+        if (fixture.teams.home.winner) {
+          teamsInFinals.push(fixture.teams.home.id)
+        } else {
+          teamsInFinals.push(fixture.teams.away.id)
+        }
+      }
+    })
+
+    // Get champion
+    if (finalMatch.fixture) {
+      if (finalMatch.fixture.status.short === "FT" || finalMatch.fixture.status.short === "PEN") {
+        if (finalMatch.teams.home.winner) {
+          officialChampion = finalMatch.teams.home.id
+        } else {
+          officialChampion = finalMatch.teams.away.id
+        }
+      } else {
+        officialChampion = finalMatch.teams.home.id
+        officialChampion = finalMatch.teams.away.id
+      }
+    }
 
     return (
       <>
         <div className="relative pt-4 px-[22.5px] pb-6">
-          <span className="absolute bg-gray-700 px-4  py-1 rounded-md top-2 right-6">+0 pts</span>
+          {/* <span className="absolute bg-gray-700 px-4 py-1 rounded-md top-2 right-6">+0 pts</span> */}
 
           <div className="space-y-2 mb-8">
             <h2 className="text-xl">Champion</h2>
             <div className="flex space-x-2 text-center">
-              {false ? (
+              {championPrediction == officialChampion ? (
                 <CheckMarkSVG className="text-green-400" />
               ) : false ? (
                 <XMarkSVG className="text-red-400" />
               ) : (
                 <CircleSVG className="text-gray-400" />
               )}
-              <h2>{TeamIds[championPredictions as keyof typeof TeamIds]}</h2>
+              <h2>{TeamIds[championPrediction as keyof typeof TeamIds]}</h2>
             </div>
-            {/* <div className="bg-[#1F2A38] px-3 py-1 rounded-md inline-block w-[100px] mt-2">TBD</div> */}
           </div>
 
           <div className="mb-4">
             <h2 className="text-xl mb-2">Final</h2>
             <div className="flex space-x-2">
-              {teamsInFinalFixtures.includes(+finalPredictions[0]) ? (
+              {teamsInFinals.includes(+finalsPredictions[0]) ? (
                 <CheckMarkSVG className="text-green-400" />
               ) : false ? (
                 <XMarkSVG className="text-red-400" />
               ) : (
                 <CircleSVG className="text-gray-400" />
               )}
-              <h2>{TeamIds[finalPredictions[0] as keyof typeof TeamIds]}</h2>
+              <h2>{TeamIds[finalsPredictions[0] as keyof typeof TeamIds]}</h2>
             </div>
             {/* <div className="text-xs ml-[9.5px] mb-[2px]">{"|"}</div> */}
             <div className="flex space-x-2 mt-2">
-              {teamsInFinalFixtures.includes(+finalPredictions[1]) ? (
+              {teamsInFinals.includes(+finalsPredictions[1]) ? (
                 <CheckMarkSVG className="text-green-400" />
               ) : false ? (
                 <XMarkSVG className="text-red-400" />
               ) : (
                 <CircleSVG className="text-gray-400" />
               )}
-              <h2>{TeamIds[finalPredictions[1] as keyof typeof TeamIds]}</h2>
+              <h2>{TeamIds[finalsPredictions[1] as keyof typeof TeamIds]}</h2>
             </div>
             <div className=" py-3">
               <RenderFixture fixture={finalMatch} />
@@ -259,19 +282,6 @@ export default function Fixtures() {
     )
   }
 
-  const renderAllFixtures = () => {
-    return (
-      <>
-        {renderGroupFixtures()}
-        <div className="px-6 text-xl mt-8">Quarter Finals</div>
-        {renderQuarterFinalsStage()}
-        <div className="px-6 text-xl mt-10">Semi Finals</div>
-        {renderSemiFinals()}
-        {renderFinals()}
-      </>
-    )
-  }
-
   return (
     <>
       <RenderSortingMenu />
@@ -280,7 +290,16 @@ export default function Fixtures() {
         {sortBy === "Quarters" && renderQuarterFinalsStage()}
         {sortBy === "Semis" && renderSemiFinals()}
         {sortBy === "Finals" && renderFinals()}
-        {sortBy === "All" && renderAllFixtures()}
+        {sortBy === "All" && (
+          <>
+            {renderGroupFixtures()}
+            <div className="px-6 text-xl mt-8">Quarter Finals</div>
+            {renderQuarterFinalsStage()}
+            <div className="px-6 text-xl mt-10">Semi Finals</div>
+            {renderSemiFinals()}
+            {renderFinals()}
+          </>
+        )}
       </div>
     </>
   )
