@@ -135,7 +135,7 @@ function parseData(data: any) {
     finalWinner = getWinners(finalFixtures.length > 1 ? [finalFixtures[1]] : [])
 
     // if match is finished, save id of winning team or "TIE" into return array
-    if (gameStatus === "FT" || gameStatus === "PEN") {
+    if (gameStatus === "FT" || gameStatus === "PEN" || gameStatus === "AET") {
       upcomingFixtures.past = fixture // save the last finished fixture
       if (goalsHome === goalsAway) return "TIE"
       else if (goalsHome > goalsAway) return homeTeamId
@@ -192,6 +192,7 @@ function parseData(data: any) {
     }
 
     if (finalWinner.includes(+user.predictions.champion)) {
+      console.log("finalWinner", finalWinner)
       correctPredictions++
       correctPredictionsChampion++
     }
@@ -268,7 +269,11 @@ const addUserRanking = (users: any) => {
 const getWinners = (fixtures: any) => {
   let winners: any = []
   fixtures.map((fixture: any) => {
-    if (fixture.fixture.status.short === "FT" || fixture.fixture.status.short === "PEN") {
+    if (
+      fixture.fixture.status.short === "FT" ||
+      fixture.fixture.status.short === "PEN" ||
+      fixture.fixture.status.short === "AET"
+    ) {
       if (fixture.teams.home.winner) {
         winners.push(fixture.teams.home.id)
       } else {
