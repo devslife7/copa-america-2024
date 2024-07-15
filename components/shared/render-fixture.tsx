@@ -84,7 +84,9 @@ export default function RenderFixture({
 }) {
   if (fixture.teams === undefined) return null
   return (
-    <div className={cn("flex justify-between p-2 bg-gray-800 rounded-md w-full text-white max-w-[600px] mx-auto", className)}>
+    <div
+      className={cn("flex justify-between p-2 bg-gray-800 rounded-md w-full text-white max-w-[600px] mx-auto", className)}
+    >
       <div>
         <div className="mb-2 flex items-center space-x-3">
           <span>{renderFlag(fixture.teams.home)}</span>
@@ -110,7 +112,7 @@ const RenderScore = (fixture: FixtureType) => {
   const status = fixture.fixture.status.short
 
   // Match finised
-  if (status === "FT") {
+  if (status === "FT" || status === "PEN" || status === "AET") {
     return (
       <div className="flex">
         <div className="border-r-2 border-gray-600 pr-4 flex flex-col justify-between my-1">
