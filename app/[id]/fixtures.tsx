@@ -214,7 +214,11 @@ export default function Fixtures() {
 
     // Get champion
     if (finalMatch.fixture) {
-      if (finalMatch.fixture.status.short === "FT" || finalMatch.fixture.status.short === "PEN") {
+      if (
+        finalMatch.fixture.status.short === "FT" ||
+        finalMatch.fixture.status.short === "PEN" ||
+        finalMatch.fixture.status.short === "AET"
+      ) {
         if (finalMatch.teams.home.winner) {
           officialChampion = finalMatch.teams.home.id
         } else {
