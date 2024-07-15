@@ -242,11 +242,16 @@ export default function Fixtures() {
             <div className="flex space-x-2 text-center">
               {championPrediction == officialChampion ? (
                 <CheckMarkSVG className="text-green-400" />
+              ) : (
+                <XMarkSVG className="text-red-400" />
+              )}
+              {/* {championPrediction == officialChampion ? (
+                <CheckMarkSVG className="text-green-400" />
               ) : false ? (
                 <XMarkSVG className="text-red-400" />
               ) : (
                 <CircleSVG className="text-gray-400" />
-              )}
+              )} */}
               <h2>{TeamIds[championPrediction as keyof typeof TeamIds]}</h2>
             </div>
           </div>
@@ -256,10 +261,8 @@ export default function Fixtures() {
             <div className="flex space-x-2">
               {teamsInFinals.includes(+finalsPredictions[0]) ? (
                 <CheckMarkSVG className="text-green-400" />
-              ) : false ? (
-                <XMarkSVG className="text-red-400" />
               ) : (
-                <CircleSVG className="text-gray-400" />
+                <XMarkSVG className="text-red-400" />
               )}
               <h2>{TeamIds[finalsPredictions[0] as keyof typeof TeamIds]}</h2>
             </div>
@@ -267,10 +270,8 @@ export default function Fixtures() {
             <div className="flex space-x-2 mt-2">
               {teamsInFinals.includes(+finalsPredictions[1]) ? (
                 <CheckMarkSVG className="text-green-400" />
-              ) : false ? (
-                <XMarkSVG className="text-red-400" />
               ) : (
-                <CircleSVG className="text-gray-400" />
+                <XMarkSVG className="text-red-400" />
               )}
               <h2>{TeamIds[finalsPredictions[1] as keyof typeof TeamIds]}</h2>
             </div>
