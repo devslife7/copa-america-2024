@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils"
 import { format, fromUnixTime } from "date-fns"
 import Image from "next/image"
 
+type FixtureType = typeof defaultFixture
 const defaultFixture = {
   fixture: {
     id: 312547,
@@ -71,8 +72,6 @@ const defaultFixture = {
   },
 }
 
-type FixtureType = typeof defaultFixture
-
 export default function RenderFixture({
   fixture = defaultFixture,
   tbd,
@@ -109,10 +108,11 @@ const renderFlag = (team: any) => {
 }
 
 const RenderScore = (fixture: FixtureType) => {
+  const isFixtureFinished = fixture.fixture.status.long === "Match Finished"
   const status = fixture.fixture.status.short
 
   // Match finised
-  if (status === "FT" || status === "PEN" || status === "AET") {
+  if (isFixtureFinished) {
     return (
       <div className="flex">
         <div className="border-r-2 border-gray-600 pr-4 flex flex-col justify-between my-1">

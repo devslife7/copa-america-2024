@@ -58,7 +58,6 @@ export function FixturesContextProvider({ children }: { children: ReactNode }) {
     async function fetchData() {
       const fixtures = await getFixtures()
       setData(parseData(fixtures))
-      // console.log("fixtures", fixtures) // SHOWS FIXTURES ONLY
     }
     fetchData()
   }, [])
@@ -192,7 +191,6 @@ function parseData(data: any) {
     }
 
     if (finalWinner.includes(+user.predictions.champion)) {
-      console.log("finalWinner", finalWinner)
       correctPredictions++
       correctPredictionsChampion++
     }
