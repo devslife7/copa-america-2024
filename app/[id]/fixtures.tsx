@@ -15,7 +15,7 @@ export default function Fixtures() {
 
   const pathname = usePathname()
   const id = pathname.split("/")[1]
-  const user = users.find(user => user.id == id)
+  const user = users.find(user => String(user.id) === id)
   if (user === undefined) return null
 
   const RenderSortingMenu = () => {
@@ -192,14 +192,14 @@ export default function Fixtures() {
     )
   }
   const renderFinals = () => {
-    let officialChampion: string = ""
+    let officialChampion: string | number = ""
     const teamsInFinals: number[] = []
     const championPrediction: string = user.predictions.champion
     const finalsPredictions: string[] = user.predictions.final
 
     // Final matches
-    const finalMatch = fixtures.finalFixtures[1] ? fixtures.finalFixtures[1] : {}
-    const thirdPlaceMatch = fixtures.finalFixtures[0] ? fixtures.finalFixtures[0] : {}
+    const finalMatch = fixtures.finalFixtures.find(match => match.league.round === "Final")!
+    const thirdPlaceMatch = fixtures.finalFixtures.find(match => match.league.round === "3rd Place Final")!
 
     // Get teams in finals
     fixtures.semiFinalFixtures.map((fixture: any) => {

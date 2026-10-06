@@ -13,7 +13,7 @@ const config: Config = {
       },
       fontFamily: {
         inika: ["var(--font-inika)", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
         roboto: ["var(--font-roboto)", "sans-serif"],
       },
     },

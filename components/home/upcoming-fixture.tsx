@@ -28,7 +28,7 @@ export default function UpcomingFixtures() {
         )}
         {pastFixture.league && (
           <div>
-            <div className="text-white font-bold text-2xl mb-2">Previous</div>
+            <div className="text-white font-bold text-2xl mb-2">Championship Final</div>
             <h3>{pastFixture.league?.round}</h3>
             <RenderFixture fixture={pastFixture} className="mt-2 mb-8" />
           </div>

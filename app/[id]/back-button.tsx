@@ -1,11 +1,4 @@
-"use client"
-import { useRouter } from "next/navigation"
-
+import Link from "next/link"
 export default function BackButton() {
-  const router = useRouter()
-  return (
-    <div className="text-5xl font-bold px-4 pb-4 absolute cursor-pointer" onClick={router.back}>
-      {"<"}
-    </div>
-  )
+  return <Link href="/" aria-label="Back to standings" className="text-5xl font-bold px-4 pb-4 absolute">{"<"}</Link>
 }

@@ -1,14 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  trailingSlash: true,
   reactStrictMode: false,
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "media.api-sports.io",
-      },
-    ],
-  },
+  images: { unoptimized: true },
 }
-
 export default nextConfig

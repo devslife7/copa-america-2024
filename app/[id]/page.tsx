@@ -5,13 +5,18 @@ import BackButton from "./back-button"
 
 import UserStats from "./ranking"
 import Fixtures from "./fixtures"
-import dynamic from "next/dynamic"
+import { notFound } from "next/navigation"
 import Title from "./title"
-const LastUpdated = dynamic(() => import("@/components/shared/last-updated"), { ssr: false })
+import LastUpdated from "@/components/shared/last-updated"
+
+export const dynamicParams = false
+export function generateStaticParams() {
+  return usersPredictions.map(user => ({ id: String(user.id) }))
+}
 
 export default function userPredictions({ params }: { params: any }) {
   const user = usersPredictions.find(user => user.id == params.id)
-  if (!user) return <div>User not found</div>
+  if (!user) notFound()
 
   return (
     <div className="relative text-white h-[840px]">

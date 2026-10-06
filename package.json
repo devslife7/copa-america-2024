@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "node scripts/serve-static.cjs",
+    "lint": "next lint",
+    "test": "node --test tests/*.test.cjs"
   },
   "dependencies": {
     "clsx": "^2.1.0",

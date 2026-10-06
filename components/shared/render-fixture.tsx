@@ -2,78 +2,10 @@ import { cn } from "@/lib/utils"
 import { format, fromUnixTime } from "date-fns"
 import Image from "next/image"
 
-type FixtureType = typeof defaultFixture
-const defaultFixture = {
-  fixture: {
-    id: 312547,
-    referee: "N. Pitana",
-    timezone: "UTC",
-    date: "2021-06-14T00:00:00+00:00",
-    timestamp: 1623628800,
-    periods: {
-      first: 1623628800,
-      second: 1623632400,
-    },
-    venue: {
-      id: 235,
-      name: "Arena Pantanal",
-      city: "Cuiabá, Mato Grosso",
-    },
-    status: {
-      long: "Match Finished",
-      short: "FT",
-      elapsed: 90,
-    },
-  },
-  league: {
-    id: 9,
-    name: "Copa America",
-    country: "World",
-    logo: "https://media.api-sports.io/football/leagues/9.png",
-    flag: null,
-    season: 2021,
-    round: "Group B - 1",
-  },
-  teams: {
-    home: {
-      id: 8,
-      name: "Colombia",
-      logo: "https://media.api-sports.io/football/teams/8.png",
-      winner: true,
-    },
-    away: {
-      id: 2382,
-      name: "Ecuador",
-      logo: "https://media.api-sports.io/football/teams/2382.png",
-      winner: false,
-    },
-  },
-  goals: {
-    home: 1,
-    away: 0,
-  },
-  score: {
-    halftime: {
-      home: 1,
-      away: 0,
-    },
-    fulltime: {
-      home: 1,
-      away: 0,
-    },
-    extratime: {
-      home: null,
-      away: null,
-    },
-    penalty: {
-      home: null,
-      away: null,
-    },
-  },
-}
+import type { Fixture as FixtureType } from "@/lib/archive"
 
 export default function RenderFixture({
-  fixture = defaultFixture,
+  fixture,
   tbd,
   className,
 }: {
@@ -108,7 +40,7 @@ const renderFlag = (team: any) => {
 }
 
 const RenderScore = (fixture: FixtureType) => {
-  const isFixtureFinished = fixture.fixture.status.long === "Match Finished"
+  const isFixtureFinished = ["FT", "AET"].includes(fixture.fixture.status.short)
   const status = fixture.fixture.status.short
 
   // Match finised

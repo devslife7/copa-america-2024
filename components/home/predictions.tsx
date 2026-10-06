@@ -4,9 +4,8 @@ import background from "../../public/images/predictions-background.png"
 import Link from "next/link"
 import ExternalLinkSVG from "@/public/svgs/external-link"
 import { cn } from "@/lib/utils"
-import dynamic from "next/dynamic"
 import { useFixturesContext } from "@/context/fixtures"
-const LastUpdated = dynamic(() => import("@/components/shared/last-updated"), { ssr: false })
+import LastUpdated from "@/components/shared/last-updated"
 
 export default function Predictions() {
   const { users } = useFixturesContext()
@@ -55,7 +54,7 @@ export default function Predictions() {
           className="z-[-1]"
         />
         <div className="lg:text-center z-10">
-          <h2 className="text-4xl font-bold z-50">Predictions</h2>
+          <h2 className="text-4xl font-bold z-50">Final Standings</h2>
           <LastUpdated />
         </div>
         <div className="my-10 space-y-6">{renderUserPredictions()}</div>
